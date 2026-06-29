@@ -1,0 +1,16 @@
+# CMake config file for the brisk package
+# It defines the following variables:
+#   BRISK_VERSION   - the version of the package
+#   BRISK_LIBRARIES - libraries to link against
+set(BRISK_VERSION @CMAKE_PROJECT_VERSION@)
+@PACKAGE_INIT@
+ 
+include(CMakeFindDependencyMacro)
+find_dependency(OpenCV)
+
+get_filename_component(DIRNAME "${CMAKE_CURRENT_LIST_FILE}" PATH)
+include("${DIRNAME}/briskTargets.cmake")
+
+set(BRISK_LIBRARIES ${BRISK_LIBRARIES} brisk::agast brisk::brisk)
+
+check_required_components(brisk)
