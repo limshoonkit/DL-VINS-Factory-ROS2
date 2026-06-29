@@ -1,0 +1,46 @@
+# LET-VINS (VINS-Mono + LET-NET ncnn front-end) on ROS Noetic (Ubuntu 20.04).
+# Build context = the VINS-Mono dir:  docker build -f docker/Dockerfile.noetic -t letvins:noetic .
+FROM ros:noetic-perception
+
+ENV DEBIAN_FRONTEND=noninteractive
+ENV CATKIN_WS=/root/catkin_ws
+ENV LET_NET_MODEL_DIR=/root/let_net_model
+
+# --- system + ROS deps (Ceres 1.14 comes from apt) ---
+RUN apt-get update && apt-get install -y --no-install-recommends \
+      build-essential cmake git wget \
+      libeigen3-dev libgoogle-glog-dev libgflags-dev \
+      libatlas-base-dev libsuitesparse-dev libceres-dev \
+      python3-catkin-tools \
+      ros-noetic-cv-bridge ros-noetic-image-transport \
+      ros-noetic-message-filters ros-noetic-tf \
+    && rm -rf /var/lib/apt/lists/*
+
+# --- ncnn (LET-NET runtime), CPU-only, installed to /usr/local (matches ncnn_DIR) ---
+RUN git clone --depth=1 https://github.com/Tencent/ncnn.git /root/ncnn && \
+    cd /root/ncnn && mkdir build && cd build && \
+    cmake -DCMAKE_BUILD_TYPE=Release \
+          -DCMAKE_INSTALL_PREFIX=/usr/local \
+          -DNCNN_VULKAN=OFF -DNCNN_BUILD_EXAMPLES=OFF \
+          -DNCNN_BUILD_TOOLS=OFF -DNCNN_BUILD_BENCHMARK=OFF \
+          -DNCNN_SHARED_LIB=OFF .. && \
+    make -j"$(($(nproc)/2>1?$(nproc)/2:1))" && make install && \
+    # normalize the cmake config to the path feature_tracker/CMakeLists expects
+    if [ ! -f /usr/local/lib/cmake/ncnn/ncnnConfig.cmake ]; then \
+        D=$(dirname "$(find /usr/local /usr -name ncnnConfig.cmake 2>/dev/null | head -1)") && \
+        echo "ncnn cmake config found in: $D" && \
+        mkdir -p /usr/local/lib/cmake/ncnn && cp -a "$D"/. /usr/local/lib/cmake/ncnn/ ; \
+    fi && \
+    ls -la /usr/local/lib/cmake/ncnn/ && \
+    rm -rf /root/ncnn/build/CMakeFiles
+
+# --- build the workspace ---
+RUN mkdir -p $CATKIN_WS/src/VINS-Mono
+COPY ./ $CATKIN_WS/src/VINS-Mono/
+WORKDIR $CATKIN_WS
+RUN catkin config --extend /opt/ros/$ROS_DISTRO --cmake-args -DCMAKE_BUILD_TYPE=Release && \
+    catkin build && \
+    sed -i '/exec "$@"/i source "/root/catkin_ws/devel/setup.bash"' /ros_entrypoint.sh
+
+ENV TERM=xterm
+ENV PYTHONIOENCODING=UTF-8

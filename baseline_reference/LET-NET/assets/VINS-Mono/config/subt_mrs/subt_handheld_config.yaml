@@ -1,0 +1,84 @@
+%YAML:1.0
+
+# LET-VINS (VINS-Mono + LET-NET) config for SubT-MRS Laurel Caverns Handheld
+# (low_light1 = Handheld1, low_light2 = Handheld2). Camera: omnidirectional RGB (MEI).
+# Intrinsics/extrinsics quoted from the official challenge calibration
+# (dataset/6_SubT-MRS/calib/SubT_MRS_Laurel_Caverns_Handheld1_*.yaml).
+
+#common parameters
+imu_topic: "/cmu_rc7/imu/data"
+image_topic: "/cmu_rc7/camera_1/image_raw"
+output_path: "/root/output/"
+
+#camera calibration
+model_type: MEI
+camera_name: camera
+image_width: 640
+image_height: 480
+mirror_parameters:
+   xi: 1.583106303248484
+distortion_parameters:
+   k1: -0.059098218173967695
+   k2: 0.1793477408661115
+   p1: 0.0016819528105368057
+   p2: -0.0005887999624264534
+projection_parameters:
+   gamma1: 758.3153257832925
+   gamma2: 676.6492212772476
+   u0: 318.27111164892506
+   v0: 239.79816832491474
+
+# Extrinsic parameter between IMU and Camera (imu^R_cam, imu^T_cam = rgb_camera_to_imu).
+estimate_extrinsic: 0   # 0: trust the calibrated extrinsic (verified correct)
+extrinsicRotation: !!opencv-matrix
+   rows: 3
+   cols: 3
+   dt: d
+   data: [-0.04279531, -0.00237969,  0.99908103,
+          -0.99880330, -0.02359508, -0.04283961,
+           0.02367534, -0.99971877, -0.00136708]
+extrinsicTranslation: !!opencv-matrix
+   rows: 3
+   cols: 1
+   dt: d
+   data: [0.19499356, 0.04340662, -0.01782382]
+
+#feature tracker parameters
+max_cnt: 150            # max feature number in feature tracking
+min_dist: 20            # min distance between two features
+freq: 10                # frequency (Hz) of publishing tracking result
+F_threshold: 1.0        # ransac threshold (pixel)
+show_track: 1           # publish/draw tracking image (needed for the offline viz frame dump)
+equalize: 1             # dark cave -> equalize to find enough features
+fisheye: 0              # MEI model already handles the distortion; no circular mask
+
+#optimization parameters
+max_solver_time: 0.04
+max_num_iterations: 8
+keyframe_parallax: 10.0
+
+#imu parameters (reused from dl-vins-factory subt_rc7 config)
+acc_n: 0.08
+gyr_n: 0.004
+acc_w: 0.00004
+gyr_w: 2.0e-6
+g_norm: 9.81007
+
+#loop closure parameters
+loop_closure: 1
+load_previous_pose_graph: 0
+fast_relocalization: 0
+pose_graph_save_path: "/root/output/pose_graph/"
+
+#unsynchronization parameters
+estimate_td: 1
+td: 0.0
+
+#rolling shutter parameters
+rolling_shutter: 0
+rolling_shutter_tr: 0
+
+#visualization parameters
+save_image: 0
+visualize_imu_forward: 0
+visualize_camera_size: 0.4
