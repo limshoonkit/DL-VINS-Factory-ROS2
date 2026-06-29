@@ -3,39 +3,16 @@
 
 ## Demo
 
+https://github.com/user-attachments/assets/bbd4ba3f-6376-4c9c-a9f7-bf9824ee06c0
+
 ![NTU-VIRAL combined](media/ntu_combined.mp4)
+
+
+https://github.com/user-attachments/assets/b1bf0218-9f3f-4836-97f0-54fa2f88fc5c
 
 ![EuRoC combined](media/euroc_combined.mp4)
 
-<details>
-<summary><b>Individual sequence clips</b></summary>
-<br>
 
-**1. EuRoC MAV**
-
-|  GFTT  | ALIKED | RaCO   | Superpoint | XFeat    |   
-|--------|--------|--------|------------|----------|
-|        |        |        |            |          |
-
-**2. NTU-VIRAL**
-
-|  GFTT  | ALIKED | RaCO   | Superpoint | XFeat    |   
-|--------|--------|--------|------------|----------|
-|        |        |        |            |          |
-
-**3. Botanic Garden**
-
-|  GFTT  | ALIKED | RaCO   | Superpoint | XFeat    |   
-|--------|--------|--------|------------|----------|
-|        |        |        |            |          |
-
-**4. SubT-MRS**
-
-|  GFTT  | ALIKED | RaCO   | Superpoint | XFeat    |   
-|--------|--------|--------|------------|----------|
-|        |        |        |            |          |
-
-</details>
 
 ---
 
