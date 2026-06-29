@@ -1,0 +1,35 @@
+%YAML:1.0
+---
+image_height: 480
+image_width: 752
+# cam0 calib comes from the launch file via the `cam0_calib_path` ROS param
+# (absolute path into dl_vins/config/ntu_viral/). Left empty here.
+cam0_calib: ""
+image0_topic: "/right/image_raw"
+
+pose_graph_save_path: "/tmp/dl_vins_pose_graph/"
+save_image: 0
+load_previous_pose_graph: 0
+
+# Loop closure tunables
+min_score: 0.03                # min BoW score to attempt a closure
+pnp_inflation: 10.0            # PnP RANSAC reprojection threshold inflation
+recall_ignore_recent_ct: 50    # skip the N most recent KFs when querying BoW
+max_theta_diff: 30.0           # |yaw| gate (deg) on relative pose
+max_pos_diff: 20.0             # |t|   gate (m)   on relative pose
+min_loop_feat_num: 25          # minimum matched 2D-3D features to accept loop
+
+# Loop-closure mode:
+#   "classic"    -> DBoW2 + BRIEF                        (GFTT front-end)
+#   "global_vpr" -> AnyLoc DINOv2 ViT-S + VLAD retrieval (all DL front-ends with lightglue verification)
+loop_closure_mode: "classic"
+descriptor_topic: "/dl_vins/frame_descriptors" # FrameDescriptors topic
+dino_loop_sim_thresh: 0.60     # min cosine DINO-VLAD similarity to attempt a closure
+dl_ratio_test: 0.85            # Lowe ratio for learned-descriptor NN matching
+
+# AnyLoc DINOv2 ViT-S/14 + VLAD head — shared across all datasets/extractors.
+dino_vpr_engine: "dino_vits14_h280_w448.fp16.engine"
+dino_vpr_vocab: "vlad_vocab_dino_vits14_k32.bin"
+dino_vpr_input_h: 280          # multiple of 14 (20 patches)
+dino_vpr_input_w: 448          # multiple of 14 (32 patches)
+dino_vpr_embed_dim: 384        # DINOv2 ViT-S/14 token dim

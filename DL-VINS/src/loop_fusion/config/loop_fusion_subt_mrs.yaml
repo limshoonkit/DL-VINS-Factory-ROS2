@@ -1,0 +1,40 @@
+%YAML:1.0
+---
+image_height: 480
+image_width: 640
+# cam0 calib comes from the launch file via the `cam0_calib_path` ROS param
+# (absolute path into dl_vins/config/subt_mrs/).  Left empty here.
+cam0_calib: ""
+image0_topic: "/camera_1/image_raw"
+
+pose_graph_save_path: "/tmp/dl_vins_pose_graph/"
+save_image: 0
+load_previous_pose_graph: 0
+
+# Loop closure tunables
+min_score: 0.03       
+pnp_inflation: 10.0      
+recall_ignore_recent_ct: 50
+max_theta_diff: 30.0
+max_pos_diff: 20.0
+min_loop_feat_num: 25
+
+# 4-DoF pose-graph optimization budget.
+pose_graph_opt_window: 0           # 0 = unbounded (full graph)
+pose_graph_max_solver_time: 5.0    # ceres max_solver_time_in_seconds
+pose_graph_max_iterations: 20      # ceres max_num_iterations
+pose_graph_num_threads: 4          # ceres num_threads for the 4-DoF solve
+
+# Loop-closure mode:
+#   "classic"    -> DBoW2 + BRIEF                        (GFTT front-end)
+#   "global_vpr" -> AnyLoc DINOv2 ViT-S + VLAD retrieval (all DL front-ends with lightglue)
+loop_closure_mode: "classic"
+descriptor_topic: "/dl_vins/frame_descriptors"
+dino_loop_sim_thresh: 0.60
+dl_ratio_test: 0.85
+
+dino_vpr_engine: "dino_vits14_h280_w448.fp16.engine"
+dino_vpr_vocab: "vlad_vocab_dino_vits14_k32.bin"
+dino_vpr_input_h: 280
+dino_vpr_input_w: 448
+dino_vpr_embed_dim: 384

@@ -1,0 +1,42 @@
+dl_vins_component:
+  ros__parameters:
+    # ===== Estimator / IMU / Extrinsic (Botanic Garden) =====
+    gravity: 9.81007
+    acc_noise: 0.01
+    gyr_noise: 0.002
+    acc_bias_noise: 0.00003
+    gyr_bias_noise: 0.00008
+    initial_td: 0.0
+    max_iterations: 10
+    max_solver_time: 0.04
+    estimate_extrinsic: false
+    num_threads: 6
+    ceres_device: 0
+    odom_frame_id: "odom"
+    norm_focal_length: 0.0
+
+    # IMU-Camera Extrinsics from official calib_chain.yaml (Kalibr), Xsens->cam, row-major 4x4
+    # From official calib_chain.yaml (Kalibr) T_xsens_gray0/gray1. Stereo baseline ~0.254 m.
+    body_T_cam0: [-0.00375313, 0.01609339, 0.99986345, 0.17517298,
+             -0.99997267, -0.00642959, -0.00365005, 0.13259005,
+             0.00636997, -0.99984982, 0.01611708, 0.0670137,
+             0.0, 0.0, 0.0, 1.0]
+    body_T_cam1: [-0.00406537, 0.0128982, 0.99990855, 0.17295013,
+             -0.99998236, -0.00438248, -0.00400914, -0.12155995,
+             0.00433036, -0.99990721, 0.01291578, 0.06682273,
+             0.0, 0.0, 0.0, 1.0]
+
+    # ===== Method-specific: SuperPoint + LK (stereo) =====
+    cam0_calib: "config/botanic_garden/dalsa_cam0_pinhole_down.yaml"
+    cam1_calib: "config/botanic_garden/dalsa_cam1_pinhole_down.yaml"
+    image_width: 960
+    image_height: 600
+    image_encoding: "mono8"
+    max_tracked_keypoints: 256
+    enable_visualization: false
+    enable_csv_logging: true
+    log_folder: "./logs"
+    feature_extraction_method: 3
+    optflow_device: 0
+    use_descriptor_matcher: false
+    weights_folder: "weights/botanic_garden"

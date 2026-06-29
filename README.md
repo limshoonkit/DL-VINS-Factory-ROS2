@@ -78,12 +78,16 @@ Ground truth is pre-baked as `<dataset>/groundtruth/<seq>_gt.tum` and the ROS1 b
 
 Trajectories are written to `tmp/<dataset>_eval_<mode>/<method>/<seq>/vio_trajectory_run01.tum`.
 
-### Example Quick sweep — CPU GFTT only (no engines)
+### Example Quick Run — CPU GFTT only (no engines)
 
 ```bash
-EVAL_QUICK=1 EVAL_MODE=stereo EVAL_USE_LOOP_FUSION=true \
-  EVAL_METHODS="dlvins_gftt_cpu_stereo" \
-  scripts/eval_run.sh
+EVAL_METHOD_SET=dl \
+ EVAL_MODE=mono \
+ EVAL_USE_LOOP_FUSION=true \
+ EVAL_METHODS="dlvins_gftt_cpu_mono_loop" \
+ EVAL_DATASET=euroc \
+ EVAL_SEQUENCES="MH_01_easy" \
+ bash scripts/eval_run.sh
 ```
 
 ### Full run — DL front-ends
@@ -91,7 +95,10 @@ EVAL_QUICK=1 EVAL_MODE=stereo EVAL_USE_LOOP_FUSION=true \
 Run the full DL sweep for all sequences on a dataset (very long running):
 
 ```bash
-EVAL_DATASET=euroc EVAL_MODE=stereo EVAL_METHOD_SET=dl scripts/eval_run.sh
+EVAL_METHOD_SET=dl \
+ EVAL_MODE=stereo \
+ EVAL_DATASET=euroc \
+ bash scripts/eval_run.sh
 ```
 
 ## C. Running with launch file and RViz

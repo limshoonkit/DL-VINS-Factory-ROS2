@@ -1,0 +1,40 @@
+dl_vins_component:
+  ros__parameters:
+    # ===== Estimator / IMU / Extrinsic (NTU VIRAL) =====
+    gravity: 9.81007
+    acc_noise: 0.06
+    gyr_noise: 0.005
+    acc_bias_noise: 0.00008
+    gyr_bias_noise: 0.000003
+    initial_td: 0.0
+    max_iterations: 10
+    max_solver_time: 0.04
+    estimate_extrinsic: true
+    num_threads: 6
+    init_max_abias_norm: 0.25
+    ceres_device: 0
+    odom_frame_id: "odom"
+    norm_focal_length: 0.0
+
+    # IMU-Camera Extrinsic Calibration (NTU VIRAL, row-major 4x4)
+    # cam0 = right, cam1 = left (matches camRight.yaml / camLeft.yaml convention)
+    body_T_cam0: [-0.01916508, -0.01496218,  0.99970437,  0.00519443,
+                   0.99974371,  0.01176483,  0.01934191,  0.1347802,
+                  -0.01205075,  0.99981884,  0.01473287,  0.01465067,
+                   0.0, 0.0, 0.0, 1.0]
+
+    # ===== Method-specific: XFeat + LightGlue (mono) =====
+    cam0_calib: "config/ntu_viral/camRight.yaml"
+    cam1_calib: ""
+    image_width: 752
+    image_height: 480
+    image_encoding: "mono8"
+    max_tracked_keypoints: 256
+    enable_visualization: false
+    enable_csv_logging: true
+    log_folder: "./logs"
+    feature_extraction_method: 5
+    use_descriptor_matcher: true
+    matcher_type: "lightglue"
+    matcher_score_threshold: 0.2
+    weights_folder: "weights/ntu_viral"

@@ -1,0 +1,39 @@
+dl_vins_component:
+  ros__parameters:
+    # ===== Estimator / IMU / Extrinsic (EuRoC) =====
+    gravity: 9.81007
+    acc_noise: 0.1
+    gyr_noise: 0.01
+    acc_bias_noise: 0.001
+    gyr_bias_noise: 0.0001
+    initial_td: 0.0
+    max_iterations: 10
+    max_solver_time: 0.04
+    estimate_extrinsic: false
+    num_threads: 6
+    init_max_abias_norm: 0.25
+    ceres_device: 0
+    odom_frame_id: "odom"
+    norm_focal_length: 0.0
+
+    # IMU-Camera Extrinsic Calibration (EuRoC, row-major 4x4)
+    body_T_cam0: [0.0148655429818, -0.999880929698, 0.00414029679422, -0.0216401454975,
+                  0.999557249008,  0.0149672133247, 0.025715529948,  -0.064676986768,
+                  -0.0257744366974, 0.00375618835797, 0.999660727178,  0.00981073058949,
+                  0.0, 0.0, 0.0, 1.0]
+
+    # ===== Method-specific: XFeat + LightGlue (mono) =====
+    cam0_calib: "config/euroc/cam0_pinhole.yaml"
+    cam1_calib: ""
+    image_width: 752
+    image_height: 480
+    image_encoding: "mono8"
+    max_tracked_keypoints: 256
+    enable_visualization: false
+    enable_csv_logging: true
+    log_folder: "./logs"
+    feature_extraction_method: 5
+    use_descriptor_matcher: true
+    matcher_type: "lightglue"
+    matcher_score_threshold: 0.2
+    weights_folder: "weights/euroc"

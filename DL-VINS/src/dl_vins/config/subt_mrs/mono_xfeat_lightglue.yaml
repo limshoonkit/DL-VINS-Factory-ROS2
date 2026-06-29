@@ -1,0 +1,43 @@
+dl_vins_component:
+  ros__parameters:
+    # ===== Estimator / IMU / Extrinsic (SubT-MRS RC7 platform, shared by all sequences) =====
+    gravity: 9.81007
+    acc_noise: 0.08
+    gyr_noise: 0.004
+    acc_bias_noise: 0.00004
+    gyr_bias_noise: 2.0e-6
+    initial_td: 0.0
+    max_iterations: 10
+    max_solver_time: 0.04
+    estimate_extrinsic: false
+    estimate_td: true
+    num_threads: 6
+    init_max_abias_norm: 0.25
+    ceres_device: 0
+    odom_frame_id: "odom"
+    norm_focal_length: 0.0
+
+    # IMU-Camera Extrinsic (rgb_camera_to_imu from official calib, row-major 4x4)
+    body_T_cam0: [-0.04279531,  -0.00237969,  0.99908103,  0.19499356,
+              -0.99880330,  -0.02359508,  -0.04283961,  0.04340662,
+              0.02367534,  -0.99971877,  -0.00136708,  -0.01782382,
+              0.00000000,  0.00000000,  0.00000000,  1.00000000]
+
+    # ===== Method-specific: XFeat + LightGlue (mono) =====
+    cam0_calib: "config/subt_mrs/cam_rc7_mei.yaml"
+    fisheye: true
+    fisheye_mask: "config/subt_mrs/fisheye_mask_rc7.png"
+    cam1_calib: ""
+    image_width: 640
+    image_height: 480
+    image_encoding: "mono8"
+    max_tracked_keypoints: 160
+    min_feature_distance: 20
+    enable_visualization: false
+    enable_csv_logging: true
+    log_folder: "./logs"
+    feature_extraction_method: 5
+    use_descriptor_matcher: true
+    matcher_type: "lightglue"
+    matcher_score_threshold: 0.2
+    weights_folder: "weights/subt_mrs"
