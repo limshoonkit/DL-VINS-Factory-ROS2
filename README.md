@@ -3,16 +3,21 @@
 
 ## Demo
 
+1. ![NTU-VIRAL combined](media/ntu_combined.mp4)
+   
 https://github.com/user-attachments/assets/bbd4ba3f-6376-4c9c-a9f7-bf9824ee06c0
 
-![NTU-VIRAL combined](media/ntu_combined.mp4)
-
-
+2. ![EuRoC combined](media/euroc_combined.mp4)
+   
 https://github.com/user-attachments/assets/b1bf0218-9f3f-4836-97f0-54fa2f88fc5c
 
-![EuRoC combined](media/euroc_combined.mp4)
+3. ALIKED_LK SubT_MRS smoke room
 
+https://github.com/user-attachments/assets/d04eb0d0-6a45-4aa6-8a83-ee4e06d12958
 
+4. SuperPoint_LightGlue SubT_MRS low_light1
+
+https://github.com/user-attachments/assets/91dc3863-0ca3-4fba-b527-1fde5a592d41
 
 ---
 
