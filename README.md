@@ -1,5 +1,6 @@
 # DL-VINS Factory ROS2
 
+A tightly coupled visual-inertial odometry (VIO) system with deep learning front-ends for feature extraction and matching. It replaces classical hand-crafted features with learned alternatives — **ALIKED**, **RaCo**, **SuperPoint**, **XFeat** with either Lucas-Kanade optical flow tracking or frame-to-frame **LightGlue** matching — accelerated via TensorRT for deployment on NVIDIA Jetson. Optional loop closure is provided through [AnyLoc](https://github.com/AnyLoc/AnyLoc) using DINOv2 + VLAD place recognition. The system is evaluated against public benchmarks (EuRoC, NTU-VIRAL, SubT-MRS) and compared to baselines (LET-Net, VINS-Fusion, OKVIS2).
 
 ## Demo
 
