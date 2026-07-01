@@ -1,0 +1,92 @@
+%YAML:1.0
+# OKVIS2 config — EuRoC stereo-inertial (cam0+cam1, /imu0).
+# Calibration identical to okvis2/config/euroc.yaml and matches VINS-Fusion
+# euroc/cam{0,1}_pinhole.yaml + body_T_cam{0,1}, and DL-VINS euroc config.
+cameras:
+     - {T_SC:
+        [ 0.0148655429818, -0.999880929698, 0.00414029679422, -0.0216401454975,
+          0.999557249008, 0.0149672133247, 0.025715529948, -0.064676986768,
+          -0.0257744366974, 0.00375618835797, 0.999660727178, 0.00981073058949,
+           0.0, 0.0, 0.0, 1.0],
+        image_dimension: [752, 480],
+        distortion_coefficients: [-0.28340811217, 0.0739590738929, 0.000193595028569, 1.76187114545e-05],
+        distortion_type: radialtangential,
+        focal_length: [458.654880721, 457.296696463],
+        principal_point: [367.215803962, 248.37534061],
+        camera_type: gray,
+        slam_use: okvis}
+
+     - {T_SC:
+        [ 0.0125552670891, -0.999755099723, 0.0182237714554, -0.0198435579556,
+          0.999598781151, 0.0130119051815, 0.0251588363115, 0.0453689425024,
+          -0.0253898008918, 0.0179005838253, 0.999517347078, 0.00786212447038,
+           0.0, 0.0, 0.0, 1.0],
+        image_dimension: [752, 480],
+        distortion_coefficients: [-0.283683654496, 0.0745128430929, -0.000104738949098, -3.55590700274e-05],
+        distortion_type: radialtangential,
+        focal_length: [457.587426604, 456.13442556],
+        principal_point: [379.99944652, 255.238185386],
+        camera_type: gray,
+        slam_use: okvis}
+
+camera_parameters:
+    timestamp_tolerance: 0.005
+    sync_cameras: [0, 1]
+    image_delay: 0.0
+    online_calibration:
+        do_extrinsics: false
+        do_extrinsics_final_ba: true
+        sigma_r: 0.01
+        sigma_alpha: 0.1
+        sigma_r_final_ba: 0.03
+        sigma_alpha_final_ba: 0.3
+
+imu_parameters:
+    use: true
+    a_max: 176.0
+    g_max: 7.8
+    sigma_g_c: 20.0e-4
+    sigma_a_c: 20.0e-3
+    sigma_bg: 0.01
+    sigma_ba: 0.1
+    sigma_gw_c: 20.0e-5
+    sigma_aw_c: 20.0e-3
+    g: 9.81007
+    g0: [ 0.0, 0.0, 0.0 ]
+    a0: [ -0.05, 0.09, 0.01 ]
+    T_BS:
+        [1.0000, 0.0000, 0.0000, 0.0000,
+         0.0000, 1.0000, 0.0000, 0.0000,
+         0.0000, 0.0000, 1.0000, 0.0000,
+         0.0000, 0.0000, 0.0000, 1.0000]
+
+frontend_parameters:
+    detection_threshold: 38.0
+    absolute_threshold: 150.0
+    matching_threshold: 60.0
+    octaves: 0
+    max_num_keypoints: 700
+    keyframe_overlap: 0.60
+    use_cnn: false
+    parallelise_detection: true
+    num_matching_threads: 4
+
+estimator_parameters:
+    num_keyframes: 5
+    num_loop_closure_frames: 3
+    num_imu_frames: 3
+    do_loop_closures: false
+    do_final_ba: false
+    enforce_realtime: true
+    realtime_min_iterations: 3
+    realtime_max_iterations: 10
+    realtime_time_limit: 0.035
+    realtime_num_threads: 3
+    full_graph_iterations: 15
+    full_graph_num_threads: 3
+    p_dbow: 0.4
+    drift_percentage_heuristic: 1.35
+
+output_parameters:
+    display_matches: false
+    display_overhead: false

@@ -1,0 +1,459 @@
+[INFO] [launch]: All log files can be found below /home/ubuntu/.ros/log/2026-06-23-13-44-52-215697-ubuntu-Alienware-m15-R7-929726
+[INFO] [launch]: Default logging verbosity is set to INFO
+[INFO] [component_container_mt-1]: process started with pid [929917]
+[component_container_mt-1] [INFO] [1782193492.571568470] [dl_vins.dl_vins_container]: Load Library: /home/ubuntu/dl-vins-factory/DL-VINS/install/dl_vins/lib/libdl_vins_component.so
+[component_container_mt-1] [INFO] [1782193492.655174863] [dl_vins.dl_vins_container]: Found class: rclcpp_components::NodeFactoryTemplate<uosm::perception::DlVinsComponent>
+[component_container_mt-1] [INFO] [1782193492.655243862] [dl_vins.dl_vins_container]: Instantiate class: rclcpp_components::NodeFactoryTemplate<uosm::perception::DlVinsComponent>
+[component_container_mt-1] [INFO] [1782193492.660093092] [dl_vins_component]: **********************************
+[component_container_mt-1] [INFO] [1782193492.660120285] [dl_vins_component]:  DLVINS Component                 
+[component_container_mt-1] [INFO] [1782193492.660130132] [dl_vins_component]: **********************************
+[component_container_mt-1] [INFO] [1782193492.660138695] [dl_vins_component]:  * namespace: /
+[component_container_mt-1] [INFO] [1782193492.660148790] [dl_vins_component]:  * node name: dl_vins_component
+[component_container_mt-1] [INFO] [1782193492.660157449] [dl_vins_component]: **********************************
+[component_container_mt-1] [INFO] [1782193492.661125670] [dl_vins_component]: Estimator Parameters:
+[component_container_mt-1] [INFO] [1782193492.661142490] [dl_vins_component]:  * window_size: 10 (compile-time)
+[component_container_mt-1] [INFO] [1782193492.661152394] [dl_vins_component]:  * gravity: 9.81007
+[component_container_mt-1] [INFO] [1782193492.661171990] [dl_vins_component]:  * device: CPU
+[component_container_mt-1] [INFO] [1782193492.661180400] [dl_vins_component]:  * mode: mono
+[component_container_mt-1] [INFO] [1782193492.661188446] [dl_vins_component]:  * initial_td: 0.0000 s (estimate_td=false)
+[component_container_mt-1] [INFO] [1782193492.661200628] [dl_vins_component]:  * init gates: max_g_error=0.500, max_abias=0.250, scale=[0.100, 10.000]
+[component_container_mt-1] [INFO] [1782193492.661215571] [dl_vins_component]:  * init_min_parallax_ratio: 0.0652 (30.0 px @ ref focal 460)
+[component_container_mt-1] [INFO] [1782193492.661227759] [dl_vins_component]:  * estimate_extrinsic: true (online, gated)
+[component_container_mt-1] [INFO] [1782193492.661235729] [dl_vins_component]: Tracker Parameters:
+[component_container_mt-1] [INFO] [1782193492.661243380] [dl_vins_component]:  * feature_extraction: ALIKED
+[component_container_mt-1] [INFO] [1782193492.661251615] [dl_vins_component]:  * max_keypoints: 256
+[component_container_mt-1] [INFO] [1782193492.661259762] [dl_vins_component]:  * use_descriptor_matcher: true
+[INFO] [launch_ros.actions.load_composable_nodes]: Loaded node '/dl_vins_component' in container '/dl_vins/dl_vins_container'
+[component_container_mt-1] [INFO] [1782193492.664127319] [dl_vins.dl_vins_container]: Load Library: /home/ubuntu/dl-vins-factory/DL-VINS/install/loop_fusion/lib/libloop_fusion_component.so
+[component_container_mt-1] [INFO] [1782193492.667401520] [dl_vins.dl_vins_container]: Found class: rclcpp_components::NodeFactoryTemplate<uosm::perception::LoopFusionComponent>
+[component_container_mt-1] [INFO] [1782193492.667425883] [dl_vins.dl_vins_container]: Instantiate class: rclcpp_components::NodeFactoryTemplate<uosm::perception::LoopFusionComponent>
+[component_container_mt-1] [INFO] [1782193492.670306829] [loop_fusion]: loop_fusion config_file: /home/ubuntu/dl-vins-factory/DL-VINS/install/loop_fusion/share/loop_fusion/config/loop_fusion_ntu_viral.yaml
+[component_container_mt-1] [INFO] [1782193492.670883552] [loop_fusion]: cam calib path: /home/ubuntu/dl-vins-factory/DL-VINS/install/dl_vins/share/dl_vins/config/ntu_viral/camRight.yaml
+[component_container_mt-1] [INFO] [1782193492.671324752] [loop_fusion]: Derived FOCAL_LENGTH_PX = 431.32 px from m_camera
+[component_container_mt-1] [INFO] [1782193492.671522867] [dl_vins_component]: Resolved paths:
+[component_container_mt-1] [INFO] [1782193492.671620494] [dl_vins_component]:   cam0_calib: /home/ubuntu/dl-vins-factory/DL-VINS/install/dl_vins/share/dl_vins/config/ntu_viral/camRight.yaml
+[component_container_mt-1] [INFO] [1782193492.671637452] [dl_vins_component]:   weights_folder: /home/ubuntu/dl-vins-factory/DL-VINS/install/dl_vins/share/dl_vins/weights/ntu_viral
+[component_container_mt-1] [INFO] [1782193492.671651189] [dl_vins_component]:   use_descriptor_matcher: true (type='lightglue')
+[component_container_mt-1] [INFO] [1782193492.671586405] [loop_fusion]: loop tunables: MIN_SCORE=0.030 PNP_INFLATION=10.00 RECALL_IGNORE_RECENT_COUNT=50 MAX_THETA_DIFF=30.00 MAX_POS_DIFF=20.00 MIN_LOOP_NUM=25
+[component_container_mt-1] [MetricsLogger] Logging enabled, folder: /home/ubuntu/dl-vins-factory/tmp/ntu_viral_eval_mono_loop/dlvins_aliked_lightglue_mono_loop/nya_02/./logs, session: 20260623_134452
+[component_container_mt-1] [vlad] codebook loaded: 32 clusters x 384 dim  (VLAD dim 12288)
+[component_container_mt-1] [INFO] [1782193492.673478668] [feature_tracker]: Auto-computed focal_length from PinholeCamera: 432.0px
+[component_container_mt-1] The logger passed into createInferRuntime differs from one already provided for an existing builder, runtime, or refitter. Uses of the global logger, returned by nvinfer1::getLogger(), will return the existing value.
+[component_container_mt-1] Loaded engine size: 2 MiB
+[component_container_mt-1] [MemUsageChange] TensorRT-managed allocation in IExecutionContext creation: CPU +0, GPU +272, now: CPU 0, GPU 274 (MiB)
+[component_container_mt-1] [INFO] [1782193492.838238517] [dense_extractor]: Input tensor: image
+[component_container_mt-1] [INFO] [1782193492.838262704] [dense_extractor]: Output tensor: score_map
+[component_container_mt-1] [INFO] [1782193492.838269659] [dense_extractor]: Output tensor: feature_map
+[component_container_mt-1] [INFO] [1782193492.838274668] [dense_extractor]: DenseExtractor ready: B=1 480x768 C=3 Cf=128
+[component_container_mt-1] [dino_vpr] ready: 280x448 -> 640 tokens x 384  (VLAD dim 12288)
+[component_container_mt-1] [INFO] [1782193492.876362786] [loop_fusion]: loop closure GLOBAL_VPR: AnyLoc DINOv2+VLAD ready (engine=dino_vits14_h280_w448.fp16.engine 280x448, VLAD dim=12288, sim_thresh=0.60 ratio=0.85)
+[component_container_mt-1] [LoopMetricsLogger] Logging enabled, folder: /home/ubuntu/dl-vins-factory/tmp/ntu_viral_eval_mono_loop/dlvins_aliked_lightglue_mono_loop/nya_02/./logs, session: 20260623_134452
+[component_container_mt-1] [loop_fusion] 4-DoF (x, y, z, yaw) pose-graph optimization thread starting
+[component_container_mt-1] [LoopMetricsLogger] loop_fusion CSV: /home/ubuntu/dl-vins-factory/tmp/ntu_viral_eval_mono_loop/dlvins_aliked_lightglue_mono_loop/nya_02/./logs/loop_fusion_metrics_20260623_134452.csv
+[component_container_mt-1] [LoopMetricsLogger] loop_optimizations CSV: /home/ubuntu/dl-vins-factory/tmp/ntu_viral_eval_mono_loop/dlvins_aliked_lightglue_mono_loop/nya_02/./logs/loop_optimizations_20260623_134452.csv
+[component_container_mt-1] [INFO] [1782193492.879750694] [loop_fusion]: loop_fusion: composable component up; spinning on container
+[INFO] [launch_ros.actions.load_composable_nodes]: Loaded node '/loop_fusion' in container '/dl_vins/dl_vins_container'
+[component_container_mt-1] [INFO] [1782193492.983627127] [dense_extractor]: Warmup complete (3 iters, B=1 480x768)
+[component_container_mt-1] The logger passed into createInferRuntime differs from one already provided for an existing builder, runtime, or refitter. Uses of the global logger, returned by nvinfer1::getLogger(), will return the existing value.
+[component_container_mt-1] Loaded engine size: 1 MiB
+[component_container_mt-1] [MemUsageChange] TensorRT-managed allocation in IExecutionContext creation: CPU +0, GPU +5, now: CPU 0, GPU 279 (MiB)
+[component_container_mt-1] [INFO] [1782193492.993522680] [descriptor_head]: Input tensor: feature_map
+[component_container_mt-1] [INFO] [1782193492.993539666] [descriptor_head]: Input tensor: kpts_n
+[component_container_mt-1] [INFO] [1782193492.993545731] [descriptor_head]: Output tensor: descriptors
+[component_container_mt-1] [INFO] [1782193492.993550032] [descriptor_head]: DescriptorHead ready: B=1 K=256 HxW=480x768 Cf=128 D=128
+[component_container_mt-1] [INFO] [1782193492.995173090] [descriptor_head]: Warmup complete (3 iters, B=1 K=256 480x768 D=128)
+[component_container_mt-1] [INFO] [1782193493.001915658] [feature_tracker]: Loaded ALIKED dense pipeline (batch=1, dhead=yes)
+[component_container_mt-1] The logger passed into createInferRuntime differs from one already provided for an existing builder, runtime, or refitter. Uses of the global logger, returned by nvinfer1::getLogger(), will return the existing value.
+[component_container_mt-1] Loaded engine size: 24 MiB
+[component_container_mt-1] [MemUsageChange] TensorRT-managed allocation in IExecutionContext creation: CPU +0, GPU +3, now: CPU 0, GPU 303 (MiB)
+[component_container_mt-1] [INFO] [1782193493.112693316] [lightglue_matcher]: LightGlueMatcher initialized: engine='/home/ubuntu/dl-vins-factory/DL-VINS/install/dl_vins/share/dl_vins/weights/matcher/mono_extractor/aliked_lightglue_kp256_sim.fp16.engine', desc_dim=128, max_kp=256, kpt_dim=2, threshold=0.20, mode=single-pair
+[component_container_mt-1] [INFO] [1782193493.124767031] [lightglue_matcher]: Warmup complete (3 iters, max_kp=256, desc_dim=128)
+[component_container_mt-1] [INFO] [1782193493.124799658] [feature_tracker]: Loaded 'lightglue' descriptor matcher: /home/ubuntu/dl-vins-factory/DL-VINS/install/dl_vins/share/dl_vins/weights/matcher/mono_extractor/aliked_lightglue_kp256_sim.fp16.engine (threshold=0.20, desc_dim=128)
+[component_container_mt-1] [MetricsLogger] Feature tracker CSV: /home/ubuntu/dl-vins-factory/tmp/ntu_viral_eval_mono_loop/dlvins_aliked_lightglue_mono_loop/nya_02/./logs/feature_tracker_aliked_20260623_134452.csv
+[component_container_mt-1] [INFO] [1782193493.124889649] [dl_vins_component]: Feature tracker initialized
+[component_container_mt-1] [INFO] [1782193493.124925190] [dl_vins_component]: Extrinsics loaded:
+[component_container_mt-1] [INFO] [1782193493.124936195] [dl_vins_component]:   tic0: [0.0052, 0.1348, 0.0147]
+[component_container_mt-1] [INFO] [1782193493.124950078] [dl_vins_component]: Auto-detected norm_focal_length: 432.04 px
+[component_container_mt-1] [MetricsLogger] Estimator CSV: /home/ubuntu/dl-vins-factory/tmp/ntu_viral_eval_mono_loop/dlvins_aliked_lightglue_mono_loop/nya_02/./logs/estimator_metrics_20260623_134452.csv
+[component_container_mt-1] [INFO] [1782193493.125113467] [estimator]: Processing thread started
+[component_container_mt-1] [INFO] [1782193493.125160174] [dl_vins_component]: Tracking thread started
+[component_container_mt-1] [INFO] [1782193493.125233847] [dl_vins_component]: IMU subscription QoS reliability: reliable
+[component_container_mt-1] [INFO] [1782193493.127271774] [dl_vins_component]: DlVinsComponent fully initialized
+[component_container_mt-1] [INFO] [1782193497.620004195] [estimator]: Initializing first IMU pose
+[component_container_mt-1] [INFO] [1782193499.620095492] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782193499.821314561] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782193500.019986258] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782193500.227209766] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782193500.420570537] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782193500.621947769] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782193500.819736331] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782193501.022256505] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782193501.221665545] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782193501.423961312] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782193501.619372687] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782193501.821454439] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782193502.019238664] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782193502.220273514] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782193502.418417839] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782193502.618467691] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782193502.820733476] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782193503.019869588] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782193503.219863657] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782193503.420402781] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782193503.618917355] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782193503.824456395] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782193504.020553389] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782193504.220920373] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782193504.418504809] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782193504.621530801] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782193504.819952436] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782193505.019730069] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782193505.220823170] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782193505.421139120] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782193505.619516144] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782193505.821047886] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782193506.018897678] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782193506.221944226] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782193506.420010070] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782193506.620197430] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782193506.824499774] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782193507.021982463] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782193507.224194309] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782193507.422475901] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782193507.621370888] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782193507.821762223] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782193508.023800213] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782193508.222680370] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782193508.423038237] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782193508.625875798] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782193508.822864694] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782193509.021898196] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782193509.226650938] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782193509.423560808] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782193509.620398994] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782193509.821662001] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782193510.023859820] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782193510.223269598] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782193510.423064394] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782193510.624023170] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782193510.824102390] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782193511.027018898] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782193511.224576735] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782193511.423519595] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782193511.623996893] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782193511.824214303] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782193512.024064058] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782193512.224737004] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782193512.423980462] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782193512.623935189] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782193512.824099154] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782193513.025426874] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782193513.226511181] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782193513.424638984] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782193513.621773447] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782193513.821579262] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782193514.028332461] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782193514.222804599] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782193514.422394808] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782193514.622822103] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782193514.830466283] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782193515.026200226] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782193515.226324065] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782193515.422798240] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782193515.625162387] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782193515.823847429] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782193516.024168569] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782193516.222822811] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782193516.431343585] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782193516.623394950] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782193516.824008577] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782193517.022881538] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782193517.226181262] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782193517.422623053] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782193517.623831210] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782193517.825953139] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782193518.028461830] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782193518.224614913] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782193518.424508020] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782193518.622989892] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782193518.824655265] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782193519.027769999] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782193519.225259073] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782193519.423954816] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782193519.628136748] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782193519.825386637] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782193520.023705198] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782193520.225820067] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782193520.426077511] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782193520.624625626] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782193520.827389782] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782193521.026414393] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782193521.226064117] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782193521.444041973] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782193521.624737879] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782193521.824329192] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782193522.024833191] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782193522.227145435] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782193522.425536528] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782193522.626738924] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782193522.827827399] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782193523.027707816] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782193523.226024611] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782193523.427788904] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782193523.627502331] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782193523.828393728] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782193524.030278056] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782193524.227405923] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782193524.426741803] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782193524.629575088] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782193524.825055037] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782193525.025013324] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782193525.227069363] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782193525.427494639] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782193525.625194302] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782193525.825584860] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782193526.026899190] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782193526.227332263] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782193526.426983011] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782193526.626830634] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782193526.826502863] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782193527.026518420] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782193527.226275788] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782193527.436790365] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782193527.626100173] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782193527.827483649] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782193528.026126674] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782193528.226994148] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782193528.426234600] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782193528.626639319] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782193528.826160009] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782193529.026153066] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782193529.227410416] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782193529.426886115] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782193529.626641836] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782193529.826688838] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782193530.026860745] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782193530.227223211] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782193530.426470678] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782193530.626982280] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782193530.828504791] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782193531.039377824] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782193531.228449910] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782193531.427966224] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782193531.627468469] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782193531.827405386] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782193532.027165848] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782193532.227035883] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782193532.428413585] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782193532.628496055] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782193532.827649103] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782193533.029895327] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782193533.227267036] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782193533.428081605] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782193533.629357873] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782193533.830464190] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782193534.029502015] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782193534.229850990] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782193534.429314830] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782193534.630421720] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782193534.829042511] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782193535.028178388] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782193535.228452055] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782193535.427464859] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782193535.627855481] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782193535.828042040] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782193536.028472202] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782193536.228653161] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782193536.428866497] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782193536.628697451] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782193536.828501663] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782193537.029253312] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782193537.228782365] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782193537.429526871] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782193537.629099154] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782193537.829202070] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782193538.029286670] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782193538.228969629] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782193538.429877835] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782193538.630604924] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782193538.829724178] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782193539.030235310] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782193539.229600341] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782193539.429747286] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782193539.630265015] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782193539.830106500] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782193540.030240737] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782193540.230906081] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782193540.430514480] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782193540.630102362] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782193540.831191825] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782193541.030620056] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782193541.230796961] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782193541.430435538] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782193541.630415200] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782193541.831666692] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782193542.053833231] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782193542.231008749] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782193542.430583285] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782193542.630983043] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782193542.832093417] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782193543.031890895] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782193543.231247618] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782193543.430756863] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782193543.630967396] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782193543.831482785] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782193544.031542594] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782193544.233241908] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782193544.431078400] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782193544.630584346] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782193544.831640996] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782193545.034047118] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782193545.233713557] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782193545.433593067] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782193545.633713527] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782193545.831298650] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782193546.031399422] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782193546.231030730] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782193546.432307967] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782193546.631684960] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782193546.830663645] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782193547.032006326] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782193547.231908122] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782193547.431293518] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782193547.631324546] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782193547.838017749] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782193548.032677430] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782193548.233144550] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782193548.432609930] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782193548.633273826] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782193548.834141232] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782193549.033003049] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782193549.232371491] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782193549.432749936] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782193549.633886865] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782193549.833444588] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782193550.033496775] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782193550.232912329] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782193550.432096459] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782193550.632633791] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782193550.832506881] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782193551.033212772] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782193551.233165351] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782193551.433141123] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782193551.633064821] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782193551.833551844] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782193552.034126907] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782193552.233350571] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782193552.434054018] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782193552.634726883] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782193552.834915304] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782193553.034045514] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782193553.254422317] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782193553.435465267] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782193553.634374935] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782193553.833637466] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] WARNING: Logging before InitGoogleLogging() is written to STDERR
+[component_container_mt-1] W0623 13:45:54.098611 930023 levenberg_marquardt_strategy.cc:123] Linear solver failure. Failed to compute a step: Eigen failure. Unable to perform dense Cholesky factorization.
+[component_container_mt-1] W0623 13:45:54.100517 930023 levenberg_marquardt_strategy.cc:123] Linear solver failure. Failed to compute a step: Eigen failure. Unable to perform dense Cholesky factorization.
+[component_container_mt-1] W0623 13:45:54.103726 930023 levenberg_marquardt_strategy.cc:123] Linear solver failure. Failed to compute a step: Eigen failure. Unable to perform dense Cholesky factorization.
+[component_container_mt-1] [WARN] [1782193554.215661499] [estimator]: Mono init rejected: scale=0.0298 outside [0.100, 10.000]. Clearing state.
+[component_container_mt-1] [INFO] [1782193554.233852859] [estimator]: Initializing first IMU pose
+[component_container_mt-1] [WARN] [1782193556.046549122] [sfm]: Unstable feature tracking, only 0 points for PnP
+[component_container_mt-1] W0623 13:45:56.302963 930023 levenberg_marquardt_strategy.cc:126] Linear solver failure. Failed to compute a finite step.
+[component_container_mt-1] [WARN] [1782193556.307957742] [sfm]: Vision-only BA did not converge
+[component_container_mt-1] [WARN] [1782193556.551977069] [sfm]: Vision-only BA did not converge
+[component_container_mt-1] [INFO] [1782193556.784954981] [estimator]: Mono initialization complete!
+[component_container_mt-1] [INFO] [1782193556.784976049] [estimator]: [init_quality] |g|=9.8101 scale=0.1281 abias=0.114 static_bootstrap=no
+[component_container_mt-1] optimize pose graph 
+[component_container_mt-1] optimize pose graph 
+[component_container_mt-1] optimize pose graph 
+[component_container_mt-1] optimize pose graph 
+[component_container_mt-1] optimize pose graph 
+[component_container_mt-1] optimize pose graph 
+[component_container_mt-1] optimize pose graph 
+[component_container_mt-1] optimize pose graph 
+[component_container_mt-1] optimize pose graph 
+[component_container_mt-1] optimize pose graph 
+[component_container_mt-1] optimize pose graph 
+[component_container_mt-1] optimize pose graph 
+[component_container_mt-1] optimize pose graph 
+[component_container_mt-1] optimize pose graph 
+[component_container_mt-1] optimize pose graph 
+[component_container_mt-1] optimize pose graph 
+[component_container_mt-1] optimize pose graph 
+[component_container_mt-1] optimize pose graph 
+[component_container_mt-1] optimize pose graph 
+[component_container_mt-1] optimize pose graph 
+[component_container_mt-1] optimize pose graph 
+[component_container_mt-1] optimize pose graph 
+[component_container_mt-1] optimize pose graph 
+[component_container_mt-1] optimize pose graph 
+[component_container_mt-1] optimize pose graph 
+[component_container_mt-1] optimize pose graph 
+[component_container_mt-1] optimize pose graph 
+[component_container_mt-1] optimize pose graph 
+[component_container_mt-1] optimize pose graph 
+[component_container_mt-1] optimize pose graph 
+[component_container_mt-1] optimize pose graph 
+[component_container_mt-1] optimize pose graph 
+[component_container_mt-1] optimize pose graph 
+[component_container_mt-1] optimize pose graph 
+[component_container_mt-1] optimize pose graph 
+[component_container_mt-1] optimize pose graph 
+[component_container_mt-1] optimize pose graph 
+[component_container_mt-1] optimize pose graph 
+[component_container_mt-1] optimize pose graph 
+[component_container_mt-1] optimize pose graph 
+[component_container_mt-1] optimize pose graph 
+[component_container_mt-1] optimize pose graph 
+[component_container_mt-1] optimize pose graph 
+[component_container_mt-1] optimize pose graph 
+[component_container_mt-1] optimize pose graph 
+[component_container_mt-1] optimize pose graph 
+[component_container_mt-1] optimize pose graph 
+[component_container_mt-1] optimize pose graph 
+[component_container_mt-1] optimize pose graph 
+[component_container_mt-1] optimize pose graph 
+[component_container_mt-1] optimize pose graph 
+[component_container_mt-1] optimize pose graph 
+[component_container_mt-1] optimize pose graph 
+[component_container_mt-1] optimize pose graph 
+[component_container_mt-1] optimize pose graph 
+[component_container_mt-1] optimize pose graph 
+[component_container_mt-1] optimize pose graph 
+[component_container_mt-1] optimize pose graph 
+[component_container_mt-1] optimize pose graph 
+[component_container_mt-1] optimize pose graph 
+[component_container_mt-1] optimize pose graph 
+[component_container_mt-1] optimize pose graph 
+[component_container_mt-1] optimize pose graph 
+[component_container_mt-1] optimize pose graph 
+[component_container_mt-1] optimize pose graph 
+[component_container_mt-1] optimize pose graph 
+[component_container_mt-1] optimize pose graph 
+[component_container_mt-1] optimize pose graph 
+[component_container_mt-1] optimize pose graph 
+[component_container_mt-1] optimize pose graph 
+[component_container_mt-1] optimize pose graph 
+[component_container_mt-1] optimize pose graph 
+[component_container_mt-1] optimize pose graph 
+[component_container_mt-1] optimize pose graph 
+[component_container_mt-1] optimize pose graph 
+[component_container_mt-1] optimize pose graph 
+[component_container_mt-1] optimize pose graph 
+[component_container_mt-1] optimize pose graph 
+[component_container_mt-1] optimize pose graph 
+[component_container_mt-1] optimize pose graph 
+[component_container_mt-1] optimize pose graph 
+[component_container_mt-1] optimize pose graph 
+[component_container_mt-1] optimize pose graph 
+[component_container_mt-1] optimize pose graph 
+[WARNING] [launch]: user interrupted with ctrl-c (SIGINT)
+[component_container_mt-1] [INFO] [1782193933.081694862] [rclcpp]: signal_handler(SIGINT/SIGTERM)
+[component_container_mt-1] [WARN] [1782193933.113476262] [dl_vins_component]: DlVinsComponent shutting down.
+[component_container_mt-1] [INFO] [1782193933.113904936] [estimator]: Processing thread stopped
+[component_container_mt-1] [MetricsLogger] Feature tracker log closed
+[component_container_mt-1] [MetricsLogger] Estimator log closed
+[component_container_mt-1] [LoopMetricsLogger] loop_fusion log closed
+[component_container_mt-1] [LoopMetricsLogger] loop_optimizations log closed
+[INFO] [component_container_mt-1]: process has finished cleanly [pid 929917]

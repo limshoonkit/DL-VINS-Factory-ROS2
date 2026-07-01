@@ -1,0 +1,94 @@
+%YAML:1.0
+# OKVIS2 config — Botanic Garden stereo-inertial (COLOR/RGB).
+# cam0 = dalsa color left (/dalsa_color/left/image_raw), cam1 = dalsa color right
+# (/dalsa_color/right/image_raw), IMU = /imu/data.
+# Intrinsics from dalsa_rgb0/rgb1_pinhole_down.yaml; T_SC from official calib_chain.yaml
+# (Kalibr) T_xsens_rgb0/rgb1 (baseline ~0.254 m).
+cameras:
+     - {T_SC:
+        [-0.00140533, -0.00896721, 0.99995881, 0.18377395,
+              -0.99999022, 0.0042065, -0.00136765, 0.14789743,
+              -0.00419407, -0.99995095, -0.00897304, -0.0087318,
+              0.0, 0.0, 0.0, 1.0],
+        image_dimension: [960, 600],
+        distortion_coefficients: [-0.060164620903866, 0.094005180631043, 0.0, 0.0],
+        distortion_type: radialtangential,
+        focal_length: [642.9165664800531, 641.9171825800378],
+        principal_point: [460.1840658156501, 308.5846449100310],
+        camera_type: gray,
+        slam_use: okvis}
+
+     - {T_SC:
+        [-0.00120822, -0.00094742, 0.99999882, 0.18313715,
+              -0.99997156, 0.00744575, -0.00120114, -0.10587443,
+              -0.00744461, -0.99997183, -0.00095639, -0.00933521,
+              0.0, 0.0, 0.0, 1.0],
+        image_dimension: [960, 600],
+        distortion_coefficients: [-0.057705696896734, 0.086955444511364, 0.0, 0.0],
+        distortion_type: radialtangential,
+        focal_length: [644.4385505412966, 643.5879520187435],
+        principal_point: [455.1775919513420, 304.1616226347153],
+        camera_type: gray,
+        slam_use: okvis}
+
+camera_parameters:
+    timestamp_tolerance: 0.005
+    sync_cameras: [0, 1]
+    image_delay: 0.0
+    online_calibration:
+        do_extrinsics: false
+        do_extrinsics_final_ba: true
+        sigma_r: 0.01
+        sigma_alpha: 0.1
+        sigma_r_final_ba: 0.03
+        sigma_alpha_final_ba: 0.3
+
+imu_parameters:
+    use: true
+    a_max: 176.0
+    g_max: 7.8
+    sigma_g_c: 2.0e-3
+    sigma_a_c: 1.0e-2
+    sigma_bg: 0.01
+    sigma_ba: 0.1
+    sigma_gw_c: 8.0e-5
+    sigma_aw_c: 3.0e-5
+    g: 9.81007
+    g0: [ 0.0, 0.0, 0.0 ]
+    a0: [ 0.0, 0.0, 0.0 ]
+    T_BS:
+        [1.0000, 0.0000, 0.0000, 0.0000,
+         0.0000, 1.0000, 0.0000, 0.0000,
+         0.0000, 0.0000, 1.0000, 0.0000,
+         0.0000, 0.0000, 0.0000, 1.0000]
+
+frontend_parameters:
+    detection_threshold: 38.0
+    absolute_threshold: 150.0
+    matching_threshold: 60.0
+    octaves: 0
+    max_num_keypoints: 700
+    keyframe_overlap: 0.60
+    use_cnn: true
+    parallelise_detection: true
+    num_matching_threads: 4
+
+estimator_parameters:
+    num_keyframes: 5
+    num_loop_closure_frames: 3
+    num_imu_frames: 3
+    do_loop_closures: true
+    do_final_ba: false
+    enforce_realtime: false
+    realtime_min_iterations: 3
+    realtime_max_iterations: 10
+    realtime_time_limit: 0.07
+    realtime_num_threads: 3
+    full_graph_iterations: 15
+    full_graph_num_threads: 3
+    p_dbow: 0.4
+    drift_percentage_heuristic: 1.35
+
+output_parameters:
+    display_matches: false
+    display_overhead: false
