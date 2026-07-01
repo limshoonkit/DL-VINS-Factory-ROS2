@@ -1,0 +1,166 @@
+[INFO] [launch]: All log files can be found below /home/nvidia/.ros/log/2026-06-29-00-47-16-770851-nvidia-desktop-3621075
+[INFO] [launch]: Default logging verbosity is set to INFO
+[INFO] [component_container_mt-1]: process started with pid [3621229]
+[component_container_mt-1] [INFO] [1782665237.181305692] [dl_vins.dl_vins_container]: Load Library: /home/nvidia/dl-vins-factory/DL-VINS/install/dl_vins/lib/libdl_vins_component.so
+[component_container_mt-1] [INFO] [1782665237.320847959] [dl_vins.dl_vins_container]: Found class: rclcpp_components::NodeFactoryTemplate<uosm::perception::DlVinsComponent>
+[component_container_mt-1] [INFO] [1782665237.321860992] [dl_vins.dl_vins_container]: Instantiate class: rclcpp_components::NodeFactoryTemplate<uosm::perception::DlVinsComponent>
+[component_container_mt-1] [INFO] [1782665237.331470145] [dl_vins_component]: **********************************
+[component_container_mt-1] [INFO] [1782665237.332490697] [dl_vins_component]:  DLVINS Component                 
+[component_container_mt-1] [INFO] [1782665237.332876736] [dl_vins_component]: **********************************
+[component_container_mt-1] [INFO] [1782665237.333194137] [dl_vins_component]:  * namespace: /
+[component_container_mt-1] [INFO] [1782665237.333502994] [dl_vins_component]:  * node name: dl_vins_component
+[component_container_mt-1] [INFO] [1782665237.333803499] [dl_vins_component]: **********************************
+[component_container_mt-1] [INFO] [1782665237.334816307] [dl_vins_component]: Estimator Parameters:
+[component_container_mt-1] [INFO] [1782665237.335138540] [dl_vins_component]:  * window_size: 10 (compile-time)
+[component_container_mt-1] [INFO] [1782665237.335442149] [dl_vins_component]:  * gravity: 9.81007
+[component_container_mt-1] [INFO] [1782665237.335748446] [dl_vins_component]:  * device: CPU
+[component_container_mt-1] [INFO] [1782665237.336056503] [dl_vins_component]:  * mode: mono
+[component_container_mt-1] [INFO] [1782665237.336351312] [dl_vins_component]:  * initial_td: 0.0000 s (estimate_td=false)
+[component_container_mt-1] [INFO] [1782665237.336666056] [dl_vins_component]:  * init gates: max_g_error=0.500, max_abias=0.250, scale=[0.100, 10.000]
+[component_container_mt-1] [INFO] [1782665237.336971937] [dl_vins_component]:  * init_min_parallax_ratio: 0.0652 (30.0 px @ ref focal 460)
+[component_container_mt-1] [INFO] [1782665237.337273434] [dl_vins_component]:  * estimate_extrinsic: false (fixed)
+[component_container_mt-1] [INFO] [1782665237.337570227] [dl_vins_component]: Tracker Parameters:
+[component_container_mt-1] [INFO] [1782665237.337865517] [dl_vins_component]:  * feature_extraction: RACO
+[component_container_mt-1] [INFO] [1782665237.338159398] [dl_vins_component]:  * max_keypoints: 384
+[component_container_mt-1] [INFO] [1782665237.338448895] [dl_vins_component]:  * use_descriptor_matcher: true
+[INFO] [launch_ros.actions.load_composable_nodes]: Loaded node '/dl_vins_component' in container '/dl_vins/dl_vins_container'
+[component_container_mt-1] [INFO] [1782665237.341464793] [dl_vins.dl_vins_container]: Load Library: /home/nvidia/dl-vins-factory/DL-VINS/install/loop_fusion/lib/libloop_fusion_component.so
+[component_container_mt-1] [INFO] [1782665237.346330888] [dl_vins.dl_vins_container]: Found class: rclcpp_components::NodeFactoryTemplate<uosm::perception::LoopFusionComponent>
+[component_container_mt-1] [INFO] [1782665237.346388199] [dl_vins.dl_vins_container]: Instantiate class: rclcpp_components::NodeFactoryTemplate<uosm::perception::LoopFusionComponent>
+[component_container_mt-1] [INFO] [1782665237.349152295] [dl_vins_component]: Resolved paths:
+[component_container_mt-1] [INFO] [1782665237.349224389] [dl_vins_component]:   cam0_calib: /home/nvidia/dl-vins-factory/DL-VINS/install/dl_vins/share/dl_vins/config/euroc/cam0_pinhole.yaml
+[component_container_mt-1] [INFO] [1782665237.349238917] [dl_vins_component]:   fisheye: false, fisheye_mask: 
+[component_container_mt-1] [INFO] [1782665237.349250436] [dl_vins_component]:   weights_folder: /home/nvidia/dl-vins-factory/DL-VINS/install/dl_vins/share/dl_vins/weights/euroc
+[component_container_mt-1] [INFO] [1782665237.349259652] [dl_vins_component]:   use_descriptor_matcher: true (type='lightglue')
+[component_container_mt-1] [MetricsLogger] Logging enabled, folder: /home/nvidia/dl-vins-factory/tmp/euroc_eval_mono_loop/dlvins_raco_lightglue_kp384_mono_loop/MH_05_difficult/./logs, session: 20260629_004717
+[component_container_mt-1] [INFO] [1782665237.350665284] [feature_tracker]: Auto-computed focal_length from PinholeCamera: 458.0px
+[component_container_mt-1] [INFO] [1782665237.354940960] [loop_fusion]: loop_fusion config_file: /home/nvidia/dl-vins-factory/DL-VINS/install/loop_fusion/share/loop_fusion/config/loop_fusion_euroc.yaml
+[component_container_mt-1] [INFO] [1782665237.355750190] [loop_fusion]: cam calib path: /home/nvidia/dl-vins-factory/DL-VINS/install/dl_vins/share/dl_vins/config/euroc/cam0_pinhole.yaml
+[component_container_mt-1] [INFO] [1782665237.356051367] [loop_fusion]: Derived FOCAL_LENGTH_PX = 458.64 px from m_camera
+[component_container_mt-1] [INFO] [1782665237.356108965] [loop_fusion]: loop tunables: MIN_SCORE=0.030 PNP_INFLATION=10.00 RECALL_IGNORE_RECENT_COUNT=50 MAX_THETA_DIFF=30.00 MAX_POS_DIFF=20.00 MIN_LOOP_NUM=25
+[component_container_mt-1] [INFO] [1782665237.356129829] [loop_fusion]: pose-graph opt: window=0 (0=unbounded) max_solver_time=5.00s max_iters=20 threads=1
+[component_container_mt-1] [vlad] codebook loaded: 32 clusters x 384 dim  (VLAD dim 12288)
+[component_container_mt-1] Loaded engine size: 1 MiB
+[component_container_mt-1] [MemUsageChange] TensorRT-managed allocation in IExecutionContext creation: CPU +0, GPU +158, now: CPU 0, GPU 158 (MiB)
+[component_container_mt-1] [dino_vpr][trt] Using an engine plan file across different models of devices is not recommended and is likely to affect performance or even cause errors.
+[component_container_mt-1] [INFO] [1782665237.456959874] [feature_extractor]: Engine input dimensions [480x768] differ from config [480x752], using engine dimensions
+[component_container_mt-1] [INFO] [1782665237.457003041] [feature_extractor]: Found Input tensor: images with dtype: FLOAT32, shape: [480x768]
+[component_container_mt-1] [INFO] [1782665237.457077664] [feature_extractor]: Found Output tensor: keypoints with dtype: FLOAT32
+[component_container_mt-1] [INFO] [1782665237.457086303] [feature_extractor]: Found Output tensor: keypoint_scores with dtype: FLOAT32
+[component_container_mt-1] [INFO] [1782665237.457090495] [feature_extractor]: Using I/O tensors: Input='images', Keypoints='keypoints', Scores='keypoint_scores', Descriptors='', NumKeypoints=''
+[component_container_mt-1] [INFO] [1782665237.460244566] [feature_extractor]: Allocated 0.00 MB pinned memory for raco model (3CH), descriptor_dim: 0
+[component_container_mt-1] [INFO] [1782665237.505124325] [feature_extractor]: Pipeline warmup complete (3 iters, batch=1, 480x768)
+[component_container_mt-1] [INFO] [1782665237.505386015] [feature_tracker]: Loaded raco extractor (batch=1): /home/nvidia/dl-vins-factory/DL-VINS/install/dl_vins/share/dl_vins/weights/euroc/mono_extractor/raco_b1_h480_w768_kp384_sim.fp16.engine
+[component_container_mt-1] Loaded engine size: 1 MiB
+[component_container_mt-1] Using an engine plan file across different models of devices is not recommended and is likely to affect performance or even cause errors.
+[component_container_mt-1] [MemUsageChange] TensorRT-managed allocation in IExecutionContext creation: CPU +0, GPU +317, now: CPU 0, GPU 524 (MiB)
+[component_container_mt-1] [INFO] [1782665237.555813677] [dense_extractor]: Input tensor: image
+[component_container_mt-1] [INFO] [1782665237.555850925] [dense_extractor]: Output tensor: score_map
+[component_container_mt-1] [INFO] [1782665237.555857388] [dense_extractor]: Output tensor: feature_map
+[component_container_mt-1] [INFO] [1782665237.555861516] [dense_extractor]: DenseExtractor ready: B=1 480x768 C=3 Cf=128
+[component_container_mt-1] [dino_vpr] ready: 280x448 -> 640 tokens x 384  (VLAD dim 12288)
+[component_container_mt-1] [INFO] [1782665237.590475625] [loop_fusion]: loop closure GLOBAL_VPR: AnyLoc DINOv2+VLAD ready (engine=dino_vits14_h280_w448.fp16.engine 280x448, VLAD dim=12288, sim_thresh=0.60 ratio=0.85)
+[component_container_mt-1] [LoopMetricsLogger] Logging enabled, folder: /home/nvidia/dl-vins-factory/tmp/euroc_eval_mono_loop/dlvins_raco_lightglue_kp384_mono_loop/MH_05_difficult/./logs, session: 20260629_004717
+[component_container_mt-1] [loop_fusion] 4-DoF (x, y, z, yaw) pose-graph optimization thread starting
+[component_container_mt-1] [LoopMetricsLogger] loop_fusion CSV: /home/nvidia/dl-vins-factory/tmp/euroc_eval_mono_loop/dlvins_raco_lightglue_kp384_mono_loop/MH_05_difficult/./logs/loop_fusion_metrics_20260629_004717.csv
+[component_container_mt-1] [LoopMetricsLogger] loop_optimizations CSV: /home/nvidia/dl-vins-factory/tmp/euroc_eval_mono_loop/dlvins_raco_lightglue_kp384_mono_loop/MH_05_difficult/./logs/loop_optimizations_20260629_004717.csv
+[component_container_mt-1] [INFO] [1782665237.601313710] [loop_fusion]: loop_fusion: composable component up; spinning on container
+[INFO] [launch_ros.actions.load_composable_nodes]: Loaded node '/loop_fusion' in container '/dl_vins/dl_vins_container'
+[component_container_mt-1] [INFO] [1782665237.730173537] [dense_extractor]: Warmup complete (3 iters, B=1 480x768)
+[component_container_mt-1] Loaded engine size: 0 MiB
+[component_container_mt-1] [MemUsageChange] TensorRT-managed allocation in IExecutionContext creation: CPU +0, GPU +6, now: CPU 0, GPU 530 (MiB)
+[component_container_mt-1] [INFO] [1782665237.739986782] [descriptor_head]: Input tensor: feature_map
+[component_container_mt-1] [INFO] [1782665237.740020221] [descriptor_head]: Input tensor: kpts_n
+[component_container_mt-1] [INFO] [1782665237.740026301] [descriptor_head]: Output tensor: descriptors
+[component_container_mt-1] [INFO] [1782665237.740030237] [descriptor_head]: DescriptorHead ready: B=1 K=384 HxW=480x768 Cf=128 D=128
+[component_container_mt-1] [INFO] [1782665237.812451565] [descriptor_head]: Warmup complete (3 iters, B=1 K=384 480x768 D=128)
+[component_container_mt-1] Loaded engine size: 24 MiB
+[component_container_mt-1] [MemUsageChange] TensorRT-managed allocation in IExecutionContext creation: CPU +0, GPU +4, now: CPU 0, GPU 556 (MiB)
+[component_container_mt-1] [INFO] [1782665237.978678301] [lightglue_matcher]: LightGlueMatcher initialized: engine='/home/nvidia/dl-vins-factory/DL-VINS/install/dl_vins/share/dl_vins/weights/matcher/mono_extractor/raco_lightglue_kp384_sim.fp16.engine', desc_dim=128, max_kp=384, kpt_dim=2, threshold=0.20, mode=single-pair
+[component_container_mt-1] [INFO] [1782665238.001928546] [lightglue_matcher]: Warmup complete (3 iters, max_kp=384, desc_dim=128)
+[component_container_mt-1] [INFO] [1782665238.002003232] [feature_tracker]: Loaded 'lightglue' descriptor matcher: /home/nvidia/dl-vins-factory/DL-VINS/install/dl_vins/share/dl_vins/weights/matcher/mono_extractor/raco_lightglue_kp384_sim.fp16.engine (threshold=0.20, desc_dim=128)
+[component_container_mt-1] [MetricsLogger] Feature tracker CSV: /home/nvidia/dl-vins-factory/tmp/euroc_eval_mono_loop/dlvins_raco_lightglue_kp384_mono_loop/MH_05_difficult/./logs/feature_tracker_raco_20260629_004717.csv
+[component_container_mt-1] [INFO] [1782665238.002172828] [dl_vins_component]: Feature tracker initialized
+[component_container_mt-1] [INFO] [1782665238.002244571] [dl_vins_component]: Extrinsics loaded:
+[component_container_mt-1] [INFO] [1782665238.002257243] [dl_vins_component]:   tic0: [-0.0216, -0.0647, 0.0098]
+[component_container_mt-1] [INFO] [1782665238.002272410] [dl_vins_component]: Auto-detected norm_focal_length: 457.98 px
+[component_container_mt-1] [MetricsLogger] Estimator CSV: /home/nvidia/dl-vins-factory/tmp/euroc_eval_mono_loop/dlvins_raco_lightglue_kp384_mono_loop/MH_05_difficult/./logs/estimator_metrics_20260629_004717.csv
+[component_container_mt-1] [INFO] [1782665238.002586547] [estimator]: Processing thread started
+[component_container_mt-1] [INFO] [1782665238.002655569] [dl_vins_component]: Tracking thread started
+[component_container_mt-1] [INFO] [1782665238.002834221] [dl_vins_component]: IMU subscription QoS reliability: reliable
+[component_container_mt-1] [INFO] [1782665238.007706236] [dl_vins_component]: DlVinsComponent fully initialized
+[component_container_mt-1] [INFO] [1782665243.846468859] [estimator]: Initializing first IMU pose
+[component_container_mt-1] [INFO] [1782665244.816709971] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782665244.917235832] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782665245.016495002] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782665245.127253137] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782665245.230505910] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782665245.317496724] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782665245.430086401] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782665245.534147827] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782665245.631854649] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782665245.718529119] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782665245.832419085] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782665245.920598224] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782665246.031148108] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782665246.117622678] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782665246.216247079] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782665246.331419703] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782665246.430742360] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782665246.518129197] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782665246.616542274] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782665246.718146414] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782665246.815648568] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782665246.923008158] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782665247.031334029] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782665247.118956637] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782665247.217052122] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782665247.318642694] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782665247.417416211] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782665247.532292938] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782665247.631220372] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782665247.730920523] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782665247.817864331] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782665247.932461481] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782665248.017500788] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [WARN] [1782665248.298705242] [sfm]: Vision-only BA did not converge
+[component_container_mt-1] [WARN] [1782665248.447281508] [sfm]: Vision-only BA did not converge
+[component_container_mt-1] [WARN] [1782665248.595244380] [sfm]: Vision-only BA did not converge
+[component_container_mt-1] [WARN] [1782665248.714923844] [estimator]: LinearAlignment failed: |g|=10.3917 (expected ~9.8101, tol=0.500), scale=0.0051
+[component_container_mt-1] WARNING: Logging before InitGoogleLogging() is written to STDERR
+[component_container_mt-1] W0629 00:47:28.854663 3621268 levenberg_marquardt_strategy.cc:123] Linear solver failure. Failed to compute a step: Eigen failure. Unable to perform dense Cholesky factorization.
+[component_container_mt-1] [WARN] [1782665248.862581220] [sfm]: Vision-only BA did not converge
+[component_container_mt-1] [WARN] [1782665249.008194258] [sfm]: Vision-only BA did not converge
+[component_container_mt-1] [WARN] [1782665249.149287754] [sfm]: Vision-only BA did not converge
+[component_container_mt-1] [INFO] [1782665249.354764108] [estimator]: Mono initialization complete!
+[component_container_mt-1] [INFO] [1782665249.354822411] [estimator]: [init_quality] |g|=9.8101 scale=0.1245 abias=0.050 static_bootstrap=no
+[component_container_mt-1] optimize pose graph 
+[component_container_mt-1] optimize pose graph 
+[component_container_mt-1] optimize pose graph 
+[component_container_mt-1] optimize pose graph 
+[component_container_mt-1] optimize pose graph 
+[component_container_mt-1] optimize pose graph 
+[component_container_mt-1] optimize pose graph 
+[component_container_mt-1] optimize pose graph 
+[component_container_mt-1] optimize pose graph 
+[component_container_mt-1] optimize pose graph 
+[component_container_mt-1] optimize pose graph 
+[component_container_mt-1] optimize pose graph 
+[component_container_mt-1] optimize pose graph 
+[component_container_mt-1] optimize pose graph 
+[component_container_mt-1] optimize pose graph 
+[component_container_mt-1] optimize pose graph 
+[component_container_mt-1] optimize pose graph 
+[component_container_mt-1] optimize pose graph 
+[WARNING] [launch]: user interrupted with ctrl-c (SIGINT)
+[INFO] [component_container_mt-1]: sending signal 'SIGINT' to process[component_container_mt-1]
+[component_container_mt-1] [INFO] [1782665365.385347594] [rclcpp]: signal_handler(SIGINT/SIGTERM)
+[component_container_mt-1] [WARN] [1782665365.446843000] [dl_vins_component]: DlVinsComponent shutting down.
+[component_container_mt-1] [INFO] [1782665365.448294422] [estimator]: Processing thread stopped
+[component_container_mt-1] [MetricsLogger] Feature tracker log closed
+[component_container_mt-1] [MetricsLogger] Estimator log closed
+[component_container_mt-1] [INFO] [1782665365.505532775] [feature_extractor]: FeatureExtractor TensorRT & CUDA resources cleaned up.
+[component_container_mt-1] [LoopMetricsLogger] loop_fusion log closed
+[component_container_mt-1] [LoopMetricsLogger] loop_optimizations log closed
+[component_container_mt-1] [INFO] [1782665365.598205730] [rclcpp]: signal_handler(SIGINT/SIGTERM)
+[INFO] [component_container_mt-1]: process has finished cleanly [pid 3621229]

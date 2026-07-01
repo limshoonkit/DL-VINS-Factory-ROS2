@@ -1,0 +1,461 @@
+[INFO] [launch]: All log files can be found below /home/nvidia/.ros/log/2026-06-18-20-17-44-870763-ubuntu-1209129
+[INFO] [launch]: Default logging verbosity is set to INFO
+[INFO] [component_container_mt-1]: process started with pid [1209248]
+[component_container_mt-1] [INFO] [1781785065.276313197] [dl_vins.dl_vins_container]: Load Library: /home/nvidia/dl-vins-factory/DL-VINS/install/dl_vins/lib/libdl_vins_component.so
+[component_container_mt-1] [INFO] [1781785065.389827926] [dl_vins.dl_vins_container]: Found class: rclcpp_components::NodeFactoryTemplate<uosm::perception::DlVinsComponent>
+[component_container_mt-1] [INFO] [1781785065.390784059] [dl_vins.dl_vins_container]: Instantiate class: rclcpp_components::NodeFactoryTemplate<uosm::perception::DlVinsComponent>
+[component_container_mt-1] [INFO] [1781785065.399274572] [dl_vins_component]: **********************************
+[component_container_mt-1] [INFO] [1781785065.399895131] [dl_vins_component]:  DLVINS Component                 
+[component_container_mt-1] [INFO] [1781785065.400359342] [dl_vins_component]: **********************************
+[component_container_mt-1] [INFO] [1781785065.400682885] [dl_vins_component]:  * namespace: /
+[component_container_mt-1] [INFO] [1781785065.401001884] [dl_vins_component]:  * node name: dl_vins_component
+[component_container_mt-1] [INFO] [1781785065.401305715] [dl_vins_component]: **********************************
+[component_container_mt-1] [INFO] [1781785065.402351702] [dl_vins_component]: Estimator Parameters:
+[component_container_mt-1] [INFO] [1781785065.402675725] [dl_vins_component]:  * window_size: 10 (compile-time)
+[component_container_mt-1] [INFO] [1781785065.402984804] [dl_vins_component]:  * gravity: 9.81007
+[component_container_mt-1] [INFO] [1781785065.403308091] [dl_vins_component]:  * device: CPU
+[component_container_mt-1] [INFO] [1781785065.403611890] [dl_vins_component]:  * mode: mono
+[component_container_mt-1] [INFO] [1781785065.403924458] [dl_vins_component]:  * initial_td: 0.0000 s (estimate_td=false)
+[component_container_mt-1] [INFO] [1781785065.404428507] [dl_vins_component]:  * init gates: max_g_error=0.500, max_abias=0.250, scale=[0.100, 10.000]
+[component_container_mt-1] [INFO] [1781785065.404750706] [dl_vins_component]:  * init_min_parallax_ratio: 0.0652 (30.0 px @ ref focal 460)
+[component_container_mt-1] [INFO] [1781785065.405061770] [dl_vins_component]:  * estimate_extrinsic: false (fixed)
+[component_container_mt-1] [INFO] [1781785065.405362401] [dl_vins_component]: Tracker Parameters:
+[component_container_mt-1] [INFO] [1781785065.405647961] [dl_vins_component]:  * feature_extraction: SIFT_CPU
+[component_container_mt-1] [INFO] [1781785065.405943985] [dl_vins_component]:  * optflow_device: CPU
+[component_container_mt-1] [INFO] [1781785065.406240392] [dl_vins_component]:  * max_keypoints: 256
+[component_container_mt-1] [INFO] [1781785065.406539136] [dl_vins_component]:  * use_descriptor_matcher: false
+[INFO] [launch_ros.actions.load_composable_nodes]: Loaded node '/dl_vins_component' in container '/dl_vins/dl_vins_container'
+[component_container_mt-1] [INFO] [1781785065.410370420] [dl_vins.dl_vins_container]: Load Library: /home/nvidia/dl-vins-factory/DL-VINS/install/loop_fusion/lib/libloop_fusion_component.so
+[component_container_mt-1] [INFO] [1781785065.415297194] [dl_vins.dl_vins_container]: Found class: rclcpp_components::NodeFactoryTemplate<uosm::perception::LoopFusionComponent>
+[component_container_mt-1] [INFO] [1781785065.415345513] [dl_vins.dl_vins_container]: Instantiate class: rclcpp_components::NodeFactoryTemplate<uosm::perception::LoopFusionComponent>
+[component_container_mt-1] [INFO] [1781785065.417156470] [dl_vins_component]: Resolved paths:
+[component_container_mt-1] [INFO] [1781785065.417215572] [dl_vins_component]:   cam0_calib: /home/nvidia/dl-vins-factory/DL-VINS/install/dl_vins/share/dl_vins/config/euroc/cam0_pinhole.yaml
+[component_container_mt-1] [INFO] [1781785065.417230676] [dl_vins_component]:   weights_folder: /home/nvidia/dl-vins-factory/DL-VINS/install/dl_vins/share/dl_vins/weights/euroc
+[component_container_mt-1] [INFO] [1781785065.417240467] [dl_vins_component]:   use_descriptor_matcher: false (type='lightglue')
+[component_container_mt-1] [MetricsLogger] Logging enabled, folder: /home/nvidia/dl-vins-factory/tmp/euroc_eval_mono_loop/dlvins_sift_cpu_lk_mono_loop/V1_03_difficult/./logs, session: 20260618_201745
+[component_container_mt-1] [INFO] [1781785065.418488592] [feature_tracker]: Auto-computed focal_length from PinholeCamera: 458.0px
+[component_container_mt-1] [INFO] [1781785065.424834078] [loop_fusion]: loop_fusion config_file: /home/nvidia/dl-vins-factory/DL-VINS/install/loop_fusion/share/loop_fusion/config/loop_fusion_euroc.yaml
+[component_container_mt-1] [INFO] [1781785065.425126102] [loop_fusion]: cam calib path: /home/nvidia/dl-vins-factory/DL-VINS/install/dl_vins/share/dl_vins/config/euroc/cam0_pinhole.yaml
+[component_container_mt-1] [INFO] [1781785065.425389262] [loop_fusion]: Derived FOCAL_LENGTH_PX = 458.64 px from m_camera
+[component_container_mt-1] [INFO] [1781785065.425436941] [loop_fusion]: loop tunables: MIN_SCORE=0.030 PNP_INFLATION=10.00 RECALL_IGNORE_RECENT_COUNT=50 MAX_THETA_DIFF=30.00 MAX_POS_DIFF=20.00 MIN_LOOP_NUM=25
+[component_container_mt-1] [INFO] [1781785065.425515979] [loop_fusion]: vocabulary: /home/nvidia/dl-vins-factory/DL-VINS/install/loop_fusion/share/loop_fusion/support_files/brief_k10L6.bin
+[component_container_mt-1] [INFO] [1781785065.478232545] [feature_tracker]: SIFT_CPU: GPU buffers allocated (262144 + 8192 bytes)
+[component_container_mt-1] [MetricsLogger] Feature tracker CSV: /home/nvidia/dl-vins-factory/tmp/euroc_eval_mono_loop/dlvins_sift_cpu_lk_mono_loop/V1_03_difficult/./logs/feature_tracker_sift_cpu_20260618_201745.csv
+[component_container_mt-1] [INFO] [1781785065.478433531] [dl_vins_component]: Feature tracker initialized
+[component_container_mt-1] [INFO] [1781785065.478547640] [dl_vins_component]: Extrinsics loaded:
+[component_container_mt-1] [INFO] [1781785065.478565015] [dl_vins_component]:   tic0: [-0.0216, -0.0647, 0.0098]
+[component_container_mt-1] [INFO] [1781785065.478582327] [dl_vins_component]: Auto-detected norm_focal_length: 457.98 px
+[component_container_mt-1] [MetricsLogger] Estimator CSV: /home/nvidia/dl-vins-factory/tmp/euroc_eval_mono_loop/dlvins_sift_cpu_lk_mono_loop/V1_03_difficult/./logs/estimator_metrics_20260618_201745.csv
+[component_container_mt-1] [INFO] [1781785065.478842191] [estimator]: Processing thread started
+[component_container_mt-1] [INFO] [1781785065.478950188] [dl_vins_component]: Tracking thread started
+[component_container_mt-1] [INFO] [1781785065.479072329] [dl_vins_component]: IMU subscription QoS reliability: reliable
+[component_container_mt-1] [INFO] [1781785065.484246455] [dl_vins_component]: DlVinsComponent fully initialized
+[component_container_mt-1] loop start load vocabulary
+[component_container_mt-1] [INFO] [1781785065.683491606] [loop_fusion]: BRIEF_PATTERN_FILE: /home/nvidia/dl-vins-factory/DL-VINS/install/loop_fusion/share/loop_fusion/support_files/brief_pattern.yml
+[component_container_mt-1] [INFO] [1781785065.683595539] [loop_fusion]: loop closure: CLASSIC mode (DBoW2 + BRIEF)
+[component_container_mt-1] [LoopMetricsLogger] Logging enabled, folder: /home/nvidia/dl-vins-factory/tmp/euroc_eval_mono_loop/dlvins_sift_cpu_lk_mono_loop/V1_03_difficult/./logs, session: 20260618_201745
+[component_container_mt-1] [loop_fusion] 4-DoF (x, y, z, yaw) pose-graph optimization thread starting
+[component_container_mt-1] [LoopMetricsLogger] loop_fusion CSV: /home/nvidia/dl-vins-factory/tmp/euroc_eval_mono_loop/dlvins_sift_cpu_lk_mono_loop/V1_03_difficult/./logs/loop_fusion_metrics_20260618_201745.csv
+[component_container_mt-1] [LoopMetricsLogger] loop_optimizations CSV: /home/nvidia/dl-vins-factory/tmp/euroc_eval_mono_loop/dlvins_sift_cpu_lk_mono_loop/V1_03_difficult/./logs/loop_optimizations_20260618_201745.csv
+[component_container_mt-1] [INFO] [1781785065.691645489] [loop_fusion]: loop_fusion: composable component up; spinning on container
+[INFO] [launch_ros.actions.load_composable_nodes]: Loaded node '/loop_fusion' in container '/dl_vins/dl_vins_container'
+[component_container_mt-1] [INFO] [1781785070.045369490] [estimator]: Initializing first IMU pose
+[component_container_mt-1] [INFO] [1781785070.588606314] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1781785070.641231362] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1781785070.694011062] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1781785070.747299388] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1781785070.800049841] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1781785070.853181564] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1781785070.871918349] [estimator]: [bootstrap] static window captured (acc_var=0.0406): Bgs_prior=[-0.00216, 0.01966, 0.07714]
+[component_container_mt-1] [INFO] [1781785070.906447938] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1781785070.958779971] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1781785071.010922793] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1781785071.063085262] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1781785071.115806052] [dl_vins_component]: Auto-tune: camera=20.0Hz, decimation=2 (feed ~10.0Hz)
+[component_container_mt-1] [INFO] [1781785071.116210777] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1781785071.168541594] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1781785071.273033120] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1781785071.378325232] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1781785071.483679550] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1781785071.588213219] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1781785071.692859237] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1781785071.797333548] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1781785071.903250634] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1781785072.007969066] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1781785072.112353268] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1781785072.217973338] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1781785072.322441026] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1781785072.427038021] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1781785072.530588614] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1781785072.634745398] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1781785072.738208825] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1781785072.841831736] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1781785072.946567095] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1781785073.050431311] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1781785073.156304783] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1781785073.260405888] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1781785073.364360341] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1781785073.469302735] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1781785073.574335046] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1781785073.679206146] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1781785073.782900735] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1781785073.887872504] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1781785073.992847536] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1781785074.097306232] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1781785074.203366290] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1781785074.308479143] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1781785074.413206407] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1781785074.517307768] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1781785074.621931995] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1781785074.726481567] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1781785074.830534162] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1781785074.934079955] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1781785075.038190308] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1781785075.142760744] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1781785075.246907896] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1781785075.351921936] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1781785075.456964423] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1781785075.562077180] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1781785075.666885177] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1781785075.770705747] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1781785075.876215388] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1781785075.979977399] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1781785076.083838767] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1781785076.188275191] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1781785076.292541668] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1781785076.398088877] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1781785076.503211777] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1781785076.607404464] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1781785076.712499013] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1781785076.817255044] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1781785076.923152131] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1781785077.027428112] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1781785077.132100497] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1781785077.236561880] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1781785077.340541293] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [WARN] [1781785077.472559661] [estimator]: LinearAlignment failed: |g|=9.8862 (expected ~9.8101, tol=0.500), scale=-0.0002
+[component_container_mt-1] [WARN] [1781785077.584997748] [estimator]: Mono init rejected: scale=0.0071 outside [0.100, 10.000]. Clearing state.
+[component_container_mt-1] [INFO] [1781785077.652360591] [estimator]: Initializing first IMU pose
+[component_container_mt-1] [WARN] [1781785078.593704558] [sfm]: Unstable feature tracking, only 0 points for PnP
+[component_container_mt-1] [WARN] [1781785078.740587789] [estimator]: LinearAlignment failed: |g|=11.8392 (expected ~9.8101, tol=0.500), scale=-0.0776
+[component_container_mt-1] WARNING: Logging before InitGoogleLogging() is written to STDERR
+[component_container_mt-1] W0618 20:17:58.820406 1209309 levenberg_marquardt_strategy.cc:123] Linear solver failure. Failed to compute a step: Eigen failure. Unable to perform dense Cholesky factorization.
+[component_container_mt-1] W0618 20:17:58.820797 1209309 levenberg_marquardt_strategy.cc:123] Linear solver failure. Failed to compute a step: Eigen failure. Unable to perform dense Cholesky factorization.
+[component_container_mt-1] W0618 20:17:58.822712 1209309 levenberg_marquardt_strategy.cc:123] Linear solver failure. Failed to compute a step: Eigen failure. Unable to perform dense Cholesky factorization.
+[component_container_mt-1] W0618 20:17:58.823918 1209309 levenberg_marquardt_strategy.cc:123] Linear solver failure. Failed to compute a step: Eigen failure. Unable to perform dense Cholesky factorization.
+[component_container_mt-1] W0618 20:17:58.824258 1209309 levenberg_marquardt_strategy.cc:123] Linear solver failure. Failed to compute a step: Eigen failure. Unable to perform dense Cholesky factorization.
+[component_container_mt-1] W0618 20:17:58.833292 1209309 levenberg_marquardt_strategy.cc:123] Linear solver failure. Failed to compute a step: Eigen failure. Unable to perform dense Cholesky factorization.
+[component_container_mt-1] W0618 20:17:58.834403 1209309 levenberg_marquardt_strategy.cc:123] Linear solver failure. Failed to compute a step: Eigen failure. Unable to perform dense Cholesky factorization.
+[component_container_mt-1] W0618 20:17:58.834722 1209309 levenberg_marquardt_strategy.cc:123] Linear solver failure. Failed to compute a step: Eigen failure. Unable to perform dense Cholesky factorization.
+[component_container_mt-1] W0618 20:17:58.835831 1209309 levenberg_marquardt_strategy.cc:123] Linear solver failure. Failed to compute a step: Eigen failure. Unable to perform dense Cholesky factorization.
+[component_container_mt-1] W0618 20:17:58.837726 1209309 levenberg_marquardt_strategy.cc:123] Linear solver failure. Failed to compute a step: Eigen failure. Unable to perform dense Cholesky factorization.
+[component_container_mt-1] W0618 20:17:58.838048 1209309 levenberg_marquardt_strategy.cc:123] Linear solver failure. Failed to compute a step: Eigen failure. Unable to perform dense Cholesky factorization.
+[component_container_mt-1] [WARN] [1781785078.839906628] [estimator]: LinearAlignment failed: |g|=11.1349 (expected ~9.8101, tol=0.500), scale=0.2718
+[component_container_mt-1] [WARN] [1781785078.943391143] [estimator]: LinearAlignment failed: |g|=10.6335 (expected ~9.8101, tol=0.500), scale=0.0032
+[component_container_mt-1] W0618 20:17:59.044237 1209309 levenberg_marquardt_strategy.cc:123] Linear solver failure. Failed to compute a step: Eigen failure. Unable to perform dense Cholesky factorization.
+[component_container_mt-1] W0618 20:17:59.045279 1209309 levenberg_marquardt_strategy.cc:123] Linear solver failure. Failed to compute a step: Eigen failure. Unable to perform dense Cholesky factorization.
+[component_container_mt-1] W0618 20:17:59.045574 1209309 levenberg_marquardt_strategy.cc:123] Linear solver failure. Failed to compute a step: Eigen failure. Unable to perform dense Cholesky factorization.
+[component_container_mt-1] W0618 20:17:59.047308 1209309 levenberg_marquardt_strategy.cc:123] Linear solver failure. Failed to compute a step: Eigen failure. Unable to perform dense Cholesky factorization.
+[component_container_mt-1] W0618 20:17:59.047597 1209309 levenberg_marquardt_strategy.cc:123] Linear solver failure. Failed to compute a step: Eigen failure. Unable to perform dense Cholesky factorization.
+[component_container_mt-1] [WARN] [1781785079.047739473] [sfm]: Vision-only BA did not converge
+[component_container_mt-1] W0618 20:17:59.147233 1209309 levenberg_marquardt_strategy.cc:123] Linear solver failure. Failed to compute a step: Eigen failure. Unable to perform dense Cholesky factorization.
+[component_container_mt-1] W0618 20:17:59.148972 1209309 levenberg_marquardt_strategy.cc:123] Linear solver failure. Failed to compute a step: Eigen failure. Unable to perform dense Cholesky factorization.
+[component_container_mt-1] W0618 20:17:59.149261 1209309 levenberg_marquardt_strategy.cc:123] Linear solver failure. Failed to compute a step: Eigen failure. Unable to perform dense Cholesky factorization.
+[component_container_mt-1] W0618 20:17:59.151010 1209309 levenberg_marquardt_strategy.cc:123] Linear solver failure. Failed to compute a step: Eigen failure. Unable to perform dense Cholesky factorization.
+[component_container_mt-1] W0618 20:17:59.151278 1209309 levenberg_marquardt_strategy.cc:123] Linear solver failure. Failed to compute a step: Eigen failure. Unable to perform dense Cholesky factorization.
+[component_container_mt-1] W0618 20:17:59.152980 1209309 levenberg_marquardt_strategy.cc:123] Linear solver failure. Failed to compute a step: Eigen failure. Unable to perform dense Cholesky factorization.
+[component_container_mt-1] W0618 20:17:59.153244 1209309 levenberg_marquardt_strategy.cc:123] Linear solver failure. Failed to compute a step: Eigen failure. Unable to perform dense Cholesky factorization.
+[component_container_mt-1] W0618 20:17:59.154225 1209309 levenberg_marquardt_strategy.cc:123] Linear solver failure. Failed to compute a step: Eigen failure. Unable to perform dense Cholesky factorization.
+[component_container_mt-1] W0618 20:17:59.154495 1209309 levenberg_marquardt_strategy.cc:123] Linear solver failure. Failed to compute a step: Eigen failure. Unable to perform dense Cholesky factorization.
+[component_container_mt-1] W0618 20:17:59.155481 1209309 levenberg_marquardt_strategy.cc:123] Linear solver failure. Failed to compute a step: Eigen failure. Unable to perform dense Cholesky factorization.
+[component_container_mt-1] W0618 20:17:59.157182 1209309 levenberg_marquardt_strategy.cc:123] Linear solver failure. Failed to compute a step: Eigen failure. Unable to perform dense Cholesky factorization.
+[component_container_mt-1] W0618 20:17:59.158164 1209309 levenberg_marquardt_strategy.cc:123] Linear solver failure. Failed to compute a step: Eigen failure. Unable to perform dense Cholesky factorization.
+[component_container_mt-1] W0618 20:17:59.158425 1209309 levenberg_marquardt_strategy.cc:123] Linear solver failure. Failed to compute a step: Eigen failure. Unable to perform dense Cholesky factorization.
+[component_container_mt-1] [WARN] [1781785079.159267378] [sfm]: Vision-only BA did not converge
+[component_container_mt-1] [WARN] [1781785079.279882035] [estimator]: Mono init rejected: scale=0.0160 outside [0.100, 10.000]. Clearing state.
+[component_container_mt-1] [INFO] [1781785079.321886326] [estimator]: Initializing first IMU pose
+[component_container_mt-1] [WARN] [1781785080.246227668] [sfm]: Unstable feature tracking, only 0 points for PnP
+[component_container_mt-1] [WARN] [1781785080.370881091] [estimator]: LinearAlignment failed: |g|=7.6070 (expected ~9.8101, tol=0.500), scale=0.0187
+[component_container_mt-1] [INFO] [1781785080.446520405] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1781785080.550157811] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1781785080.652419096] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1781785080.756174259] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1781785080.858651570] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1781785080.962219859] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1781785081.066350563] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [WARN] [1781785081.173892308] [sfm]: Unstable feature tracking, only 14 points for PnP
+[component_container_mt-1] [WARN] [1781785081.174301928] [sfm]: Unstable feature tracking, only 13 points for PnP
+[component_container_mt-1] [WARN] [1781785081.174590016] [sfm]: Unstable feature tracking, only 13 points for PnP
+[component_container_mt-1] [WARN] [1781785081.206675642] [estimator]: Mono init rejected: scale=0.0400 outside [0.100, 10.000]. Clearing state.
+[component_container_mt-1] [INFO] [1781785081.272016973] [estimator]: Initializing first IMU pose
+[component_container_mt-1] [WARN] [1781785082.207743339] [sfm]: Unstable feature tracking, only 0 points for PnP
+[component_container_mt-1] [WARN] [1781785082.353565383] [estimator]: LinearAlignment failed: |g|=9.8954 (expected ~9.8101, tol=0.500), scale=-0.0015
+[component_container_mt-1] [WARN] [1781785082.478470127] [sfm]: Vision-only BA did not converge
+[component_container_mt-1] [WARN] [1781785082.568945696] [sfm]: Vision-only BA did not converge
+[component_container_mt-1] [WARN] [1781785082.623671613] [sfm]: Unstable feature tracking, only 14 points for PnP
+[component_container_mt-1] [WARN] [1781785082.624103025] [sfm]: Unstable feature tracking, only 14 points for PnP
+[component_container_mt-1] [IMUFactor] Numerical instability in jacobian_pose_i, resetting
+[component_container_mt-1] [IMUFactor] Numerical instability in jacobian_speedbias_i, resetting
+[component_container_mt-1] [IMUFactor] Numerical instability in jacobian_pose_j, resetting
+[component_container_mt-1] [IMUFactor] Numerical instability in jacobian_speedbias_j, resetting
+[component_container_mt-1] [IMUFactor] Numerical instability in jacobian_pose_i, resetting
+[component_container_mt-1] [IMUFactor] Numerical instability in jacobian_speedbias_i, resetting
+[component_container_mt-1] [IMUFactor] Numerical instability in jacobian_pose_j, resetting
+[component_container_mt-1] [IMUFactor] Numerical instability in jacobian_speedbias_j, resetting
+[component_container_mt-1] [WARN] [1781785082.661797229] [estimator]: Mono init rejected: scale=0.0290 outside [0.100, 10.000]. Clearing state.
+[component_container_mt-1] [INFO] [1781785082.718325080] [estimator]: Initializing first IMU pose
+[component_container_mt-1] [WARN] [1781785083.717536957] [sfm]: Unstable feature tracking, only 0 points for PnP
+[component_container_mt-1] [WARN] [1781785083.831425083] [estimator]: LinearAlignment failed: |g|=9.7134 (expected ~9.8101, tol=0.500), scale=-0.0761
+[component_container_mt-1] [IMUFactor] Numerical instability in jacobian_pose_i, resetting
+[component_container_mt-1] [IMUFactor] Numerical instability in jacobian_speedbias_i, resetting
+[component_container_mt-1] [IMUFactor] Numerical instability in jacobian_pose_j, resetting
+[component_container_mt-1] [IMUFactor] Numerical instability in jacobian_speedbias_j, resetting
+[component_container_mt-1] [IMUFactor] Numerical instability in jacobian_pose_i, resetting
+[component_container_mt-1] [IMUFactor] Numerical instability in jacobian_speedbias_i, resetting
+[component_container_mt-1] [IMUFactor] Numerical instability in jacobian_pose_j, resetting
+[component_container_mt-1] [IMUFactor] Numerical instability in jacobian_speedbias_j, resetting
+[component_container_mt-1] [IMUFactor] Numerical instability in jacobian_pose_i, resetting
+[component_container_mt-1] [IMUFactor] Numerical instability in jacobian_speedbias_i, resetting
+[component_container_mt-1] [IMUFactor] Numerical instability in jacobian_pose_j, resetting
+[component_container_mt-1] [IMUFactor] Numerical instability in jacobian_speedbias_j, resetting
+[component_container_mt-1] [IMUFactor] Numerical instability in jacobian_pose_i, resetting
+[component_container_mt-1] [IMUFactor] Numerical instability in jacobian_speedbias_i, resetting
+[component_container_mt-1] [IMUFactor] Numerical instability in jacobian_pose_j, resetting
+[component_container_mt-1] [IMUFactor] Numerical instability in jacobian_speedbias_j, resetting
+[component_container_mt-1] [IMUFactor] Numerical instability in jacobian_pose_i, resetting
+[component_container_mt-1] [IMUFactor] Numerical instability in jacobian_speedbias_i, resetting
+[component_container_mt-1] [IMUFactor] Numerical instability in jacobian_pose_j, resetting
+[component_container_mt-1] [IMUFactor] Numerical instability in jacobian_speedbias_j, resetting
+[component_container_mt-1] [IMUFactor] Numerical instability in jacobian_pose_i, resetting
+[component_container_mt-1] [IMUFactor] Numerical instability in jacobian_speedbias_i, resetting
+[component_container_mt-1] [IMUFactor] Numerical instability in jacobian_pose_j, resetting
+[component_container_mt-1] [IMUFactor] Numerical instability in jacobian_speedbias_j, resetting
+[component_container_mt-1] [INFO] [1781785083.943918112] [estimator]: Mono initialization complete!
+[component_container_mt-1] [INFO] [1781785083.943968159] [estimator]: [init_quality] |g|=9.8101 scale=0.2223 abias=0.000 static_bootstrap=yes
+[component_container_mt-1] [IMUFactor] Numerical instability in jacobian_pose_i, resetting
+[component_container_mt-1] [IMUFactor] Numerical instability in jacobian_speedbias_i, resetting
+[component_container_mt-1] [IMUFactor] Numerical instability in jacobian_pose_j, resetting
+[component_container_mt-1] [IMUFactor] Numerical instability in jacobian_speedbias_j, resetting
+[component_container_mt-1] [IMUFactor] Numerical instability in jacobian_pose_i, resetting
+[component_container_mt-1] [IMUFactor] Numerical instability in jacobian_speedbias_i, resetting
+[component_container_mt-1] [IMUFactor] Numerical instability in jacobian_pose_j, resetting
+[component_container_mt-1] [IMUFactor] Numerical instability in jacobian_speedbias_j, resetting
+[component_container_mt-1] [IMUFactor] Numerical instability in jacobian_pose_i, resetting
+[component_container_mt-1] [IMUFactor] Numerical instability in jacobian_speedbias_i, resetting
+[component_container_mt-1] [IMUFactor] Numerical instability in jacobian_pose_j, resetting
+[component_container_mt-1] [IMUFactor] Numerical instability in jacobian_speedbias_j, resetting
+[component_container_mt-1] [IMUFactor] Numerical instability in jacobian_pose_i, resetting
+[component_container_mt-1] [IMUFactor] Numerical instability in jacobian_speedbias_i, resetting
+[component_container_mt-1] [IMUFactor] Numerical instability in jacobian_pose_j, resetting
+[component_container_mt-1] [IMUFactor] Numerical instability in jacobian_speedbias_j, resetting
+[component_container_mt-1] [IMUFactor] Numerical instability in jacobian_pose_i, resetting
+[component_container_mt-1] [IMUFactor] Numerical instability in jacobian_speedbias_i, resetting
+[component_container_mt-1] [IMUFactor] Numerical instability in jacobian_pose_j, resetting
+[component_container_mt-1] [IMUFactor] Numerical instability in jacobian_speedbias_j, resetting
+[component_container_mt-1] [IMUFactor] Numerical instability in jacobian_pose_i, resetting
+[component_container_mt-1] [IMUFactor] Numerical instability in jacobian_speedbias_i, resetting
+[component_container_mt-1] [IMUFactor] Numerical instability in jacobian_pose_i, resetting
+[component_container_mt-1] [IMUFactor] Numerical instability in jacobian_speedbias_i, resetting
+[component_container_mt-1] [IMUFactor] Numerical instability in jacobian_pose_j, resetting
+[component_container_mt-1] [IMUFactor] Numerical instability in jacobian_speedbias_j, resetting
+[component_container_mt-1] [IMUFactor] Numerical instability in jacobian_pose_j, resetting
+[component_container_mt-1] [IMUFactor] Numerical instability in jacobian_speedbias_j, resetting
+[component_container_mt-1] [IMUFactor] Numerical instability in jacobian_pose_i, resetting
+[component_container_mt-1] [IMUFactor] Numerical instability in jacobian_speedbias_i, resetting
+[component_container_mt-1] [IMUFactor] Numerical instability in jacobian_pose_j, resetting
+[component_container_mt-1] [IMUFactor] Numerical instability in jacobian_speedbias_j, resetting
+[component_container_mt-1] [IMUFactor] Numerical instability in jacobian_pose_i, resetting
+[component_container_mt-1] [IMUFactor] Numerical instability in jacobian_speedbias_i, resetting
+[component_container_mt-1] [IMUFactor] Numerical instability in jacobian_pose_j, resetting
+[component_container_mt-1] [IMUFactor] Numerical instability in jacobian_speedbias_j, resetting
+[component_container_mt-1] [IMUFactor] Numerical instability in jacobian_pose_i, resetting
+[component_container_mt-1] [IMUFactor] Numerical instability in jacobian_speedbias_i, resetting
+[component_container_mt-1] [IMUFactor] Numerical instability in jacobian_pose_j, resetting
+[component_container_mt-1] [IMUFactor] Numerical instability in jacobian_speedbias_j, resetting
+[component_container_mt-1] [IMUFactor] Numerical instability in jacobian_pose_i, resetting
+[component_container_mt-1] [IMUFactor] Numerical instability in jacobian_speedbias_i, resetting
+[component_container_mt-1] [IMUFactor] Numerical instability in jacobian_pose_j, resetting
+[component_container_mt-1] [IMUFactor] Numerical instability in jacobian_speedbias_j, resetting
+[component_container_mt-1] [IMUFactor] Numerical instability in jacobian_pose_i, resetting
+[component_container_mt-1] [IMUFactor] Numerical instability in jacobian_speedbias_i, resetting
+[component_container_mt-1] [IMUFactor] Numerical instability in jacobian_pose_j, resetting
+[component_container_mt-1] [IMUFactor] Numerical instability in jacobian_pose_i, resetting
+[component_container_mt-1] [IMUFactor] Numerical instability in jacobian_speedbias_i, resetting
+[component_container_mt-1] [IMUFactor] Numerical instability in jacobian_pose_j, resetting
+[component_container_mt-1] [IMUFactor] Numerical instability in jacobian_speedbias_j, resetting
+[component_container_mt-1] [IMUFactor] Numerical instability in jacobian_speedbias_j, resetting
+[component_container_mt-1] [IMUFactor] Numerical instability in jacobian_pose_i, resetting
+[component_container_mt-1] [IMUFactor] Numerical instability in jacobian_speedbias_i, resetting
+[component_container_mt-1] [IMUFactor] Numerical instability in jacobian_pose_j, resetting
+[component_container_mt-1] [IMUFactor] Numerical instability in jacobian_speedbias_j, resetting
+[component_container_mt-1] [IMUFactor] Numerical instability in jacobian_pose_i, resetting
+[component_container_mt-1] [IMUFactor] Numerical instability in jacobian_speedbias_i, resetting
+[component_container_mt-1] [IMUFactor] Numerical instability in jacobian_pose_j, resetting
+[component_container_mt-1] [IMUFactor] Numerical instability in jacobian_speedbias_j, resetting
+[component_container_mt-1] [IMUFactor] Numerical instability in jacobian_pose_i, resetting
+[component_container_mt-1] [IMUFactor] Numerical instability in jacobian_pose_i, resetting
+[component_container_mt-1] [IMUFactor] Numerical instability in jacobian_speedbias_i, resetting
+[component_container_mt-1] [IMUFactor] Numerical instability in jacobian_speedbias_i, resetting
+[component_container_mt-1] [IMUFactor] Numerical instability in jacobian_pose_j, resetting
+[component_container_mt-1] [IMUFactor] Numerical instability in jacobian_speedbias_j, resetting
+[component_container_mt-1] [IMUFactor] Numerical instability in jacobian_pose_j, resetting
+[component_container_mt-1] [IMUFactor] Numerical instability in jacobian_speedbias_j, resetting
+[component_container_mt-1] [IMUFactor] Numerical instability in jacobian_pose_i, resetting
+[component_container_mt-1] [IMUFactor] Numerical instability in jacobian_speedbias_i, resetting
+[component_container_mt-1] [IMUFactor] Numerical instability in jacobian_pose_j, resetting
+[component_container_mt-1] [IMUFactor] Numerical instability in jacobian_pose_i, resetting
+[component_container_mt-1] [IMUFactor] Numerical instability in jacobian_speedbias_i, resetting
+[component_container_mt-1] [IMUFactor] Numerical instability in jacobian_speedbias_j, resetting
+[component_container_mt-1] [IMUFactor] Numerical instability in jacobian_pose_j, resetting
+[component_container_mt-1] [IMUFactor] Numerical instability in jacobian_speedbias_j, resetting
+[component_container_mt-1] [IMUFactor] Numerical instability in jacobian_pose_i, resetting
+[component_container_mt-1] [IMUFactor] Numerical instability in jacobian_speedbias_i, resetting
+[component_container_mt-1] [IMUFactor] Numerical instability in jacobian_pose_j, resetting
+[component_container_mt-1] [IMUFactor] Numerical instability in jacobian_speedbias_j, resetting
+[component_container_mt-1] [IMUFactor] Numerical instability in jacobian_pose_i, resetting
+[component_container_mt-1] [IMUFactor] Numerical instability in jacobian_speedbias_i, resetting
+[component_container_mt-1] [IMUFactor] Numerical instability in jacobian_pose_j, resetting
+[component_container_mt-1] [IMUFactor] Numerical instability in jacobian_speedbias_j, resetting
+[component_container_mt-1] [IMUFactor] Numerical instability in jacobian_pose_i, resetting
+[component_container_mt-1] [IMUFactor] Numerical instability in jacobian_speedbias_i, resetting
+[component_container_mt-1] [IMUFactor] Numerical instability in jacobian_pose_j, resetting
+[component_container_mt-1] [IMUFactor] Numerical instability in jacobian_pose_i, resetting
+[component_container_mt-1] [IMUFactor] Numerical instability in jacobian_speedbias_i, resetting
+[component_container_mt-1] [IMUFactor] Numerical instability in jacobian_pose_j, resetting
+[component_container_mt-1] [IMUFactor] Numerical instability in jacobian_speedbias_j, resetting
+[component_container_mt-1] [IMUFactor] Numerical instability in jacobian_speedbias_j, resetting
+[component_container_mt-1] [IMUFactor] Numerical instability in jacobian_pose_i, resetting
+[component_container_mt-1] [IMUFactor] Numerical instability in jacobian_speedbias_i, resetting
+[component_container_mt-1] [IMUFactor] Numerical instability in jacobian_pose_j, resetting
+[component_container_mt-1] [IMUFactor] Numerical instability in jacobian_speedbias_j, resetting
+[component_container_mt-1] [IMUFactor] Numerical instability in jacobian_pose_i, resetting
+[component_container_mt-1] [IMUFactor] Numerical instability in jacobian_speedbias_i, resetting
+[component_container_mt-1] [IMUFactor] Numerical instability in jacobian_pose_j, resetting
+[component_container_mt-1] [IMUFactor] Numerical instability in jacobian_speedbias_j, resetting
+[component_container_mt-1] [IMUFactor] Numerical instability in jacobian_pose_i, resetting
+[component_container_mt-1] [IMUFactor] Numerical instability in jacobian_speedbias_i, resetting
+[component_container_mt-1] [IMUFactor] Numerical instability in jacobian_pose_j, resetting
+[component_container_mt-1] [IMUFactor] Numerical instability in jacobian_speedbias_j, resetting
+[component_container_mt-1] [IMUFactor] Numerical instability in jacobian_pose_i, resetting
+[component_container_mt-1] [IMUFactor] Numerical instability in jacobian_speedbias_i, resetting
+[component_container_mt-1] [IMUFactor] Numerical instability in jacobian_pose_j, resetting
+[component_container_mt-1] [IMUFactor] Numerical instability in jacobian_speedbias_j, resetting
+[component_container_mt-1] [IMUFactor] Numerical instability in jacobian_pose_i, resetting
+[component_container_mt-1] [IMUFactor] Numerical instability in jacobian_speedbias_i, resetting
+[component_container_mt-1] [IMUFactor] Numerical instability in jacobian_pose_j, resetting
+[component_container_mt-1] [IMUFactor] Numerical instability in jacobian_speedbias_j, resetting
+[component_container_mt-1] [IMUFactor] Numerical instability in jacobian_pose_i, resetting
+[component_container_mt-1] [IMUFactor] Numerical instability in jacobian_speedbias_i, resetting
+[component_container_mt-1] [IMUFactor] Numerical instability in jacobian_pose_j, resetting
+[component_container_mt-1] [IMUFactor] Numerical instability in jacobian_speedbias_j, resetting
+[component_container_mt-1] [IMUFactor] Numerical instability in jacobian_pose_i, resetting
+[component_container_mt-1] [IMUFactor] Numerical instability in jacobian_speedbias_i, resetting
+[component_container_mt-1] [IMUFactor] Numerical instability in jacobian_pose_j, resetting
+[component_container_mt-1] [IMUFactor] Numerical instability in jacobian_speedbias_j, resetting
+[component_container_mt-1] [IMUFactor] Numerical instability in jacobian_pose_i, resetting
+[component_container_mt-1] [IMUFactor] Numerical instability in jacobian_speedbias_i, resetting
+[component_container_mt-1] [IMUFactor] Numerical instability in jacobian_pose_j, resetting
+[component_container_mt-1] [IMUFactor] Numerical instability in jacobian_speedbias_j, resetting
+[component_container_mt-1] [WARN] [1781785084.642494089] [estimator]: Failure detected [accel-bias blow-up]: |V|=0.17/50 |Ba|=3.397/2.5 |Bg|=0.086/1.0 jump=0.04/20
+[component_container_mt-1] [WARN] [1781785085.681008189] [estimator]: Failure detected [accel-bias blow-up]: |V|=1.75/50 |Ba|=4.553/2.5 |Bg|=0.089/1.0 jump=0.18/20
+[component_container_mt-1] [WARN] [1781785086.714700696] [estimator]: Failure detected [accel-bias blow-up]: |V|=2.60/50 |Ba|=4.617/2.5 |Bg|=0.092/1.0 jump=0.24/20
+[component_container_mt-1] [WARN] [1781785087.764836453] [estimator]: Failure detected [accel-bias blow-up]: |V|=2.12/50 |Ba|=4.720/2.5 |Bg|=0.127/1.0 jump=0.25/20
+[component_container_mt-1] [WARN] [1781785088.791043987] [estimator]: Failure detected [accel-bias blow-up]: |V|=3.30/50 |Ba|=4.397/2.5 |Bg|=0.128/1.0 jump=0.29/20
+[component_container_mt-1] [WARN] [1781785089.823238392] [estimator]: Failure detected [accel-bias blow-up]: |V|=7.84/50 |Ba|=4.448/2.5 |Bg|=0.131/1.0 jump=0.80/20
+[component_container_mt-1] [WARN] [1781785090.855225059] [estimator]: Failure detected [accel-bias blow-up]: |V|=15.40/50 |Ba|=4.395/2.5 |Bg|=0.127/1.0 jump=1.49/20
+[component_container_mt-1] [WARN] [1781785091.888806561] [estimator]: Failure detected [accel-bias blow-up]: |V|=24.24/50 |Ba|=4.385/2.5 |Bg|=0.127/1.0 jump=2.38/20
+[component_container_mt-1] [WARN] [1781785092.939580540] [estimator]: Failure detected [accel-bias blow-up]: |V|=31.99/50 |Ba|=4.387/2.5 |Bg|=0.127/1.0 jump=3.17/20
+[component_container_mt-1] [WARN] [1781785093.987498760] [estimator]: Failure detected [accel-bias blow-up]: |V|=36.23/50 |Ba|=4.403/2.5 |Bg|=0.125/1.0 jump=3.57/20
+[component_container_mt-1] [WARN] [1781785095.023993012] [estimator]: Failure detected [accel-bias blow-up]: |V|=38.96/50 |Ba|=4.387/2.5 |Bg|=0.127/1.0 jump=3.89/20
+[component_container_mt-1] [WARN] [1781785096.039326996] [estimator]: Failure detected [accel-bias blow-up]: |V|=39.71/50 |Ba|=4.401/2.5 |Bg|=0.128/1.0 jump=4.00/20
+[component_container_mt-1] [WARN] [1781785097.065809913] [estimator]: Failure detected [accel-bias blow-up]: |V|=45.92/50 |Ba|=5.364/2.5 |Bg|=0.154/1.0 jump=8.43/20
+[component_container_mt-1] [WARN] [1781785098.093354498] [estimator]: Failure detected [velocity blow-up + accel-bias blow-up]: |V|=50.63/50 |Ba|=6.385/2.5 |Bg|=0.191/1.0 jump=19.52/20
+[component_container_mt-1] [WARN] [1781785099.138196579] [estimator]: Failure detected [accel-bias blow-up]: |V|=30.69/50 |Ba|=5.476/2.5 |Bg|=0.179/1.0 jump=7.79/20
+[component_container_mt-1] [WARN] [1781785100.179895436] [estimator]: Failure detected [accel-bias blow-up]: |V|=40.14/50 |Ba|=5.242/2.5 |Bg|=0.171/1.0 jump=7.17/20
+[component_container_mt-1] [WARN] [1781785101.213848819] [estimator]: Failure detected [accel-bias blow-up]: |V|=36.15/50 |Ba|=5.099/2.5 |Bg|=0.163/1.0 jump=0.39/20
+[component_container_mt-1] [WARN] [1781785102.238933749] [estimator]: Failure detected [velocity blow-up + accel-bias blow-up]: |V|=63.18/50 |Ba|=4.542/2.5 |Bg|=0.130/1.0 jump=10.12/20
+[component_container_mt-1] [WARN] [1781785103.265142807] [estimator]: Failure detected [velocity blow-up + accel-bias blow-up]: |V|=63.25/50 |Ba|=4.642/2.5 |Bg|=0.131/1.0 jump=7.40/20
+[component_container_mt-1] [WARN] [1781785104.305733155] [estimator]: Failure detected [velocity blow-up + accel-bias blow-up]: |V|=61.39/50 |Ba|=4.583/2.5 |Bg|=0.127/1.0 jump=6.42/20
+[component_container_mt-1] [WARN] [1781785105.348290712] [estimator]: Failure detected [velocity blow-up + accel-bias blow-up]: |V|=54.80/50 |Ba|=4.758/2.5 |Bg|=0.130/1.0 jump=6.28/20
+[component_container_mt-1] [WARN] [1781785106.386694786] [estimator]: Failure detected [velocity blow-up + position jump + accel-bias blow-up]: |V|=60.84/50 |Ba|=4.440/2.5 |Bg|=0.125/1.0 jump=23.07/20
+[component_container_mt-1] [WARN] [1781785107.422787853] [estimator]: Failure detected [velocity blow-up + accel-bias blow-up]: |V|=63.14/50 |Ba|=4.469/2.5 |Bg|=0.124/1.0 jump=10.96/20
+[component_container_mt-1] [WARN] [1781785108.480032035] [estimator]: Failure detected [velocity blow-up + accel-bias blow-up]: |V|=58.45/50 |Ba|=4.614/2.5 |Bg|=0.123/1.0 jump=8.25/20
+[component_container_mt-1] [WARN] [1781785109.529393400] [estimator]: Failure detected [velocity blow-up + accel-bias blow-up]: |V|=55.86/50 |Ba|=4.620/2.5 |Bg|=0.121/1.0 jump=6.97/20
+[component_container_mt-1] [WARN] [1781785110.578648335] [estimator]: Failure detected [velocity blow-up + accel-bias blow-up]: |V|=67.72/50 |Ba|=4.189/2.5 |Bg|=0.113/1.0 jump=14.50/20
+[component_container_mt-1] [WARN] [1781785111.619924104] [estimator]: Failure detected [velocity blow-up + accel-bias blow-up]: |V|=61.15/50 |Ba|=3.756/2.5 |Bg|=0.104/1.0 jump=16.50/20
+[component_container_mt-1] [WARN] [1781785112.673441736] [estimator]: Failure detected [position jump + accel-bias blow-up]: |V|=22.35/50 |Ba|=3.542/2.5 |Bg|=0.086/1.0 jump=53.31/20
+[component_container_mt-1] [WARN] [1781785113.726464405] [estimator]: Failure detected [velocity blow-up + position jump + accel-bias blow-up]: |V|=128.80/50 |Ba|=6.348/2.5 |Bg|=0.194/1.0 jump=49.08/20
+[component_container_mt-1] [WARN] [1781785114.775282393] [estimator]: Failure detected [velocity blow-up + accel-bias blow-up]: |V|=116.84/50 |Ba|=5.915/2.5 |Bg|=0.184/1.0 jump=10.03/20
+[component_container_mt-1] [WARN] [1781785115.833507411] [estimator]: Failure detected [velocity blow-up + position jump + accel-bias blow-up]: |V|=127.90/50 |Ba|=6.116/2.5 |Bg|=0.194/1.0 jump=23.15/20
+[component_container_mt-1] [WARN] [1781785116.888430763] [estimator]: Failure detected [velocity blow-up + position jump + accel-bias blow-up]: |V|=143.35/50 |Ba|=6.494/2.5 |Bg|=0.209/1.0 jump=33.57/20
+[component_container_mt-1] [WARN] [1781785117.936631936] [estimator]: Failure detected [velocity blow-up + position jump + accel-bias blow-up]: |V|=171.91/50 |Ba|=4.066/2.5 |Bg|=0.131/1.0 jump=53.59/20
+[component_container_mt-1] [WARN] [1781785118.975704439] [estimator]: Failure detected [velocity blow-up + position jump + accel-bias blow-up]: |V|=247.89/50 |Ba|=5.427/2.5 |Bg|=0.120/1.0 jump=37.73/20
+[component_container_mt-1] [WARN] [1781785120.032436444] [estimator]: Failure detected [velocity blow-up + position jump + accel-bias blow-up]: |V|=212.30/50 |Ba|=4.209/2.5 |Bg|=0.116/1.0 jump=41.84/20
+[component_container_mt-1] [WARN] [1781785121.076124145] [estimator]: Failure detected [velocity blow-up + position jump + accel-bias blow-up]: |V|=209.11/50 |Ba|=3.116/2.5 |Bg|=0.118/1.0 jump=20.85/20
+[component_container_mt-1] [WARN] [1781785122.142995479] [estimator]: Failure detected [velocity blow-up + position jump + accel-bias blow-up]: |V|=224.91/50 |Ba|=4.297/2.5 |Bg|=0.119/1.0 jump=22.59/20
+[component_container_mt-1] [WARN] [1781785123.197909359] [estimator]: Failure detected [velocity blow-up + position jump + accel-bias blow-up]: |V|=240.46/50 |Ba|=4.202/2.5 |Bg|=0.113/1.0 jump=24.23/20
+[component_container_mt-1] [WARN] [1781785124.257804763] [estimator]: Failure detected [velocity blow-up + position jump + accel-bias blow-up]: |V|=247.81/50 |Ba|=4.424/2.5 |Bg|=0.119/1.0 jump=28.89/20
+[component_container_mt-1] [WARN] [1781785125.318356916] [estimator]: Failure detected [velocity blow-up + position jump + accel-bias blow-up]: |V|=253.32/50 |Ba|=4.640/2.5 |Bg|=0.125/1.0 jump=24.11/20
+[component_container_mt-1] [WARN] [1781785126.375010043] [estimator]: Failure detected [velocity blow-up + position jump + accel-bias blow-up]: |V|=289.23/50 |Ba|=3.308/2.5 |Bg|=0.117/1.0 jump=50.12/20
+[component_container_mt-1] [WARN] [1781785127.422915448] [estimator]: Failure detected [velocity blow-up + position jump + accel-bias blow-up]: |V|=279.79/50 |Ba|=4.883/2.5 |Bg|=0.128/1.0 jump=26.65/20
+[component_container_mt-1] [WARN] [1781785128.456268273] [estimator]: Failure detected [velocity blow-up + position jump + accel-bias blow-up]: |V|=296.02/50 |Ba|=4.350/2.5 |Bg|=0.133/1.0 jump=28.43/20
+[component_container_mt-1] [WARN] [1781785129.509937164] [estimator]: Failure detected [velocity blow-up + position jump + accel-bias blow-up]: |V|=435.71/50 |Ba|=2.896/2.5 |Bg|=0.135/1.0 jump=43.48/20
+[component_container_mt-1] [WARN] [1781785130.568973039] [estimator]: Failure detected [velocity blow-up + position jump + accel-bias blow-up]: |V|=522.20/50 |Ba|=3.725/2.5 |Bg|=0.175/1.0 jump=42.42/20
+[component_container_mt-1] [WARN] [1781785131.627053134] [estimator]: Failure detected [velocity blow-up + position jump + accel-bias blow-up]: |V|=349.54/50 |Ba|=4.949/2.5 |Bg|=0.125/1.0 jump=76.50/20
+[component_container_mt-1] [WARN] [1781785132.679543306] [estimator]: Failure detected [velocity blow-up + position jump + accel-bias blow-up]: |V|=432.18/50 |Ba|=4.063/2.5 |Bg|=0.105/1.0 jump=46.07/20
+[component_container_mt-1] [WARN] [1781785133.711502538] [estimator]: Failure detected [velocity blow-up + position jump + accel-bias blow-up]: |V|=358.13/50 |Ba|=4.423/2.5 |Bg|=0.128/1.0 jump=38.16/20
+[component_container_mt-1] [WARN] [1781785134.750756508] [estimator]: Failure detected [velocity blow-up + position jump + accel-bias blow-up]: |V|=375.08/50 |Ba|=4.388/2.5 |Bg|=0.126/1.0 jump=37.46/20
+[component_container_mt-1] [WARN] [1781785135.790410883] [estimator]: Failure detected [velocity blow-up + position jump + accel-bias blow-up]: |V|=386.87/50 |Ba|=4.391/2.5 |Bg|=0.127/1.0 jump=38.77/20
+[component_container_mt-1] [WARN] [1781785136.834268562] [estimator]: Failure detected [velocity blow-up + position jump + accel-bias blow-up]: |V|=397.50/50 |Ba|=4.343/2.5 |Bg|=0.127/1.0 jump=39.56/20
+[component_container_mt-1] [WARN] [1781785137.856257932] [estimator]: Failure detected [velocity blow-up + position jump + accel-bias blow-up]: |V|=406.63/50 |Ba|=4.374/2.5 |Bg|=0.127/1.0 jump=40.78/20
+[component_container_mt-1] [WARN] [1781785138.885012518] [estimator]: Failure detected [velocity blow-up + position jump + accel-bias blow-up]: |V|=415.18/50 |Ba|=4.333/2.5 |Bg|=0.127/1.0 jump=40.81/20
+[component_container_mt-1] [WARN] [1781785139.912507875] [estimator]: Failure detected [velocity blow-up + position jump]: |V|=422.08/50 |Ba|=2.458/2.5 |Bg|=0.097/1.0 jump=37.46/20
+[component_container_mt-1] [WARN] [1781785140.950831215] [estimator]: Failure detected [velocity blow-up + position jump + accel-bias blow-up]: |V|=431.34/50 |Ba|=2.796/2.5 |Bg|=0.102/1.0 jump=44.66/20
+[component_container_mt-1] [WARN] [1781785141.985395270] [estimator]: Failure detected [velocity blow-up + position jump + accel-bias blow-up]: |V|=438.43/50 |Ba|=4.064/2.5 |Bg|=0.124/1.0 jump=44.74/20
+[component_container_mt-1] [WARN] [1781785143.015631734] [estimator]: Failure detected [velocity blow-up + position jump + accel-bias blow-up]: |V|=450.90/50 |Ba|=3.996/2.5 |Bg|=0.124/1.0 jump=44.81/20
+[component_container_mt-1] [WARN] [1781785144.055702033] [estimator]: Failure detected [velocity blow-up + position jump + accel-bias blow-up]: |V|=426.51/50 |Ba|=3.316/2.5 |Bg|=0.109/1.0 jump=54.26/20
+[component_container_mt-1] [WARN] [1781785145.106802452] [estimator]: Failure detected [velocity blow-up + position jump + accel-bias blow-up]: |V|=447.24/50 |Ba|=3.400/2.5 |Bg|=0.114/1.0 jump=42.92/20
+[component_container_mt-1] [WARN] [1781785146.149681888] [estimator]: Failure detected [velocity blow-up + position jump + accel-bias blow-up]: |V|=446.54/50 |Ba|=3.976/2.5 |Bg|=0.117/1.0 jump=61.79/20
+[component_container_mt-1] [WARN] [1781785147.200693382] [estimator]: Failure detected [velocity blow-up + position jump + accel-bias blow-up]: |V|=475.56/50 |Ba|=4.425/2.5 |Bg|=0.128/1.0 jump=47.33/20
+[component_container_mt-1] [WARN] [1781785148.242524111] [estimator]: Failure detected [velocity blow-up + position jump + accel-bias blow-up]: |V|=476.41/50 |Ba|=4.598/2.5 |Bg|=0.127/1.0 jump=63.29/20
+[component_container_mt-1] [WARN] [1781785149.283547631] [estimator]: Failure detected [velocity blow-up + position jump + accel-bias blow-up]: |V|=484.87/50 |Ba|=4.554/2.5 |Bg|=0.128/1.0 jump=46.44/20
+[component_container_mt-1] [WARN] [1781785150.337321671] [estimator]: Failure detected [velocity blow-up + position jump + accel-bias blow-up]: |V|=424.18/50 |Ba|=3.218/2.5 |Bg|=0.111/1.0 jump=34.08/20
+[component_container_mt-1] [WARN] [1781785151.392989866] [estimator]: Failure detected [velocity blow-up + position jump + accel-bias blow-up]: |V|=480.15/50 |Ba|=4.847/2.5 |Bg|=0.125/1.0 jump=66.72/20
+[component_container_mt-1] [WARN] [1781785152.443437856] [estimator]: Failure detected [velocity blow-up + position jump + accel-bias blow-up]: |V|=500.00/50 |Ba|=4.827/2.5 |Bg|=0.127/1.0 jump=53.65/20
+[component_container_mt-1] [WARN] [1781785153.492980751] [estimator]: Failure detected [velocity blow-up + position jump + accel-bias blow-up]: |V|=530.70/50 |Ba|=5.001/2.5 |Bg|=0.134/1.0 jump=54.68/20
+[component_container_mt-1] [WARN] [1781785154.539974567] [estimator]: Failure detected [velocity blow-up + position jump + accel-bias blow-up]: |V|=545.91/50 |Ba|=4.807/2.5 |Bg|=0.132/1.0 jump=56.46/20
+[component_container_mt-1] [WARN] [1781785155.585026677] [estimator]: Failure detected [velocity blow-up + position jump + accel-bias blow-up]: |V|=490.10/50 |Ba|=4.307/2.5 |Bg|=0.110/1.0 jump=55.86/20
+[component_container_mt-1] [WARN] [1781785156.635780963] [estimator]: Failure detected [velocity blow-up + position jump + accel-bias blow-up]: |V|=547.12/50 |Ba|=5.116/2.5 |Bg|=0.131/1.0 jump=70.51/20
+[component_container_mt-1] [WARN] [1781785157.692557702] [estimator]: Failure detected [velocity blow-up + position jump + accel-bias blow-up]: |V|=530.41/50 |Ba|=4.177/2.5 |Bg|=0.112/1.0 jump=53.22/20
+[component_container_mt-1] [WARN] [1781785158.769946660] [estimator]: Failure detected [velocity blow-up + position jump + accel-bias blow-up]: |V|=528.95/50 |Ba|=6.497/2.5 |Bg|=0.134/1.0 jump=47.84/20
+[component_container_mt-1] [WARN] [1781785159.824533253] [estimator]: Failure detected [velocity blow-up + position jump + accel-bias blow-up]: |V|=534.34/50 |Ba|=6.398/2.5 |Bg|=0.134/1.0 jump=54.15/20
+[component_container_mt-1] [WARN] [1781785160.891203505] [estimator]: Failure detected [velocity blow-up + position jump + accel-bias blow-up]: |V|=501.24/50 |Ba|=3.806/2.5 |Bg|=0.097/1.0 jump=36.20/20
+[component_container_mt-1] [WARN] [1781785161.960656559] [estimator]: Failure detected [velocity blow-up + position jump + accel-bias blow-up]: |V|=476.74/50 |Ba|=4.295/2.5 |Bg|=0.092/1.0 jump=54.86/20
+[component_container_mt-1] [WARN] [1781785163.035372952] [estimator]: Failure detected [velocity blow-up + position jump + accel-bias blow-up]: |V|=526.63/50 |Ba|=5.781/2.5 |Bg|=0.124/1.0 jump=86.93/20
+[component_container_mt-1] [WARN] [1781785164.107268352] [estimator]: Failure detected [velocity blow-up + position jump + accel-bias blow-up]: |V|=518.91/50 |Ba|=3.819/2.5 |Bg|=0.090/1.0 jump=56.02/20
+[component_container_mt-1] [WARN] [1781785165.164774505] [estimator]: Failure detected [velocity blow-up + position jump + accel-bias blow-up]: |V|=528.88/50 |Ba|=5.420/2.5 |Bg|=0.112/1.0 jump=75.09/20
+[component_container_mt-1] [WARN] [1781785166.212161610] [estimator]: Failure detected [velocity blow-up + position jump + accel-bias blow-up]: |V|=494.42/50 |Ba|=5.555/2.5 |Bg|=0.099/1.0 jump=41.74/20
+[component_container_mt-1] [WARN] [1781785167.240055164] [estimator]: Failure detected [velocity blow-up + position jump + accel-bias blow-up]: |V|=382.64/50 |Ba|=7.445/2.5 |Bg|=0.110/1.0 jump=41.39/20
+[component_container_mt-1] [WARN] [1781785168.287600982] [estimator]: Failure detected [velocity blow-up + position jump + accel-bias blow-up]: |V|=350.21/50 |Ba|=7.699/2.5 |Bg|=0.109/1.0 jump=26.97/20
+[component_container_mt-1] [WARN] [1781785169.327219171] [estimator]: Failure detected [velocity blow-up + position jump + accel-bias blow-up]: |V|=291.53/50 |Ba|=8.053/2.5 |Bg|=0.098/1.0 jump=34.20/20
+[component_container_mt-1] [WARN] [1781785170.359470473] [estimator]: Failure detected [velocity blow-up + position jump + accel-bias blow-up]: |V|=196.85/50 |Ba|=11.706/2.5 |Bg|=0.091/1.0 jump=59.48/20
+[component_container_mt-1] [WARN] [1781785171.398327801] [estimator]: Failure detected [velocity blow-up + position jump + accel-bias blow-up]: |V|=497.67/50 |Ba|=5.413/2.5 |Bg|=0.094/1.0 jump=95.31/20
+[component_container_mt-1] [WARN] [1781785172.429445684] [estimator]: Failure detected [velocity blow-up + position jump + accel-bias blow-up]: |V|=713.01/50 |Ba|=4.850/2.5 |Bg|=0.132/1.0 jump=72.51/20
+[component_container_mt-1] [WARN] [1781785173.452576484] [estimator]: Failure detected [velocity blow-up + position jump + accel-bias blow-up]: |V|=688.83/50 |Ba|=5.688/2.5 |Bg|=0.133/1.0 jump=60.84/20
+[component_container_mt-1] [WARN] [1781785174.486431007] [estimator]: Failure detected [velocity blow-up + position jump + accel-bias blow-up]: |V|=560.78/50 |Ba|=6.760/2.5 |Bg|=0.115/1.0 jump=59.28/20
+[component_container_mt-1] [WARN] [1781785175.515877000] [estimator]: Failure detected [velocity blow-up + position jump + accel-bias blow-up]: |V|=541.59/50 |Ba|=6.958/2.5 |Bg|=0.115/1.0 jump=51.11/20
+[component_container_mt-1] [WARN] [1781785176.543084250] [estimator]: Failure detected [velocity blow-up + position jump + accel-bias blow-up]: |V|=515.54/50 |Ba|=7.034/2.5 |Bg|=0.109/1.0 jump=48.97/20
+[component_container_mt-1] [WARN] [1781785177.582279003] [estimator]: Failure detected [velocity blow-up + position jump + accel-bias blow-up]: |V|=549.26/50 |Ba|=6.859/2.5 |Bg|=0.115/1.0 jump=55.30/20
+[component_container_mt-1] [WARN] [1781785178.617530804] [estimator]: Failure detected [velocity blow-up + position jump + accel-bias blow-up]: |V|=553.42/50 |Ba|=6.845/2.5 |Bg|=0.116/1.0 jump=50.41/20
+[component_container_mt-1] [WARN] [1781785179.658216047] [estimator]: Failure detected [velocity blow-up + position jump + accel-bias blow-up]: |V|=576.27/50 |Ba|=6.081/2.5 |Bg|=0.098/1.0 jump=61.35/20
+[component_container_mt-1] [WARN] [1781785180.725142143] [estimator]: Failure detected [velocity blow-up + position jump + accel-bias blow-up]: |V|=498.89/50 |Ba|=7.347/2.5 |Bg|=0.121/1.0 jump=87.95/20
+[component_container_mt-1] [WARN] [1781785181.777675024] [estimator]: Failure detected [velocity blow-up + position jump + accel-bias blow-up]: |V|=478.47/50 |Ba|=6.348/2.5 |Bg|=0.101/1.0 jump=147.24/20
+[WARNING] [launch]: user interrupted with ctrl-c (SIGINT)
+[component_container_mt-1] [INFO] [1781785186.660075231] [rclcpp]: signal_handler(SIGINT/SIGTERM)
+[component_container_mt-1] [WARN] [1781785186.693353131] [dl_vins_component]: DlVinsComponent shutting down.
+[component_container_mt-1] [INFO] [1781785186.693690203] [estimator]: Processing thread stopped
+[component_container_mt-1] [MetricsLogger] Feature tracker log closed
+[component_container_mt-1] [MetricsLogger] Estimator log closed
+[component_container_mt-1] [LoopMetricsLogger] loop_fusion log closed
+[component_container_mt-1] [LoopMetricsLogger] loop_optimizations log closed
+[INFO] [component_container_mt-1]: process has finished cleanly [pid 1209248]
