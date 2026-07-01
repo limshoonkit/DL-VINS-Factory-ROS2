@@ -1,0 +1,766 @@
+[INFO] [launch]: All log files can be found below /home/nvidia/.ros/log/2026-06-26-18-25-30-790243-nvidia-desktop-1701175
+[INFO] [launch]: Default logging verbosity is set to INFO
+[INFO] [component_container_mt-1]: process started with pid [1701293]
+[component_container_mt-1] [INFO] [1782469531.197641088] [dl_vins.dl_vins_container]: Load Library: /home/nvidia/dl-vins-factory/DL-VINS/install/dl_vins/lib/libdl_vins_component.so
+[component_container_mt-1] [INFO] [1782469531.311986213] [dl_vins.dl_vins_container]: Found class: rclcpp_components::NodeFactoryTemplate<uosm::perception::DlVinsComponent>
+[component_container_mt-1] [INFO] [1782469531.313478585] [dl_vins.dl_vins_container]: Instantiate class: rclcpp_components::NodeFactoryTemplate<uosm::perception::DlVinsComponent>
+[component_container_mt-1] [INFO] [1782469531.322017679] [dl_vins_component]: **********************************
+[component_container_mt-1] [INFO] [1782469531.322618954] [dl_vins_component]:  DLVINS Component                 
+[component_container_mt-1] [INFO] [1782469531.323045190] [dl_vins_component]: **********************************
+[component_container_mt-1] [INFO] [1782469531.323399171] [dl_vins_component]:  * namespace: /
+[component_container_mt-1] [INFO] [1782469531.323723488] [dl_vins_component]:  * node name: dl_vins_component
+[component_container_mt-1] [INFO] [1782469531.324067069] [dl_vins_component]: **********************************
+[component_container_mt-1] [INFO] [1782469531.325255411] [dl_vins_component]: Estimator Parameters:
+[component_container_mt-1] [INFO] [1782469531.325609488] [dl_vins_component]:  * window_size: 10 (compile-time)
+[component_container_mt-1] [INFO] [1782469531.325929453] [dl_vins_component]:  * gravity: 9.81007
+[component_container_mt-1] [INFO] [1782469531.326246730] [dl_vins_component]:  * device: CPU
+[component_container_mt-1] [INFO] [1782469531.326546152] [dl_vins_component]:  * mode: mono
+[component_container_mt-1] [INFO] [1782469531.326870053] [dl_vins_component]:  * initial_td: 0.0000 s (estimate_td=false)
+[component_container_mt-1] [INFO] [1782469531.327181442] [dl_vins_component]:  * init gates: max_g_error=0.500, max_abias=0.250, scale=[0.100, 10.000]
+[component_container_mt-1] [INFO] [1782469531.327494976] [dl_vins_component]:  * init_min_parallax_ratio: 0.0652 (30.0 px @ ref focal 460)
+[component_container_mt-1] [INFO] [1782469531.327817917] [dl_vins_component]:  * estimate_extrinsic: true (online, gated)
+[component_container_mt-1] [INFO] [1782469531.328129370] [dl_vins_component]: Tracker Parameters:
+[component_container_mt-1] [INFO] [1782469531.328436375] [dl_vins_component]:  * feature_extraction: RACO
+[component_container_mt-1] [INFO] [1782469531.328745237] [dl_vins_component]:  * optflow_device: CPU
+[component_container_mt-1] [INFO] [1782469531.329051570] [dl_vins_component]:  * max_keypoints: 256
+[component_container_mt-1] [INFO] [1782469531.329360847] [dl_vins_component]:  * use_descriptor_matcher: false
+[INFO] [launch_ros.actions.load_composable_nodes]: Loaded node '/dl_vins_component' in container '/dl_vins/dl_vins_container'
+[component_container_mt-1] [INFO] [1782469531.332642483] [dl_vins.dl_vins_container]: Load Library: /home/nvidia/dl-vins-factory/DL-VINS/install/loop_fusion/lib/libloop_fusion_component.so
+[component_container_mt-1] [INFO] [1782469531.337438026] [dl_vins.dl_vins_container]: Found class: rclcpp_components::NodeFactoryTemplate<uosm::perception::LoopFusionComponent>
+[component_container_mt-1] [INFO] [1782469531.337491689] [dl_vins.dl_vins_container]: Instantiate class: rclcpp_components::NodeFactoryTemplate<uosm::perception::LoopFusionComponent>
+[component_container_mt-1] [INFO] [1782469531.340025907] [dl_vins_component]: Resolved paths:
+[component_container_mt-1] [INFO] [1782469531.340088499] [dl_vins_component]:   cam0_calib: /home/nvidia/dl-vins-factory/DL-VINS/install/dl_vins/share/dl_vins/config/subt_mrs/cam_rc7_mei.yaml
+[component_container_mt-1] [INFO] [1782469531.340104979] [dl_vins_component]:   weights_folder: /home/nvidia/dl-vins-factory/DL-VINS/install/dl_vins/share/dl_vins/weights/subt_mrs
+[component_container_mt-1] [INFO] [1782469531.340114803] [dl_vins_component]:   use_descriptor_matcher: false (type='lightglue')
+[component_container_mt-1] [MetricsLogger] Logging enabled, folder: /home/nvidia/dl-vins-factory/tmp/subt_mrs_eval_mono_loop/dlvins_raco_lk_mono_loop/over_exposure/./logs, session: 20260626_182531
+[component_container_mt-1] [INFO] [1782469531.341331944] [feature_tracker]: Auto-computed focal_length from CataCamera (MEI): 277.8px (gamma=717.5, xi=1.583, effective=gamma/(1+xi))
+[component_container_mt-1] [INFO] [1782469531.350188028] [loop_fusion]: loop_fusion config_file: /home/nvidia/dl-vins-factory/DL-VINS/install/loop_fusion/share/loop_fusion/config/loop_fusion_subt_mrs.yaml
+[component_container_mt-1] [INFO] [1782469531.351242483] [loop_fusion]: cam calib path: /home/nvidia/dl-vins-factory/DL-VINS/install/dl_vins/share/dl_vins/config/subt_mrs/cam_rc7_mei.yaml
+[component_container_mt-1] [INFO] [1782469531.352090763] [loop_fusion]: Derived FOCAL_LENGTH_PX = 293.56 px from m_camera
+[component_container_mt-1] [INFO] [1782469531.352512712] [loop_fusion]: loop tunables: MIN_SCORE=0.030 PNP_INFLATION=10.00 RECALL_IGNORE_RECENT_COUNT=50 MAX_THETA_DIFF=30.00 MAX_POS_DIFF=20.00 MIN_LOOP_NUM=25
+[component_container_mt-1] [INFO] [1782469531.352942340] [loop_fusion]: vocabulary: /home/nvidia/dl-vins-factory/DL-VINS/install/loop_fusion/share/loop_fusion/support_files/brief_k10L6.bin
+[component_container_mt-1] Loaded engine size: 1 MiB
+[component_container_mt-1] Using an engine plan file across different models of devices is not recommended and is likely to affect performance or even cause errors.
+[component_container_mt-1] [MemUsageChange] TensorRT-managed allocation in IExecutionContext creation: CPU +0, GPU +132, now: CPU 0, GPU 132 (MiB)
+[component_container_mt-1] [INFO] [1782469531.443332216] [feature_extractor]: Found Input tensor: images with dtype: FLOAT32, shape: [480x640]
+[component_container_mt-1] [INFO] [1782469531.443428439] [feature_extractor]: Found Output tensor: keypoints with dtype: FLOAT32
+[component_container_mt-1] [INFO] [1782469531.443437943] [feature_extractor]: Found Output tensor: keypoint_scores with dtype: FLOAT32
+[component_container_mt-1] [INFO] [1782469531.443442903] [feature_extractor]: Using I/O tensors: Input='images', Keypoints='keypoints', Scores='keypoint_scores', Descriptors='', NumKeypoints=''
+[component_container_mt-1] [INFO] [1782469531.444061330] [feature_extractor]: Allocated 0.00 MB pinned memory for raco model (3CH), descriptor_dim: 0
+[component_container_mt-1] [INFO] [1782469531.480886612] [feature_extractor]: Pipeline warmup complete (3 iters, batch=1, 480x640)
+[component_container_mt-1] [INFO] [1782469531.480973940] [feature_tracker]: Loaded raco extractor (batch=1): /home/nvidia/dl-vins-factory/DL-VINS/install/dl_vins/share/dl_vins/weights/subt_mrs/mono_extractor/raco_b1_h480_w640_kp256_sim.fp16.engine
+[component_container_mt-1] [MetricsLogger] Feature tracker CSV: /home/nvidia/dl-vins-factory/tmp/subt_mrs_eval_mono_loop/dlvins_raco_lk_mono_loop/over_exposure/./logs/feature_tracker_raco_20260626_182531.csv
+[component_container_mt-1] [INFO] [1782469531.481166482] [dl_vins_component]: Feature tracker initialized
+[component_container_mt-1] [INFO] [1782469531.481223217] [dl_vins_component]: Extrinsics loaded:
+[component_container_mt-1] [INFO] [1782469531.481235793] [dl_vins_component]:   tic0: [0.1950, 0.0434, -0.0178]
+[component_container_mt-1] [INFO] [1782469531.481253361] [dl_vins_component]: Auto-detected norm_focal_length: 277.76 px
+[component_container_mt-1] [MetricsLogger] Estimator CSV: /home/nvidia/dl-vins-factory/tmp/subt_mrs_eval_mono_loop/dlvins_raco_lk_mono_loop/over_exposure/./logs/estimator_metrics_20260626_182531.csv
+[component_container_mt-1] [INFO] [1782469531.481527855] [estimator]: Processing thread started
+[component_container_mt-1] [INFO] [1782469531.481618158] [dl_vins_component]: Tracking thread started
+[component_container_mt-1] [INFO] [1782469531.481746541] [dl_vins_component]: IMU subscription QoS reliability: reliable
+[component_container_mt-1] [INFO] [1782469531.486874881] [dl_vins_component]: DlVinsComponent fully initialized
+[component_container_mt-1] loop start load vocabulary
+[component_container_mt-1] [INFO] [1782469531.634534119] [loop_fusion]: BRIEF_PATTERN_FILE: /home/nvidia/dl-vins-factory/DL-VINS/install/loop_fusion/share/loop_fusion/support_files/brief_pattern.yml
+[component_container_mt-1] [INFO] [1782469531.634633254] [loop_fusion]: loop closure: CLASSIC mode (DBoW2 + BRIEF)
+[component_container_mt-1] [LoopMetricsLogger] Logging enabled, folder: /home/nvidia/dl-vins-factory/tmp/subt_mrs_eval_mono_loop/dlvins_raco_lk_mono_loop/over_exposure/./logs, session: 20260626_182531
+[component_container_mt-1] [loop_fusion] 4-DoF (x, y, z, yaw) pose-graph optimization thread starting
+[component_container_mt-1] [LoopMetricsLogger] loop_fusion CSV: /home/nvidia/dl-vins-factory/tmp/subt_mrs_eval_mono_loop/dlvins_raco_lk_mono_loop/over_exposure/./logs/loop_fusion_metrics_20260626_182531.csv
+[component_container_mt-1] [LoopMetricsLogger] loop_optimizations CSV: /home/nvidia/dl-vins-factory/tmp/subt_mrs_eval_mono_loop/dlvins_raco_lk_mono_loop/over_exposure/./logs/loop_optimizations_20260626_182531.csv
+[component_container_mt-1] [INFO] [1782469531.642491138] [loop_fusion]: loop_fusion: composable component up; spinning on container
+[INFO] [launch_ros.actions.load_composable_nodes]: Loaded node '/loop_fusion' in container '/dl_vins/dl_vins_container'
+[component_container_mt-1] [INFO] [1782469536.246690655] [estimator]: Initializing first IMU pose
+[component_container_mt-1] [INFO] [1782469536.814253752] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782469536.891410621] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782469536.979750562] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782469537.050674205] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782469537.144076918] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782469537.221083933] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782469537.298696414] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782469537.382956102] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782469537.471426089] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782469537.544818575] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782469537.635985851] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782469537.713846042] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782469537.788684884] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782469537.871847717] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782469537.948526926] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782469538.039986136] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782469538.118450034] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782469538.201960480] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782469538.281327538] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782469538.354421274] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [WARN] [1782469538.583268224] [sfm]: Vision-only BA did not converge
+[component_container_mt-1] [WARN] [1782469538.778507144] [estimator]: Mono init rejected: scale=0.0287 outside [0.100, 10.000]. Clearing state.
+[component_container_mt-1] [INFO] [1782469538.779666974] [estimator]: Initializing first IMU pose
+[component_container_mt-1] [INFO] [1782469539.508656351] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782469539.594538937] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782469539.658571567] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782469539.750559700] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782469539.832524463] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782469539.914791464] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [WARN] [1782469540.117457455] [sfm]: Vision-only BA did not converge
+[component_container_mt-1] [WARN] [1782469540.258520459] [estimator]: Mono init rejected: scale=0.0010 outside [0.100, 10.000]. Clearing state.
+[component_container_mt-1] [INFO] [1782469540.322875870] [estimator]: Initializing first IMU pose
+[component_container_mt-1] [INFO] [1782469541.060973390] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782469541.126916212] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782469541.212860588] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782469541.298189194] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782469541.388064993] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782469541.466534586] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [WARN] [1782469541.654826077] [estimator]: LinearAlignment failed: |g|=9.9626 (expected ~9.8101, tol=0.500), scale=-0.0473
+[component_container_mt-1] [WARN] [1782469541.792948594] [sfm]: Vision-only BA did not converge
+[component_container_mt-1] [WARN] [1782469541.913826716] [estimator]: Mono init rejected: scale=0.0389 outside [0.100, 10.000]. Clearing state.
+[component_container_mt-1] [INFO] [1782469541.952785931] [estimator]: Initializing first IMU pose
+[component_container_mt-1] [WARN] [1782469542.705753751] [sfm]: Unstable feature tracking, only 0 points for PnP
+[component_container_mt-1] [WARN] [1782469542.909941328] [estimator]: Mono init rejected: scale=0.0903 outside [0.100, 10.000]. Clearing state.
+[component_container_mt-1] [INFO] [1782469542.921301613] [estimator]: Initializing first IMU pose
+[component_container_mt-1] [INFO] [1782469543.654918015] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782469543.742733511] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782469543.819373456] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782469543.899540730] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782469543.978366223] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782469544.058101341] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782469544.142614913] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782469544.230209419] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782469544.315018636] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782469544.391653109] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782469544.473907628] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782469544.553798329] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782469544.633803044] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782469544.729610470] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782469544.792674756] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782469544.888019339] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782469544.963301407] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782469545.047393991] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782469545.125079270] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782469545.227667629] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782469545.291762114] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782469545.370836245] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782469545.454684863] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782469545.527917701] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782469545.620551042] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782469545.692936335] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782469545.773537973] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782469545.857858139] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782469545.940076755] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782469546.021015126] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782469546.096409705] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782469546.175465532] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782469546.257659091] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782469546.350558223] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782469546.425319015] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782469546.509031378] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782469546.594144048] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782469546.689927026] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782469546.748571926] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782469546.836650267] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782469546.917100738] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782469547.003841619] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782469547.083745438] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782469547.157655614] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782469547.239763510] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782469547.316627452] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782469547.403583371] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782469547.485843458] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782469547.581152648] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782469547.649998355] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782469547.744187683] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782469547.828884325] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782469547.917507301] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782469547.991657634] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782469548.088257597] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782469548.154260417] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782469548.221309243] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782469548.313558364] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782469548.393511687] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782469548.459805160] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782469548.547908940] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782469548.626720289] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782469548.721498571] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782469548.795222348] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782469548.874846522] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782469548.954631367] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782469549.035978949] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782469549.127374829] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782469549.195470142] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [WARN] [1782469549.429836622] [sfm]: Vision-only BA did not converge
+[component_container_mt-1] [INFO] [1782469549.466471600] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [WARN] [1782469549.601866682] [sfm]: Vision-only BA did not converge
+[component_container_mt-1] [WARN] [1782469549.752694175] [sfm]: Vision-only BA did not converge
+[component_container_mt-1] [WARN] [1782469549.951363556] [estimator]: Mono init rejected: scale=0.0289 outside [0.100, 10.000]. Clearing state.
+[component_container_mt-1] [INFO] [1782469550.011362748] [estimator]: Initializing first IMU pose
+[component_container_mt-1] [INFO] [1782469550.749970805] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782469550.826731196] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782469550.913849128] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782469550.993822450] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782469551.076633444] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782469551.150614082] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782469551.248281715] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782469551.319774630] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782469551.407947817] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782469551.477986602] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782469551.569117395] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782469551.638821750] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782469551.723629463] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782469551.806827173] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782469551.889115835] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782469551.969740991] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782469552.042564455] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782469552.136469241] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782469552.215593546] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782469552.288847758] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782469552.380144374] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782469552.471467869] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782469552.548365282] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782469552.618524577] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782469552.694602093] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782469552.804612082] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782469552.868301642] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782469552.952905451] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782469553.032048124] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782469553.101808799] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782469553.187763093] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782469553.282959386] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782469553.350048788] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782469553.444703998] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782469553.513500201] [estimator]: [bootstrap] static window captured (acc_var=0.0481): Bgs_prior=[-0.00024, 0.00010, 0.00110]
+[component_container_mt-1] [INFO] [1782469553.519057241] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782469553.601942665] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782469553.685840625] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782469553.753329863] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782469553.842692671] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782469553.919291079] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782469554.006933966] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782469554.078869469] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782469554.158762951] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782469554.242279282] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782469554.325440320] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782469554.412605291] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782469554.489463184] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782469554.572085346] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782469554.668024225] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782469554.732647024] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782469554.818358408] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782469554.901680725] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782469554.982175162] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782469555.068634283] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782469555.150826369] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782469555.233739921] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782469555.307066900] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782469555.394789370] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782469555.471297089] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782469555.556505757] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782469555.634783157] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782469555.717890980] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782469555.797659023] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782469555.875938791] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782469555.960508744] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782469556.037380301] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782469556.118305966] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782469556.219230497] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782469556.277190217] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782469556.361451693] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782469556.446336044] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782469556.534165457] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782469556.609695904] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782469556.689136366] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782469556.776601302] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782469556.861921361] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782469556.933730593] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782469557.017740615] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782469557.094321806] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782469557.181758902] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782469557.267268879] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782469557.341366379] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782469557.429456397] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782469557.508750908] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782469557.597970709] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782469557.672943977] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782469557.762160802] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782469557.839285220] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782469557.918454900] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782469558.003135764] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782469558.072401498] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782469558.156337216] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782469558.238368663] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782469558.323116982] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782469558.404348724] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782469558.483213543] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782469558.571167562] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782469558.646482492] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782469558.724366455] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782469558.817831498] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782469558.893855253] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782469558.969906752] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782469559.053401642] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782469559.133458674] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782469559.221234039] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782469559.301299167] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782469559.378211138] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782469559.476761385] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782469559.553647725] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782469559.628085541] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782469559.706299741] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782469559.786683042] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782469559.877463597] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782469559.951496585] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782469560.032869830] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782469560.113334442] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782469560.203808343] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782469560.277042618] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782469560.361913304] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782469560.435466456] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782469560.524597713] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782469560.609836876] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782469560.682963184] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782469560.768417064] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782469560.850469983] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782469560.927020389] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782469561.011387271] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782469561.093782554] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782469561.173565860] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782469561.258184804] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782469561.334427757] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782469561.412432710] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782469561.500048364] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782469561.575883224] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782469561.667395260] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782469561.749818223] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782469561.831355882] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782469561.909976190] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782469561.994573598] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782469562.187630606] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782469562.326400982] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782469562.453543908] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782469562.576473014] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [WARN] [1782469562.748847962] [estimator]: LinearAlignment failed: |g|=9.8625 (expected ~9.8101, tol=0.500), scale=-0.0002
+[component_container_mt-1] [WARN] [1782469562.919098064] [sfm]: Vision-only BA did not converge
+[component_container_mt-1] [WARN] [1782469563.093984190] [sfm]: Vision-only BA did not converge
+[component_container_mt-1] [INFO] [1782469563.223594326] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782469563.343151685] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782469563.448319954] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [INFO] [1782469563.553627485] [estimator]: Not enough features or parallax; Move device around
+[component_container_mt-1] [WARN] [1782469563.696203108] [estimator]: LinearAlignment failed: |g|=9.7878 (expected ~9.8101, tol=0.500), scale=-0.0212
+[component_container_mt-1] [WARN] [1782469563.862524060] [estimator]: Mono init rejected: scale=0.0236 outside [0.100, 10.000]. Clearing state.
+[component_container_mt-1] [INFO] [1782469563.877707448] [estimator]: Initializing first IMU pose
+[component_container_mt-1] [WARN] [1782469564.612474523] [sfm]: Unstable feature tracking, only 0 points for PnP
+[component_container_mt-1] [IMUFactor] Numerical instability in jacobian_pose_i, resetting
+[component_container_mt-1] [IMUFactor] Numerical instability in jacobian_speedbias_i, resetting
+[component_container_mt-1] [IMUFactor] Numerical instability in jacobian_pose_j, resetting
+[component_container_mt-1] [IMUFactor] Numerical instability in jacobian_speedbias_j, resetting
+[component_container_mt-1] [WARN] [1782469564.825677275] [estimator]: Mono init rejected: scale=0.0478 outside [0.100, 10.000]. Clearing state.
+[component_container_mt-1] [INFO] [1782469564.853142636] [estimator]: Initializing first IMU pose
+[component_container_mt-1] [WARN] [1782469565.593428765] [sfm]: Unstable feature tracking, only 0 points for PnP
+[component_container_mt-1] [WARN] [1782469565.811087029] [sfm]: Vision-only BA did not converge
+[component_container_mt-1] [WARN] [1782469565.946921078] [sfm]: Vision-only BA did not converge
+[component_container_mt-1] [INFO] [1782469566.111328734] [estimator]: Mono initialization complete!
+[component_container_mt-1] [INFO] [1782469566.111377502] [estimator]: [init_quality] |g|=9.8101 scale=0.2547 abias=0.010 static_bootstrap=yes
+[component_container_mt-1] optimize pose graph 
+[component_container_mt-1] optimize pose graph 
+[component_container_mt-1] optimize pose graph 
+[component_container_mt-1] optimize pose graph 
+[component_container_mt-1] optimize pose graph 
+[component_container_mt-1] optimize pose graph 
+[component_container_mt-1] optimize pose graph 
+[component_container_mt-1] optimize pose graph 
+[component_container_mt-1] optimize pose graph 
+[component_container_mt-1] optimize pose graph 
+[component_container_mt-1] optimize pose graph 
+[component_container_mt-1] optimize pose graph 
+[component_container_mt-1] optimize pose graph 
+[component_container_mt-1] optimize pose graph 
+[component_container_mt-1] optimize pose graph 
+[component_container_mt-1] optimize pose graph 
+[component_container_mt-1] optimize pose graph 
+[component_container_mt-1] optimize pose graph 
+[component_container_mt-1] optimize pose graph 
+[component_container_mt-1] optimize pose graph 
+[component_container_mt-1] optimize pose graph 
+[component_container_mt-1] optimize pose graph 
+[component_container_mt-1] optimize pose graph 
+[component_container_mt-1] optimize pose graph 
+[component_container_mt-1] optimize pose graph 
+[component_container_mt-1] optimize pose graph 
+[component_container_mt-1] optimize pose graph 
+[component_container_mt-1] optimize pose graph 
+[component_container_mt-1] optimize pose graph 
+[component_container_mt-1] optimize pose graph 
+[component_container_mt-1] optimize pose graph 
+[component_container_mt-1] optimize pose graph 
+[component_container_mt-1] optimize pose graph 
+[component_container_mt-1] optimize pose graph 
+[component_container_mt-1] optimize pose graph 
+[component_container_mt-1] optimize pose graph 
+[component_container_mt-1] optimize pose graph 
+[component_container_mt-1] optimize pose graph 
+[component_container_mt-1] optimize pose graph 
+[component_container_mt-1] optimize pose graph 
+[component_container_mt-1] optimize pose graph 
+[component_container_mt-1] optimize pose graph 
+[component_container_mt-1] optimize pose graph 
+[component_container_mt-1] optimize pose graph 
+[component_container_mt-1] optimize pose graph 
+[component_container_mt-1] optimize pose graph 
+[component_container_mt-1] optimize pose graph 
+[component_container_mt-1] optimize pose graph 
+[component_container_mt-1] optimize pose graph 
+[component_container_mt-1] optimize pose graph 
+[component_container_mt-1] optimize pose graph 
+[component_container_mt-1] optimize pose graph 
+[component_container_mt-1] optimize pose graph 
+[component_container_mt-1] optimize pose graph 
+[component_container_mt-1] optimize pose graph 
+[component_container_mt-1] optimize pose graph 
+[component_container_mt-1] optimize pose graph 
+[component_container_mt-1] optimize pose graph 
+[component_container_mt-1] optimize pose graph 
+[component_container_mt-1] optimize pose graph 
+[component_container_mt-1] optimize pose graph 
+[component_container_mt-1] optimize pose graph 
+[component_container_mt-1] optimize pose graph 
+[component_container_mt-1] [WARN] [1782470111.399786757] [estimator]: Failure detected [position jump]: |V|=29.99/50 |Ba|=0.099/2.5 |Bg|=0.004/1.0 jump=21.04/20
+[component_container_mt-1] [WARN] [1782470113.105733531] [estimator]: Failure detected [position jump]: |V|=30.22/50 |Ba|=0.226/2.5 |Bg|=0.003/1.0 jump=22.72/20
+[component_container_mt-1] [WARN] [1782470124.682267843] [estimator]: Failure detected [position jump]: |V|=44.31/50 |Ba|=0.193/2.5 |Bg|=0.004/1.0 jump=23.27/20
+[component_container_mt-1] [WARN] [1782470128.097928645] [estimator]: Failure detected [position jump]: |V|=48.99/50 |Ba|=0.176/2.5 |Bg|=0.007/1.0 jump=24.18/20
+[component_container_mt-1] [WARN] [1782470129.148966201] [estimator]: Failure detected [velocity blow-up]: |V|=51.17/50 |Ba|=0.148/2.5 |Bg|=0.005/1.0 jump=12.57/20
+[component_container_mt-1] [WARN] [1782470130.226659631] [estimator]: Failure detected [velocity blow-up + position jump]: |V|=52.65/50 |Ba|=0.172/2.5 |Bg|=0.006/1.0 jump=48.08/20
+[component_container_mt-1] [WARN] [1782470131.272709617] [estimator]: Failure detected [velocity blow-up]: |V|=54.77/50 |Ba|=0.200/2.5 |Bg|=0.005/1.0 jump=4.36/20
+[component_container_mt-1] [WARN] [1782470132.334112864] [estimator]: Failure detected [velocity blow-up + position jump]: |V|=58.34/50 |Ba|=0.206/2.5 |Bg|=0.005/1.0 jump=37.48/20
+[component_container_mt-1] [WARN] [1782470133.382443850] [estimator]: Failure detected [velocity blow-up]: |V|=59.15/50 |Ba|=0.202/2.5 |Bg|=0.005/1.0 jump=4.73/20
+[component_container_mt-1] [WARN] [1782470134.449595969] [estimator]: Failure detected [velocity blow-up + position jump]: |V|=62.18/50 |Ba|=0.199/2.5 |Bg|=0.004/1.0 jump=41.09/20
+[component_container_mt-1] [WARN] [1782470135.517322193] [estimator]: Failure detected [velocity blow-up]: |V|=63.25/50 |Ba|=0.195/2.5 |Bg|=0.005/1.0 jump=15.04/20
+[component_container_mt-1] [WARN] [1782470136.564217991] [estimator]: Failure detected [velocity blow-up + position jump]: |V|=67.43/50 |Ba|=0.207/2.5 |Bg|=0.005/1.0 jump=43.07/20
+[component_container_mt-1] [WARN] [1782470137.627198275] [estimator]: Failure detected [velocity blow-up + position jump]: |V|=67.42/50 |Ba|=0.195/2.5 |Bg|=0.004/1.0 jump=37.32/20
+[component_container_mt-1] [WARN] [1782470138.688492941] [estimator]: Failure detected [velocity blow-up]: |V|=69.46/50 |Ba|=0.189/2.5 |Bg|=0.005/1.0 jump=6.13/20
+[component_container_mt-1] [WARN] [1782470139.745888669] [estimator]: Failure detected [velocity blow-up]: |V|=71.39/50 |Ba|=0.183/2.5 |Bg|=0.005/1.0 jump=5.68/20
+[component_container_mt-1] [WARN] [1782470140.806187791] [estimator]: Failure detected [velocity blow-up + position jump]: |V|=72.76/50 |Ba|=0.199/2.5 |Bg|=0.018/1.0 jump=31.88/20
+[component_container_mt-1] [WARN] [1782470141.869319686] [estimator]: Failure detected [velocity blow-up]: |V|=69.14/50 |Ba|=0.111/2.5 |Bg|=0.022/1.0 jump=17.54/20
+[component_container_mt-1] [WARN] [1782470142.919389496] [estimator]: Failure detected [velocity blow-up]: |V|=64.96/50 |Ba|=0.112/2.5 |Bg|=0.005/1.0 jump=5.30/20
+[component_container_mt-1] [WARN] [1782470143.977240160] [estimator]: Failure detected [velocity blow-up]: |V|=65.94/50 |Ba|=0.155/2.5 |Bg|=0.005/1.0 jump=5.37/20
+[component_container_mt-1] [WARN] [1782470145.036934165] [estimator]: Failure detected [velocity blow-up]: |V|=67.78/50 |Ba|=0.192/2.5 |Bg|=0.006/1.0 jump=5.50/20
+[component_container_mt-1] [WARN] [1782470146.093450663] [estimator]: Failure detected [velocity blow-up]: |V|=68.89/50 |Ba|=0.194/2.5 |Bg|=0.005/1.0 jump=5.61/20
+[component_container_mt-1] [WARN] [1782470147.156887831] [estimator]: Failure detected [velocity blow-up]: |V|=68.84/50 |Ba|=0.164/2.5 |Bg|=0.005/1.0 jump=5.35/20
+[component_container_mt-1] [WARN] [1782470148.216984741] [estimator]: Failure detected [velocity blow-up]: |V|=70.87/50 |Ba|=0.160/2.5 |Bg|=0.006/1.0 jump=5.77/20
+[component_container_mt-1] [WARN] [1782470149.258496452] [estimator]: Failure detected [velocity blow-up]: |V|=71.38/50 |Ba|=0.142/2.5 |Bg|=0.005/1.0 jump=5.92/20
+[component_container_mt-1] [WARN] [1782470150.328201429] [estimator]: Failure detected [velocity blow-up]: |V|=73.32/50 |Ba|=0.132/2.5 |Bg|=0.005/1.0 jump=6.03/20
+[component_container_mt-1] [WARN] [1782470151.393794445] [estimator]: Failure detected [velocity blow-up]: |V|=74.63/50 |Ba|=0.129/2.5 |Bg|=0.005/1.0 jump=6.08/20
+[component_container_mt-1] [WARN] [1782470152.448892744] [estimator]: Failure detected [velocity blow-up]: |V|=75.90/50 |Ba|=0.128/2.5 |Bg|=0.005/1.0 jump=6.17/20
+[component_container_mt-1] [WARN] [1782470153.510098568] [estimator]: Failure detected [velocity blow-up]: |V|=76.82/50 |Ba|=0.128/2.5 |Bg|=0.005/1.0 jump=6.26/20
+[component_container_mt-1] [WARN] [1782470154.575753405] [estimator]: Failure detected [velocity blow-up]: |V|=77.35/50 |Ba|=0.160/2.5 |Bg|=0.005/1.0 jump=6.37/20
+[component_container_mt-1] [WARN] [1782470155.636901435] [estimator]: Failure detected [velocity blow-up]: |V|=78.66/50 |Ba|=0.154/2.5 |Bg|=0.005/1.0 jump=6.41/20
+[component_container_mt-1] [WARN] [1782470156.687610941] [estimator]: Failure detected [velocity blow-up]: |V|=79.72/50 |Ba|=0.160/2.5 |Bg|=0.005/1.0 jump=6.49/20
+[component_container_mt-1] optimize pose graph 
+[component_container_mt-1] [WARN] [1782470157.702850031] [estimator]: Failure detected [velocity blow-up]: |V|=80.72/50 |Ba|=0.168/2.5 |Bg|=0.005/1.0 jump=6.57/20
+[component_container_mt-1] [WARN] [1782470158.738430687] [estimator]: Failure detected [velocity blow-up]: |V|=81.80/50 |Ba|=0.179/2.5 |Bg|=0.005/1.0 jump=6.66/20
+[component_container_mt-1] [WARN] [1782470159.777724171] [estimator]: Failure detected [velocity blow-up]: |V|=82.87/50 |Ba|=0.196/2.5 |Bg|=0.005/1.0 jump=6.75/20
+[component_container_mt-1] [WARN] [1782470160.843699608] [estimator]: Failure detected [velocity blow-up]: |V|=83.73/50 |Ba|=0.217/2.5 |Bg|=0.005/1.0 jump=6.82/20
+[component_container_mt-1] optimize pose graph 
+[component_container_mt-1] [WARN] [1782470161.879324517] [estimator]: Failure detected [velocity blow-up]: |V|=85.03/50 |Ba|=0.231/2.5 |Bg|=0.005/1.0 jump=6.92/20
+[component_container_mt-1] [WARN] [1782470162.888033522] [estimator]: Failure detected [velocity blow-up]: |V|=85.48/50 |Ba|=0.249/2.5 |Bg|=0.005/1.0 jump=6.92/20
+[component_container_mt-1] [WARN] [1782470163.940922201] [estimator]: Failure detected [velocity blow-up]: |V|=86.32/50 |Ba|=0.267/2.5 |Bg|=0.005/1.0 jump=7.02/20
+[component_container_mt-1] [WARN] [1782470164.997032641] [estimator]: Failure detected [velocity blow-up]: |V|=87.11/50 |Ba|=0.289/2.5 |Bg|=0.005/1.0 jump=7.05/20
+[component_container_mt-1] [WARN] [1782470166.063637091] [estimator]: Failure detected [velocity blow-up]: |V|=87.92/50 |Ba|=0.307/2.5 |Bg|=0.005/1.0 jump=7.16/20
+[component_container_mt-1] optimize pose graph 
+[component_container_mt-1] [WARN] [1782470167.077686650] [estimator]: Failure detected [velocity blow-up]: |V|=88.48/50 |Ba|=0.340/2.5 |Bg|=0.005/1.0 jump=7.21/20
+[component_container_mt-1] [WARN] [1782470168.121011513] [estimator]: Failure detected [velocity blow-up]: |V|=89.66/50 |Ba|=0.355/2.5 |Bg|=0.005/1.0 jump=7.30/20
+[component_container_mt-1] [WARN] [1782470169.153984954] [estimator]: Failure detected [velocity blow-up]: |V|=90.72/50 |Ba|=0.375/2.5 |Bg|=0.005/1.0 jump=7.39/20
+[component_container_mt-1] [WARN] [1782470170.209922815] [estimator]: Failure detected [velocity blow-up]: |V|=91.60/50 |Ba|=0.391/2.5 |Bg|=0.005/1.0 jump=7.47/20
+[component_container_mt-1] optimize pose graph 
+[component_container_mt-1] [WARN] [1782470171.276823611] [estimator]: Failure detected [velocity blow-up]: |V|=92.29/50 |Ba|=0.411/2.5 |Bg|=0.005/1.0 jump=7.50/20
+[component_container_mt-1] [WARN] [1782470172.347818255] [estimator]: Failure detected [velocity blow-up]: |V|=93.15/50 |Ba|=0.439/2.5 |Bg|=0.005/1.0 jump=7.59/20
+[component_container_mt-1] [WARN] [1782470173.351125320] [estimator]: Failure detected [velocity blow-up]: |V|=93.65/50 |Ba|=0.463/2.5 |Bg|=0.005/1.0 jump=7.61/20
+[component_container_mt-1] [WARN] [1782470174.366900329] [estimator]: Failure detected [velocity blow-up]: |V|=94.51/50 |Ba|=0.487/2.5 |Bg|=0.005/1.0 jump=7.69/20
+[component_container_mt-1] [WARN] [1782470175.447553118] [estimator]: Failure detected [velocity blow-up]: |V|=95.09/50 |Ba|=0.514/2.5 |Bg|=0.005/1.0 jump=7.71/20
+[component_container_mt-1] [WARN] [1782470176.494060601] [estimator]: Failure detected [velocity blow-up]: |V|=95.66/50 |Ba|=0.544/2.5 |Bg|=0.005/1.0 jump=7.79/20
+[component_container_mt-1] [WARN] [1782470177.546014366] [estimator]: Failure detected [velocity blow-up]: |V|=97.12/50 |Ba|=0.542/2.5 |Bg|=0.005/1.0 jump=7.92/20
+[component_container_mt-1] [WARN] [1782470178.619191641] [estimator]: Failure detected [velocity blow-up + position jump]: |V|=73.38/50 |Ba|=1.238/2.5 |Bg|=0.012/1.0 jump=48.02/20
+[component_container_mt-1] [WARN] [1782470179.677682558] [estimator]: Failure detected [velocity blow-up]: |V|=76.24/50 |Ba|=1.240/2.5 |Bg|=0.012/1.0 jump=16.35/20
+[component_container_mt-1] [WARN] [1782470180.737848051] [estimator]: Failure detected [velocity blow-up]: |V|=78.38/50 |Ba|=1.131/2.5 |Bg|=0.013/1.0 jump=16.75/20
+[component_container_mt-1] [WARN] [1782470181.791372454] [estimator]: Failure detected [velocity blow-up]: |V|=75.03/50 |Ba|=1.165/2.5 |Bg|=0.013/1.0 jump=18.63/20
+[component_container_mt-1] [WARN] [1782470182.853021196] [estimator]: Failure detected [velocity blow-up + position jump]: |V|=69.55/50 |Ba|=1.093/2.5 |Bg|=0.009/1.0 jump=33.32/20
+[component_container_mt-1] [WARN] [1782470183.903930390] [estimator]: Failure detected [velocity blow-up]: |V|=69.44/50 |Ba|=1.071/2.5 |Bg|=0.012/1.0 jump=13.34/20
+[component_container_mt-1] [WARN] [1782470184.957318569] [estimator]: Failure detected [velocity blow-up + position jump]: |V|=63.58/50 |Ba|=1.038/2.5 |Bg|=0.009/1.0 jump=26.01/20
+[component_container_mt-1] [WARN] [1782470186.037671609] [estimator]: Failure detected [velocity blow-up + position jump]: |V|=63.59/50 |Ba|=0.901/2.5 |Bg|=0.013/1.0 jump=20.32/20
+[component_container_mt-1] [WARN] [1782470187.092529244] [estimator]: Failure detected [velocity blow-up + position jump]: |V|=57.83/50 |Ba|=1.013/2.5 |Bg|=0.008/1.0 jump=23.94/20
+[component_container_mt-1] optimize pose graph 
+[component_container_mt-1] [WARN] [1782470188.211983573] [estimator]: Failure detected [velocity blow-up]: |V|=55.08/50 |Ba|=0.855/2.5 |Bg|=0.013/1.0 jump=5.10/20
+[component_container_mt-1] [WARN] [1782470189.243096377] [estimator]: Failure detected [position jump]: |V|=47.38/50 |Ba|=0.901/2.5 |Bg|=0.013/1.0 jump=20.78/20
+[component_container_mt-1] [WARN] [1782470190.376558346] [estimator]: Failure detected [position jump]: |V|=43.46/50 |Ba|=0.756/2.5 |Bg|=0.008/1.0 jump=25.90/20
+[component_container_mt-1] [WARN] [1782470191.420278868] [estimator]: Failure detected [position jump]: |V|=39.09/50 |Ba|=0.809/2.5 |Bg|=0.007/1.0 jump=35.66/20
+[component_container_mt-1] [WARN] [1782470192.472464588] [estimator]: Failure detected [position jump]: |V|=37.15/50 |Ba|=0.807/2.5 |Bg|=0.007/1.0 jump=33.74/20
+[component_container_mt-1] [WARN] [1782470193.513689901] [estimator]: Failure detected [position jump]: |V|=37.20/50 |Ba|=0.732/2.5 |Bg|=0.013/1.0 jump=45.62/20
+[component_container_mt-1] optimize pose graph 
+[component_container_mt-1] [WARN] [1782470195.484140698] [estimator]: Failure detected [velocity blow-up]: |V|=51.44/50 |Ba|=0.651/2.5 |Bg|=0.002/1.0 jump=8.90/20
+[component_container_mt-1] [WARN] [1782470196.555911892] [estimator]: Failure detected [velocity blow-up]: |V|=50.59/50 |Ba|=0.690/2.5 |Bg|=0.002/1.0 jump=14.38/20
+[component_container_mt-1] [WARN] [1782470200.888701664] [estimator]: Failure detected [velocity blow-up]: |V|=50.04/50 |Ba|=0.733/2.5 |Bg|=0.004/1.0 jump=4.07/20
+[component_container_mt-1] optimize pose graph 
+[component_container_mt-1] [WARN] [1782470202.037853075] [estimator]: Failure detected [velocity blow-up]: |V|=54.04/50 |Ba|=0.725/2.5 |Bg|=0.006/1.0 jump=14.83/20
+[component_container_mt-1] [WARN] [1782470203.400065870] [estimator]: Failure detected [position jump]: |V|=42.10/50 |Ba|=0.720/2.5 |Bg|=0.003/1.0 jump=21.75/20
+[component_container_mt-1] [WARN] [1782470204.402004127] [estimator]: Failure detected [position jump]: |V|=47.60/50 |Ba|=0.712/2.5 |Bg|=0.003/1.0 jump=39.27/20
+[component_container_mt-1] [WARN] [1782470205.649113573] [estimator]: Failure detected [velocity blow-up + position jump]: |V|=56.21/50 |Ba|=0.712/2.5 |Bg|=0.005/1.0 jump=42.82/20
+[component_container_mt-1] [WARN] [1782470208.236140983] [estimator]: Failure detected [position jump]: |V|=12.66/50 |Ba|=0.690/2.5 |Bg|=0.004/1.0 jump=27.67/20
+[component_container_mt-1] [WARN] [1782470209.458028907] [estimator]: Failure detected [position jump]: |V|=42.54/50 |Ba|=0.695/2.5 |Bg|=0.003/1.0 jump=20.03/20
+[component_container_mt-1] optimize pose graph 
+[component_container_mt-1] optimize pose graph 
+[component_container_mt-1] optimize pose graph 
+[component_container_mt-1] optimize pose graph 
+[component_container_mt-1] [WARN] [1782470248.718971641] [estimator]: Failure detected [velocity blow-up]: |V|=50.06/50 |Ba|=0.695/2.5 |Bg|=0.004/1.0 jump=4.07/20
+[component_container_mt-1] [WARN] [1782470249.776221082] [estimator]: Failure detected [velocity blow-up]: |V|=51.90/50 |Ba|=0.696/2.5 |Bg|=0.004/1.0 jump=4.22/20
+[component_container_mt-1] [WARN] [1782470250.841037777] [estimator]: Failure detected [velocity blow-up]: |V|=53.75/50 |Ba|=0.696/2.5 |Bg|=0.004/1.0 jump=4.37/20
+[component_container_mt-1] [WARN] [1782470251.891465202] [estimator]: Failure detected [velocity blow-up]: |V|=55.64/50 |Ba|=0.698/2.5 |Bg|=0.004/1.0 jump=4.53/20
+[component_container_mt-1] [WARN] [1782470252.955479823] [estimator]: Failure detected [velocity blow-up]: |V|=57.12/50 |Ba|=0.698/2.5 |Bg|=0.004/1.0 jump=4.65/20
+[component_container_mt-1] [WARN] [1782470254.015344244] [estimator]: Failure detected [velocity blow-up]: |V|=59.06/50 |Ba|=0.698/2.5 |Bg|=0.004/1.0 jump=4.80/20
+[component_container_mt-1] [WARN] [1782470255.090174248] [estimator]: Failure detected [velocity blow-up]: |V|=60.98/50 |Ba|=0.699/2.5 |Bg|=0.004/1.0 jump=4.96/20
+[component_container_mt-1] [WARN] [1782470256.128943158] [estimator]: Failure detected [velocity blow-up]: |V|=62.94/50 |Ba|=0.700/2.5 |Bg|=0.004/1.0 jump=5.12/20
+[component_container_mt-1] [WARN] [1782470257.190291722] [estimator]: Failure detected [velocity blow-up]: |V|=65.07/50 |Ba|=0.698/2.5 |Bg|=0.004/1.0 jump=5.30/20
+[component_container_mt-1] [WARN] [1782470258.246941995] [estimator]: Failure detected [velocity blow-up]: |V|=67.24/50 |Ba|=0.698/2.5 |Bg|=0.004/1.0 jump=5.47/20
+[component_container_mt-1] [WARN] [1782470259.372378679] [estimator]: Failure detected [velocity blow-up]: |V|=69.36/50 |Ba|=0.700/2.5 |Bg|=0.004/1.0 jump=5.64/20
+[component_container_mt-1] [WARN] [1782470260.439428882] [estimator]: Failure detected [velocity blow-up]: |V|=71.48/50 |Ba|=0.700/2.5 |Bg|=0.004/1.0 jump=5.82/20
+[component_container_mt-1] [WARN] [1782470261.502462644] [estimator]: Failure detected [velocity blow-up]: |V|=73.68/50 |Ba|=0.701/2.5 |Bg|=0.004/1.0 jump=5.99/20
+[component_container_mt-1] optimize pose graph 
+[component_container_mt-1] [WARN] [1782470262.571971670] [estimator]: Failure detected [velocity blow-up]: |V|=75.55/50 |Ba|=0.700/2.5 |Bg|=0.004/1.0 jump=6.16/20
+[component_container_mt-1] [WARN] [1782470263.621509016] [estimator]: Failure detected [velocity blow-up]: |V|=78.18/50 |Ba|=0.701/2.5 |Bg|=0.004/1.0 jump=6.36/20
+[component_container_mt-1] [WARN] [1782470264.678125013] [estimator]: Failure detected [velocity blow-up]: |V|=80.44/50 |Ba|=0.701/2.5 |Bg|=0.004/1.0 jump=6.54/20
+[component_container_mt-1] [WARN] [1782470265.732147434] [estimator]: Failure detected [velocity blow-up]: |V|=82.64/50 |Ba|=0.702/2.5 |Bg|=0.004/1.0 jump=6.69/20
+[component_container_mt-1] [WARN] [1782470266.735399910] [estimator]: Failure detected [velocity blow-up]: |V|=85.15/50 |Ba|=0.703/2.5 |Bg|=0.004/1.0 jump=6.93/20
+[component_container_mt-1] [WARN] [1782470267.800580975] [estimator]: Failure detected [velocity blow-up]: |V|=87.67/50 |Ba|=0.703/2.5 |Bg|=0.004/1.0 jump=7.19/20
+[component_container_mt-1] [WARN] [1782470268.836958092] [estimator]: Failure detected [velocity blow-up]: |V|=90.67/50 |Ba|=0.704/2.5 |Bg|=0.004/1.0 jump=7.38/20
+[component_container_mt-1] optimize pose graph 
+[component_container_mt-1] [WARN] [1782470269.911179421] [estimator]: Failure detected [velocity blow-up]: |V|=93.12/50 |Ba|=0.704/2.5 |Bg|=0.004/1.0 jump=7.60/20
+[component_container_mt-1] [WARN] [1782470270.942772934] [estimator]: Failure detected [velocity blow-up]: |V|=95.63/50 |Ba|=0.706/2.5 |Bg|=0.004/1.0 jump=7.70/20
+[component_container_mt-1] [WARN] [1782470272.020606963] [estimator]: Failure detected [velocity blow-up + position jump]: |V|=98.03/50 |Ba|=0.724/2.5 |Bg|=0.002/1.0 jump=50.71/20
+[component_container_mt-1] [WARN] [1782470273.070593642] [estimator]: Failure detected [velocity blow-up + position jump]: |V|=100.22/50 |Ba|=0.730/2.5 |Bg|=0.003/1.0 jump=20.32/20
+[component_container_mt-1] [WARN] [1782470274.100769919] [estimator]: Failure detected [velocity blow-up]: |V|=101.58/50 |Ba|=0.716/2.5 |Bg|=0.004/1.0 jump=8.15/20
+[component_container_mt-1] [WARN] [1782470275.128325101] [estimator]: Failure detected [velocity blow-up]: |V|=102.16/50 |Ba|=0.708/2.5 |Bg|=0.005/1.0 jump=8.28/20
+[component_container_mt-1] [WARN] [1782470276.172535770] [estimator]: Failure detected [velocity blow-up]: |V|=102.27/50 |Ba|=0.720/2.5 |Bg|=0.005/1.0 jump=10.03/20
+[component_container_mt-1] [WARN] [1782470277.254274622] [estimator]: Failure detected [velocity blow-up + position jump]: |V|=105.04/50 |Ba|=0.715/2.5 |Bg|=0.006/1.0 jump=43.28/20
+[component_container_mt-1] [WARN] [1782470278.294607887] [estimator]: Failure detected [velocity blow-up + position jump]: |V|=108.10/50 |Ba|=0.704/2.5 |Bg|=0.004/1.0 jump=40.16/20
+[component_container_mt-1] [WARN] [1782470279.349014648] [estimator]: Failure detected [velocity blow-up]: |V|=108.20/50 |Ba|=0.712/2.5 |Bg|=0.005/1.0 jump=18.24/20
+[component_container_mt-1] [WARN] [1782470280.410513308] [estimator]: Failure detected [velocity blow-up + position jump]: |V|=110.19/50 |Ba|=0.709/2.5 |Bg|=0.004/1.0 jump=21.12/20
+[component_container_mt-1] [WARN] [1782470281.468982045] [estimator]: Failure detected [velocity blow-up]: |V|=111.01/50 |Ba|=0.730/2.5 |Bg|=0.005/1.0 jump=14.50/20
+[component_container_mt-1] [WARN] [1782470282.530578431] [estimator]: Failure detected [velocity blow-up + position jump]: |V|=109.94/50 |Ba|=0.735/2.5 |Bg|=0.005/1.0 jump=50.81/20
+[component_container_mt-1] [WARN] [1782470283.588641026] [estimator]: Failure detected [velocity blow-up + position jump]: |V|=112.86/50 |Ba|=0.725/2.5 |Bg|=0.005/1.0 jump=20.94/20
+[component_container_mt-1] [WARN] [1782470284.647321215] [estimator]: Failure detected [velocity blow-up]: |V|=113.82/50 |Ba|=0.734/2.5 |Bg|=0.004/1.0 jump=10.62/20
+[component_container_mt-1] [WARN] [1782470285.700613039] [estimator]: Failure detected [velocity blow-up + position jump]: |V|=116.28/50 |Ba|=0.726/2.5 |Bg|=0.004/1.0 jump=45.96/20
+[component_container_mt-1] [WARN] [1782470286.779247882] [estimator]: Failure detected [velocity blow-up]: |V|=115.29/50 |Ba|=0.757/2.5 |Bg|=0.005/1.0 jump=9.97/20
+[component_container_mt-1] [WARN] [1782470287.825837113] [estimator]: Failure detected [velocity blow-up]: |V|=115.49/50 |Ba|=0.790/2.5 |Bg|=0.005/1.0 jump=14.22/20
+[component_container_mt-1] [WARN] [1782470288.887966354] [estimator]: Failure detected [velocity blow-up]: |V|=117.57/50 |Ba|=0.735/2.5 |Bg|=0.005/1.0 jump=18.11/20
+[component_container_mt-1] [WARN] [1782470289.946467054] [estimator]: Failure detected [velocity blow-up]: |V|=119.38/50 |Ba|=0.711/2.5 |Bg|=0.004/1.0 jump=11.94/20
+[component_container_mt-1] [WARN] [1782470291.004399118] [estimator]: Failure detected [velocity blow-up + position jump]: |V|=120.98/50 |Ba|=0.724/2.5 |Bg|=0.004/1.0 jump=35.95/20
+[component_container_mt-1] [WARN] [1782470292.058452755] [estimator]: Failure detected [velocity blow-up]: |V|=122.18/50 |Ba|=0.731/2.5 |Bg|=0.004/1.0 jump=17.62/20
+[component_container_mt-1] [WARN] [1782470293.126639439] [estimator]: Failure detected [velocity blow-up]: |V|=124.18/50 |Ba|=0.750/2.5 |Bg|=0.004/1.0 jump=12.72/20
+[component_container_mt-1] [WARN] [1782470294.176315260] [estimator]: Failure detected [velocity blow-up]: |V|=124.70/50 |Ba|=0.754/2.5 |Bg|=0.005/1.0 jump=11.96/20
+[component_container_mt-1] [WARN] [1782470295.245033394] [estimator]: Failure detected [velocity blow-up]: |V|=126.63/50 |Ba|=0.747/2.5 |Bg|=0.004/1.0 jump=11.56/20
+[component_container_mt-1] [WARN] [1782470296.296294063] [estimator]: Failure detected [velocity blow-up + position jump]: |V|=125.63/50 |Ba|=0.712/2.5 |Bg|=0.004/1.0 jump=27.28/20
+[component_container_mt-1] [WARN] [1782470297.366146233] [estimator]: Failure detected [velocity blow-up + position jump]: |V|=127.40/50 |Ba|=0.704/2.5 |Bg|=0.005/1.0 jump=41.58/20
+[component_container_mt-1] [WARN] [1782470298.412433605] [estimator]: Failure detected [velocity blow-up]: |V|=128.06/50 |Ba|=0.704/2.5 |Bg|=0.004/1.0 jump=15.03/20
+[component_container_mt-1] [WARN] [1782470299.484654934] [estimator]: Failure detected [velocity blow-up + position jump]: |V|=128.62/50 |Ba|=0.689/2.5 |Bg|=0.005/1.0 jump=27.04/20
+[component_container_mt-1] [WARN] [1782470300.535572436] [estimator]: Failure detected [velocity blow-up]: |V|=129.42/50 |Ba|=0.696/2.5 |Bg|=0.004/1.0 jump=10.40/20
+[component_container_mt-1] [WARN] [1782470301.589596692] [estimator]: Failure detected [velocity blow-up]: |V|=133.53/50 |Ba|=0.852/2.5 |Bg|=0.005/1.0 jump=17.74/20
+[component_container_mt-1] [WARN] [1782470302.663290389] [estimator]: Failure detected [velocity blow-up + position jump]: |V|=140.65/50 |Ba|=0.958/2.5 |Bg|=0.007/1.0 jump=45.77/20
+[component_container_mt-1] [WARN] [1782470303.711373932] [estimator]: Failure detected [velocity blow-up]: |V|=127.78/50 |Ba|=0.673/2.5 |Bg|=0.004/1.0 jump=10.14/20
+[component_container_mt-1] [WARN] [1782470304.769215301] [estimator]: Failure detected [velocity blow-up]: |V|=128.56/50 |Ba|=0.686/2.5 |Bg|=0.004/1.0 jump=10.43/20
+[component_container_mt-1] [WARN] [1782470305.831487187] [estimator]: Failure detected [velocity blow-up]: |V|=129.15/50 |Ba|=0.689/2.5 |Bg|=0.004/1.0 jump=10.52/20
+[component_container_mt-1] [WARN] [1782470306.890923771] [estimator]: Failure detected [velocity blow-up]: |V|=128.87/50 |Ba|=0.678/2.5 |Bg|=0.004/1.0 jump=10.44/20
+[component_container_mt-1] [WARN] [1782470307.959409739] [estimator]: Failure detected [velocity blow-up]: |V|=129.79/50 |Ba|=0.690/2.5 |Bg|=0.004/1.0 jump=10.57/20
+[component_container_mt-1] [WARN] [1782470309.013244360] [estimator]: Failure detected [velocity blow-up]: |V|=130.16/50 |Ba|=0.687/2.5 |Bg|=0.004/1.0 jump=10.63/20
+[component_container_mt-1] [WARN] [1782470310.062595952] [estimator]: Failure detected [velocity blow-up]: |V|=130.29/50 |Ba|=0.686/2.5 |Bg|=0.004/1.0 jump=10.62/20
+[component_container_mt-1] [WARN] [1782470311.135201559] [estimator]: Failure detected [velocity blow-up]: |V|=130.69/50 |Ba|=0.688/2.5 |Bg|=0.004/1.0 jump=10.65/20
+[component_container_mt-1] [WARN] [1782470312.188887123] [estimator]: Failure detected [velocity blow-up]: |V|=131.38/50 |Ba|=0.689/2.5 |Bg|=0.004/1.0 jump=10.70/20
+[component_container_mt-1] [WARN] [1782470313.241810295] [estimator]: Failure detected [velocity blow-up]: |V|=131.36/50 |Ba|=0.689/2.5 |Bg|=0.004/1.0 jump=10.70/20
+[component_container_mt-1] [WARN] [1782470314.299276717] [estimator]: Failure detected [velocity blow-up]: |V|=131.79/50 |Ba|=0.691/2.5 |Bg|=0.004/1.0 jump=10.77/20
+[component_container_mt-1] [WARN] [1782470315.380102723] [estimator]: Failure detected [velocity blow-up]: |V|=132.30/50 |Ba|=0.691/2.5 |Bg|=0.004/1.0 jump=10.78/20
+[component_container_mt-1] [WARN] [1782470316.414551958] [estimator]: Failure detected [velocity blow-up]: |V|=133.31/50 |Ba|=0.694/2.5 |Bg|=0.004/1.0 jump=10.86/20
+[component_container_mt-1] [WARN] [1782470317.480604152] [estimator]: Failure detected [velocity blow-up]: |V|=134.19/50 |Ba|=0.695/2.5 |Bg|=0.004/1.0 jump=11.19/20
+[component_container_mt-1] [WARN] [1782470318.530470710] [estimator]: Failure detected [velocity blow-up]: |V|=134.83/50 |Ba|=0.695/2.5 |Bg|=0.004/1.0 jump=10.98/20
+[component_container_mt-1] [WARN] [1782470319.612538941] [estimator]: Failure detected [velocity blow-up]: |V|=134.83/50 |Ba|=0.695/2.5 |Bg|=0.004/1.0 jump=10.98/20
+[component_container_mt-1] [WARN] [1782470320.666654769] [estimator]: Failure detected [velocity blow-up]: |V|=135.40/50 |Ba|=0.696/2.5 |Bg|=0.004/1.0 jump=11.04/20
+[component_container_mt-1] [WARN] [1782470321.725719956] [estimator]: Failure detected [velocity blow-up]: |V|=135.80/50 |Ba|=0.697/2.5 |Bg|=0.004/1.0 jump=11.03/20
+[component_container_mt-1] [WARN] [1782470322.776372712] [estimator]: Failure detected [velocity blow-up]: |V|=136.31/50 |Ba|=0.697/2.5 |Bg|=0.004/1.0 jump=11.12/20
+[component_container_mt-1] [WARN] [1782470323.843312510] [estimator]: Failure detected [velocity blow-up]: |V|=136.85/50 |Ba|=0.697/2.5 |Bg|=0.004/1.0 jump=11.17/20
+[component_container_mt-1] [WARN] [1782470324.890833838] [estimator]: Failure detected [velocity blow-up]: |V|=137.31/50 |Ba|=0.698/2.5 |Bg|=0.004/1.0 jump=11.17/20
+[component_container_mt-1] [WARN] [1782470325.891586593] [estimator]: Failure detected [velocity blow-up]: |V|=137.58/50 |Ba|=0.698/2.5 |Bg|=0.004/1.0 jump=11.33/20
+[component_container_mt-1] [WARN] [1782470326.956798822] [estimator]: Failure detected [velocity blow-up + position jump]: |V|=138.23/50 |Ba|=0.698/2.5 |Bg|=0.004/1.0 jump=20.84/20
+[component_container_mt-1] [WARN] [1782470328.018943912] [estimator]: Failure detected [velocity blow-up]: |V|=139.06/50 |Ba|=0.700/2.5 |Bg|=0.003/1.0 jump=11.35/20
+[component_container_mt-1] [WARN] [1782470329.046982547] [estimator]: Failure detected [velocity blow-up]: |V|=139.04/50 |Ba|=0.703/2.5 |Bg|=0.004/1.0 jump=11.30/20
+[component_container_mt-1] [WARN] [1782470330.118407802] [estimator]: Failure detected [velocity blow-up]: |V|=139.01/50 |Ba|=0.700/2.5 |Bg|=0.004/1.0 jump=11.32/20
+[component_container_mt-1] [WARN] [1782470331.136311877] [estimator]: Failure detected [velocity blow-up]: |V|=139.08/50 |Ba|=0.700/2.5 |Bg|=0.004/1.0 jump=11.33/20
+[component_container_mt-1] [WARN] [1782470332.157794092] [estimator]: Failure detected [velocity blow-up]: |V|=140.19/50 |Ba|=0.709/2.5 |Bg|=0.004/1.0 jump=11.42/20
+[component_container_mt-1] [WARN] [1782470333.209762894] [estimator]: Failure detected [velocity blow-up]: |V|=139.89/50 |Ba|=0.702/2.5 |Bg|=0.004/1.0 jump=11.38/20
+[component_container_mt-1] [WARN] [1782470334.255875591] [estimator]: Failure detected [velocity blow-up]: |V|=143.99/50 |Ba|=0.738/2.5 |Bg|=0.003/1.0 jump=11.73/20
+[component_container_mt-1] [WARN] [1782470335.322354843] [estimator]: Failure detected [velocity blow-up]: |V|=141.79/50 |Ba|=0.711/2.5 |Bg|=0.004/1.0 jump=11.55/20
+[component_container_mt-1] [WARN] [1782470336.384059133] [estimator]: Failure detected [velocity blow-up]: |V|=140.84/50 |Ba|=0.705/2.5 |Bg|=0.004/1.0 jump=11.94/20
+[component_container_mt-1] [WARN] [1782470337.445433057] [estimator]: Failure detected [velocity blow-up]: |V|=141.25/50 |Ba|=0.706/2.5 |Bg|=0.004/1.0 jump=11.50/20
+[component_container_mt-1] [WARN] [1782470338.502482062] [estimator]: Failure detected [velocity blow-up]: |V|=141.75/50 |Ba|=0.706/2.5 |Bg|=0.004/1.0 jump=11.55/20
+[component_container_mt-1] [WARN] [1782470339.571099947] [estimator]: Failure detected [velocity blow-up]: |V|=141.30/50 |Ba|=0.704/2.5 |Bg|=0.004/1.0 jump=11.50/20
+[component_container_mt-1] [WARN] [1782470340.621213114] [estimator]: Failure detected [velocity blow-up]: |V|=134.32/50 |Ba|=0.684/2.5 |Bg|=0.006/1.0 jump=12.79/20
+[component_container_mt-1] [WARN] [1782470341.690229554] [estimator]: Failure detected [velocity blow-up]: |V|=138.82/50 |Ba|=0.761/2.5 |Bg|=0.006/1.0 jump=18.06/20
+[component_container_mt-1] [WARN] [1782470342.733148710] [estimator]: Failure detected [velocity blow-up + position jump]: |V|=136.87/50 |Ba|=0.745/2.5 |Bg|=0.005/1.0 jump=42.47/20
+[component_container_mt-1] [WARN] [1782470343.799473559] [estimator]: Failure detected [velocity blow-up]: |V|=137.94/50 |Ba|=0.750/2.5 |Bg|=0.005/1.0 jump=16.96/20
+[component_container_mt-1] [WARN] [1782470344.877991954] [estimator]: Failure detected [velocity blow-up]: |V|=137.00/50 |Ba|=0.731/2.5 |Bg|=0.005/1.0 jump=9.17/20
+[component_container_mt-1] [WARN] [1782470345.940037803] [estimator]: Failure detected [velocity blow-up + position jump]: |V|=135.22/50 |Ba|=0.704/2.5 |Bg|=0.005/1.0 jump=25.53/20
+[component_container_mt-1] [WARN] [1782470346.982701694] [estimator]: Failure detected [velocity blow-up + position jump]: |V|=134.15/50 |Ba|=0.717/2.5 |Bg|=0.004/1.0 jump=39.77/20
+[component_container_mt-1] [WARN] [1782470348.043886974] [estimator]: Failure detected [velocity blow-up + position jump]: |V|=133.38/50 |Ba|=0.709/2.5 |Bg|=0.004/1.0 jump=57.31/20
+[component_container_mt-1] [WARN] [1782470349.102730261] [estimator]: Failure detected [velocity blow-up + position jump]: |V|=132.58/50 |Ba|=0.708/2.5 |Bg|=0.005/1.0 jump=28.25/20
+[component_container_mt-1] [WARN] [1782470350.153988756] [estimator]: Failure detected [velocity blow-up + position jump]: |V|=133.23/50 |Ba|=0.707/2.5 |Bg|=0.004/1.0 jump=44.75/20
+[component_container_mt-1] [WARN] [1782470351.216098921] [estimator]: Failure detected [velocity blow-up]: |V|=132.15/50 |Ba|=0.704/2.5 |Bg|=0.005/1.0 jump=11.60/20
+[component_container_mt-1] [WARN] [1782470352.281758364] [estimator]: Failure detected [velocity blow-up]: |V|=132.82/50 |Ba|=0.710/2.5 |Bg|=0.004/1.0 jump=12.34/20
+[component_container_mt-1] [WARN] [1782470353.334098127] [estimator]: Failure detected [velocity blow-up]: |V|=129.81/50 |Ba|=0.701/2.5 |Bg|=0.004/1.0 jump=11.91/20
+[component_container_mt-1] [WARN] [1782470354.385417611] [estimator]: Failure detected [velocity blow-up]: |V|=132.02/50 |Ba|=0.701/2.5 |Bg|=0.004/1.0 jump=13.71/20
+[component_container_mt-1] [WARN] [1782470355.409073105] [estimator]: Failure detected [velocity blow-up]: |V|=136.20/50 |Ba|=0.707/2.5 |Bg|=0.003/1.0 jump=19.61/20
+[component_container_mt-1] [WARN] [1782470356.432193981] [estimator]: Failure detected [velocity blow-up]: |V|=132.02/50 |Ba|=0.704/2.5 |Bg|=0.003/1.0 jump=17.28/20
+[component_container_mt-1] [WARN] [1782470357.485146023] [estimator]: Failure detected [velocity blow-up]: |V|=132.95/50 |Ba|=0.701/2.5 |Bg|=0.003/1.0 jump=13.11/20
+[component_container_mt-1] [WARN] [1782470358.544123063] [estimator]: Failure detected [velocity blow-up + position jump]: |V|=132.05/50 |Ba|=0.694/2.5 |Bg|=0.004/1.0 jump=27.43/20
+[component_container_mt-1] [WARN] [1782470359.616846562] [estimator]: Failure detected [velocity blow-up + position jump]: |V|=133.26/50 |Ba|=0.687/2.5 |Bg|=0.003/1.0 jump=21.17/20
+[component_container_mt-1] [WARN] [1782470360.618394331] [estimator]: Failure detected [velocity blow-up + position jump]: |V|=131.64/50 |Ba|=0.680/2.5 |Bg|=0.004/1.0 jump=22.61/20
+[component_container_mt-1] [WARN] [1782470361.652906326] [estimator]: Failure detected [velocity blow-up]: |V|=137.19/50 |Ba|=0.680/2.5 |Bg|=0.003/1.0 jump=15.34/20
+[component_container_mt-1] [WARN] [1782470362.706725045] [estimator]: Failure detected [velocity blow-up + position jump]: |V|=126.73/50 |Ba|=0.685/2.5 |Bg|=0.003/1.0 jump=22.10/20
+[component_container_mt-1] [WARN] [1782470363.757780431] [estimator]: Failure detected [velocity blow-up]: |V|=130.85/50 |Ba|=0.698/2.5 |Bg|=0.004/1.0 jump=12.33/20
+[component_container_mt-1] [WARN] [1782470364.821837611] [estimator]: Failure detected [velocity blow-up]: |V|=129.83/50 |Ba|=0.697/2.5 |Bg|=0.003/1.0 jump=9.81/20
+[component_container_mt-1] [WARN] [1782470365.894622801] [estimator]: Failure detected [velocity blow-up + position jump]: |V|=127.74/50 |Ba|=0.683/2.5 |Bg|=0.003/1.0 jump=21.38/20
+[component_container_mt-1] [WARN] [1782470366.937772598] [estimator]: Failure detected [velocity blow-up + position jump]: |V|=131.52/50 |Ba|=0.669/2.5 |Bg|=0.003/1.0 jump=21.35/20
+[component_container_mt-1] [WARN] [1782470368.009501702] [estimator]: Failure detected [velocity blow-up + position jump]: |V|=121.30/50 |Ba|=0.664/2.5 |Bg|=0.003/1.0 jump=30.21/20
+[component_container_mt-1] [WARN] [1782470369.063618047] [estimator]: Failure detected [velocity blow-up]: |V|=129.46/50 |Ba|=0.656/2.5 |Bg|=0.003/1.0 jump=14.41/20
+[component_container_mt-1] [WARN] [1782470370.124797268] [estimator]: Failure detected [velocity blow-up + position jump]: |V|=131.62/50 |Ba|=0.638/2.5 |Bg|=0.003/1.0 jump=24.17/20
+[component_container_mt-1] [WARN] [1782470371.181618322] [estimator]: Failure detected [velocity blow-up]: |V|=119.96/50 |Ba|=0.627/2.5 |Bg|=0.003/1.0 jump=1.59/20
+[component_container_mt-1] [WARN] [1782470372.231100214] [estimator]: Failure detected [velocity blow-up]: |V|=123.13/50 |Ba|=0.677/2.5 |Bg|=0.004/1.0 jump=10.30/20
+[component_container_mt-1] [WARN] [1782470373.294705682] [estimator]: Failure detected [velocity blow-up + position jump]: |V|=122.20/50 |Ba|=0.688/2.5 |Bg|=0.004/1.0 jump=21.84/20
+[component_container_mt-1] [WARN] [1782470374.351615886] [estimator]: Failure detected [velocity blow-up]: |V|=120.98/50 |Ba|=0.684/2.5 |Bg|=0.005/1.0 jump=12.21/20
+[component_container_mt-1] [WARN] [1782470375.419850523] [estimator]: Failure detected [velocity blow-up + position jump]: |V|=118.84/50 |Ba|=0.681/2.5 |Bg|=0.005/1.0 jump=21.93/20
+[component_container_mt-1] [WARN] [1782470376.476505561] [estimator]: Failure detected [velocity blow-up + position jump]: |V|=124.55/50 |Ba|=0.690/2.5 |Bg|=0.006/1.0 jump=70.81/20
+[component_container_mt-1] [WARN] [1782470377.528116902] [estimator]: Failure detected [velocity blow-up + position jump]: |V|=117.98/50 |Ba|=0.692/2.5 |Bg|=0.004/1.0 jump=39.43/20
+[component_container_mt-1] [WARN] [1782470378.596716494] [estimator]: Failure detected [velocity blow-up + position jump]: |V|=120.79/50 |Ba|=0.688/2.5 |Bg|=0.005/1.0 jump=47.93/20
+[component_container_mt-1] [WARN] [1782470379.645782195] [estimator]: Failure detected [velocity blow-up + position jump]: |V|=117.88/50 |Ba|=0.696/2.5 |Bg|=0.004/1.0 jump=61.89/20
+[component_container_mt-1] [WARN] [1782470380.708994767] [estimator]: Failure detected [velocity blow-up]: |V|=120.24/50 |Ba|=0.702/2.5 |Bg|=0.005/1.0 jump=14.86/20
+[component_container_mt-1] [WARN] [1782470381.760938487] [estimator]: Failure detected [velocity blow-up]: |V|=115.24/50 |Ba|=0.688/2.5 |Bg|=0.004/1.0 jump=18.07/20
+[component_container_mt-1] [WARN] [1782470382.822514305] [estimator]: Failure detected [velocity blow-up + position jump]: |V|=114.60/50 |Ba|=0.695/2.5 |Bg|=0.004/1.0 jump=61.56/20
+[component_container_mt-1] [WARN] [1782470383.884352488] [estimator]: Failure detected [velocity blow-up]: |V|=114.67/50 |Ba|=0.686/2.5 |Bg|=0.005/1.0 jump=16.82/20
+[component_container_mt-1] [WARN] [1782470384.935933874] [estimator]: Failure detected [velocity blow-up + position jump]: |V|=112.36/50 |Ba|=0.690/2.5 |Bg|=0.004/1.0 jump=37.98/20
+[component_container_mt-1] [WARN] [1782470385.936730439] [estimator]: Failure detected [velocity blow-up + position jump]: |V|=111.71/50 |Ba|=0.690/2.5 |Bg|=0.004/1.0 jump=48.44/20
+[component_container_mt-1] [WARN] [1782470386.986561440] [estimator]: Failure detected [velocity blow-up]: |V|=110.93/50 |Ba|=0.693/2.5 |Bg|=0.004/1.0 jump=8.99/20
+[component_container_mt-1] [WARN] [1782470388.046063036] [estimator]: Failure detected [velocity blow-up + position jump]: |V|=109.21/50 |Ba|=0.686/2.5 |Bg|=0.004/1.0 jump=24.83/20
+[component_container_mt-1] [WARN] [1782470389.095917429] [estimator]: Failure detected [velocity blow-up + position jump]: |V|=111.26/50 |Ba|=0.681/2.5 |Bg|=0.005/1.0 jump=47.75/20
+[component_container_mt-1] [WARN] [1782470390.149719110] [estimator]: Failure detected [velocity blow-up + position jump]: |V|=108.03/50 |Ba|=0.688/2.5 |Bg|=0.004/1.0 jump=35.15/20
+[component_container_mt-1] [WARN] [1782470391.218019883] [estimator]: Failure detected [velocity blow-up + position jump]: |V|=108.03/50 |Ba|=0.685/2.5 |Bg|=0.004/1.0 jump=20.05/20
+[component_container_mt-1] [WARN] [1782470392.285902676] [estimator]: Failure detected [velocity blow-up + position jump]: |V|=106.35/50 |Ba|=0.692/2.5 |Bg|=0.004/1.0 jump=37.46/20
+[component_container_mt-1] [WARN] [1782470393.335314063] [estimator]: Failure detected [velocity blow-up + position jump]: |V|=105.74/50 |Ba|=0.698/2.5 |Bg|=0.004/1.0 jump=58.46/20
+[component_container_mt-1] [WARN] [1782470394.386593495] [estimator]: Failure detected [velocity blow-up]: |V|=108.29/50 |Ba|=0.692/2.5 |Bg|=0.005/1.0 jump=9.97/20
+[component_container_mt-1] [WARN] [1782470395.453242218] [estimator]: Failure detected [velocity blow-up]: |V|=114.46/50 |Ba|=0.715/2.5 |Bg|=0.005/1.0 jump=9.55/20
+[component_container_mt-1] [WARN] [1782470396.511198448] [estimator]: Failure detected [velocity blow-up]: |V|=125.26/50 |Ba|=0.790/2.5 |Bg|=0.007/1.0 jump=8.41/20
+[component_container_mt-1] [WARN] [1782470397.570402026] [estimator]: Failure detected [velocity blow-up]: |V|=98.33/50 |Ba|=0.699/2.5 |Bg|=0.004/1.0 jump=14.43/20
+[component_container_mt-1] [WARN] [1782470398.624126297] [estimator]: Failure detected [velocity blow-up]: |V|=95.14/50 |Ba|=0.673/2.5 |Bg|=0.004/1.0 jump=7.75/20
+[component_container_mt-1] [WARN] [1782470399.688372545] [estimator]: Failure detected [velocity blow-up]: |V|=93.57/50 |Ba|=0.672/2.5 |Bg|=0.004/1.0 jump=7.63/20
+[component_container_mt-1] [WARN] [1782470400.741695076] [estimator]: Failure detected [velocity blow-up]: |V|=92.94/50 |Ba|=0.672/2.5 |Bg|=0.004/1.0 jump=7.59/20
+[component_container_mt-1] [WARN] [1782470401.803590930] [estimator]: Failure detected [velocity blow-up]: |V|=92.31/50 |Ba|=0.674/2.5 |Bg|=0.004/1.0 jump=7.61/20
+[component_container_mt-1] [WARN] [1782470402.859584471] [estimator]: Failure detected [velocity blow-up]: |V|=91.08/50 |Ba|=0.674/2.5 |Bg|=0.004/1.0 jump=7.42/20
+[component_container_mt-1] [WARN] [1782470403.920005581] [estimator]: Failure detected [velocity blow-up]: |V|=89.51/50 |Ba|=0.674/2.5 |Bg|=0.004/1.0 jump=7.26/20
+[component_container_mt-1] [WARN] [1782470404.993786253] [estimator]: Failure detected [velocity blow-up]: |V|=88.25/50 |Ba|=0.675/2.5 |Bg|=0.004/1.0 jump=7.17/20
+[component_container_mt-1] [WARN] [1782470406.045623268] [estimator]: Failure detected [velocity blow-up]: |V|=87.57/50 |Ba|=0.675/2.5 |Bg|=0.004/1.0 jump=7.83/20
+[component_container_mt-1] [WARN] [1782470407.101525105] [estimator]: Failure detected [velocity blow-up]: |V|=85.83/50 |Ba|=0.675/2.5 |Bg|=0.004/1.0 jump=6.99/20
+[component_container_mt-1] [WARN] [1782470408.175235105] [estimator]: Failure detected [velocity blow-up]: |V|=83.63/50 |Ba|=0.676/2.5 |Bg|=0.004/1.0 jump=6.81/20
+[component_container_mt-1] [WARN] [1782470409.237200943] [estimator]: Failure detected [velocity blow-up]: |V|=82.33/50 |Ba|=0.676/2.5 |Bg|=0.004/1.0 jump=6.95/20
+[component_container_mt-1] [WARN] [1782470410.284727969] [estimator]: Failure detected [velocity blow-up]: |V|=81.69/50 |Ba|=0.675/2.5 |Bg|=0.004/1.0 jump=6.58/20
+[component_container_mt-1] [WARN] [1782470411.340852397] [estimator]: Failure detected [velocity blow-up]: |V|=78.75/50 |Ba|=0.683/2.5 |Bg|=0.005/1.0 jump=10.49/20
+[component_container_mt-1] [WARN] [1782470412.403585743] [estimator]: Failure detected [velocity blow-up]: |V|=80.10/50 |Ba|=0.678/2.5 |Bg|=0.005/1.0 jump=10.75/20
+[component_container_mt-1] [WARN] [1782470413.458453482] [estimator]: Failure detected [velocity blow-up]: |V|=76.60/50 |Ba|=0.677/2.5 |Bg|=0.004/1.0 jump=6.93/20
+[component_container_mt-1] [WARN] [1782470414.527064721] [estimator]: Failure detected [velocity blow-up]: |V|=73.10/50 |Ba|=0.677/2.5 |Bg|=0.004/1.0 jump=4.67/20
+[component_container_mt-1] [WARN] [1782470415.583846095] [estimator]: Failure detected [velocity blow-up]: |V|=72.07/50 |Ba|=0.676/2.5 |Bg|=0.004/1.0 jump=5.87/20
+[component_container_mt-1] [WARN] [1782470416.640269501] [estimator]: Failure detected [velocity blow-up + position jump]: |V|=73.58/50 |Ba|=0.687/2.5 |Bg|=0.003/1.0 jump=37.80/20
+[component_container_mt-1] [WARN] [1782470417.694988372] [estimator]: Failure detected [velocity blow-up + position jump]: |V|=78.51/50 |Ba|=0.708/2.5 |Bg|=0.002/1.0 jump=27.76/20
+[component_container_mt-1] [WARN] [1782470418.761061182] [estimator]: Failure detected [velocity blow-up + position jump]: |V|=71.72/50 |Ba|=0.709/2.5 |Bg|=0.003/1.0 jump=61.10/20
+[component_container_mt-1] [WARN] [1782470419.816862738] [estimator]: Failure detected [velocity blow-up]: |V|=66.07/50 |Ba|=0.683/2.5 |Bg|=0.003/1.0 jump=7.44/20
+[component_container_mt-1] [WARN] [1782470420.878012844] [estimator]: Failure detected [velocity blow-up]: |V|=63.09/50 |Ba|=0.689/2.5 |Bg|=0.004/1.0 jump=8.37/20
+[component_container_mt-1] [WARN] [1782470421.927143631] [estimator]: Failure detected [velocity blow-up]: |V|=63.57/50 |Ba|=0.687/2.5 |Bg|=0.004/1.0 jump=5.62/20
+[component_container_mt-1] [WARN] [1782470422.994337156] [estimator]: Failure detected [velocity blow-up]: |V|=63.02/50 |Ba|=0.688/2.5 |Bg|=0.004/1.0 jump=5.13/20
+[component_container_mt-1] [WARN] [1782470424.047273773] [estimator]: Failure detected [velocity blow-up]: |V|=62.12/50 |Ba|=0.688/2.5 |Bg|=0.004/1.0 jump=5.06/20
+[component_container_mt-1] [WARN] [1782470425.118440301] [estimator]: Failure detected [velocity blow-up]: |V|=62.31/50 |Ba|=0.687/2.5 |Bg|=0.004/1.0 jump=5.08/20
+[component_container_mt-1] [WARN] [1782470426.170588426] [estimator]: Failure detected [velocity blow-up]: |V|=61.59/50 |Ba|=0.689/2.5 |Bg|=0.004/1.0 jump=6.89/20
+[component_container_mt-1] [WARN] [1782470427.234836785] [estimator]: Failure detected [velocity blow-up]: |V|=61.38/50 |Ba|=0.688/2.5 |Bg|=0.004/1.0 jump=5.28/20
+[component_container_mt-1] [WARN] [1782470428.285674405] [estimator]: Failure detected [velocity blow-up]: |V|=61.30/50 |Ba|=0.688/2.5 |Bg|=0.004/1.0 jump=5.34/20
+[component_container_mt-1] [WARN] [1782470429.341001813] [estimator]: Failure detected [velocity blow-up]: |V|=60.71/50 |Ba|=0.688/2.5 |Bg|=0.004/1.0 jump=4.95/20
+[component_container_mt-1] [WARN] [1782470430.353005580] [estimator]: Failure detected [velocity blow-up]: |V|=61.00/50 |Ba|=0.692/2.5 |Bg|=0.004/1.0 jump=11.62/20
+[component_container_mt-1] [WARN] [1782470431.385181687] [estimator]: Failure detected [velocity blow-up]: |V|=60.58/50 |Ba|=0.688/2.5 |Bg|=0.004/1.0 jump=4.95/20
+[component_container_mt-1] [WARN] [1782470432.455032867] [estimator]: Failure detected [velocity blow-up]: |V|=60.52/50 |Ba|=0.688/2.5 |Bg|=0.004/1.0 jump=4.96/20
+[component_container_mt-1] [WARN] [1782470433.509446384] [estimator]: Failure detected [velocity blow-up]: |V|=60.50/50 |Ba|=0.688/2.5 |Bg|=0.004/1.0 jump=4.91/20
+[component_container_mt-1] [WARN] [1782470434.560473290] [estimator]: Failure detected [velocity blow-up]: |V|=60.40/50 |Ba|=0.688/2.5 |Bg|=0.004/1.0 jump=4.93/20
+[component_container_mt-1] [WARN] [1782470435.632073638] [estimator]: Failure detected [velocity blow-up]: |V|=60.23/50 |Ba|=0.689/2.5 |Bg|=0.004/1.0 jump=4.89/20
+[component_container_mt-1] [WARN] [1782470436.677324600] [estimator]: Failure detected [velocity blow-up]: |V|=60.40/50 |Ba|=0.688/2.5 |Bg|=0.004/1.0 jump=4.90/20
+[component_container_mt-1] [WARN] [1782470437.739374672] [estimator]: Failure detected [velocity blow-up]: |V|=60.51/50 |Ba|=0.689/2.5 |Bg|=0.004/1.0 jump=5.05/20
+[component_container_mt-1] [WARN] [1782470438.805958251] [estimator]: Failure detected [velocity blow-up]: |V|=60.75/50 |Ba|=0.689/2.5 |Bg|=0.004/1.0 jump=5.36/20
+[component_container_mt-1] [WARN] [1782470439.857156630] [estimator]: Failure detected [velocity blow-up]: |V|=60.72/50 |Ba|=0.689/2.5 |Bg|=0.004/1.0 jump=5.05/20
+[component_container_mt-1] [WARN] [1782470440.916879155] [estimator]: Failure detected [velocity blow-up]: |V|=60.90/50 |Ba|=0.689/2.5 |Bg|=0.004/1.0 jump=4.97/20
+[component_container_mt-1] [WARN] [1782470441.976076652] [estimator]: Failure detected [velocity blow-up]: |V|=61.11/50 |Ba|=0.689/2.5 |Bg|=0.004/1.0 jump=5.20/20
+[component_container_mt-1] [WARN] [1782470443.047525870] [estimator]: Failure detected [velocity blow-up]: |V|=61.45/50 |Ba|=0.691/2.5 |Bg|=0.004/1.0 jump=5.72/20
+[component_container_mt-1] [WARN] [1782470444.096581589] [estimator]: Failure detected [velocity blow-up]: |V|=61.78/50 |Ba|=0.690/2.5 |Bg|=0.004/1.0 jump=5.15/20
+[component_container_mt-1] [WARN] [1782470445.143191747] [estimator]: Failure detected [velocity blow-up]: |V|=61.90/50 |Ba|=0.690/2.5 |Bg|=0.004/1.0 jump=5.02/20
+[component_container_mt-1] [WARN] [1782470446.217639812] [estimator]: Failure detected [velocity blow-up]: |V|=62.29/50 |Ba|=0.690/2.5 |Bg|=0.004/1.0 jump=5.07/20
+[component_container_mt-1] [WARN] [1782470447.280081423] [estimator]: Failure detected [velocity blow-up]: |V|=62.66/50 |Ba|=0.690/2.5 |Bg|=0.004/1.0 jump=5.25/20
+[component_container_mt-1] [WARN] [1782470448.334916702] [estimator]: Failure detected [velocity blow-up]: |V|=63.06/50 |Ba|=0.690/2.5 |Bg|=0.004/1.0 jump=5.19/20
+[component_container_mt-1] [WARN] [1782470449.395987066] [estimator]: Failure detected [velocity blow-up]: |V|=63.51/50 |Ba|=0.690/2.5 |Bg|=0.004/1.0 jump=5.18/20
+[component_container_mt-1] [WARN] [1782470450.448453198] [estimator]: Failure detected [velocity blow-up]: |V|=63.98/50 |Ba|=0.690/2.5 |Bg|=0.004/1.0 jump=5.20/20
+[component_container_mt-1] [WARN] [1782470451.515265650] [estimator]: Failure detected [velocity blow-up]: |V|=64.45/50 |Ba|=0.688/2.5 |Bg|=0.004/1.0 jump=5.34/20
+[component_container_mt-1] [WARN] [1782470452.566476407] [estimator]: Failure detected [velocity blow-up + position jump]: |V|=65.74/50 |Ba|=0.699/2.5 |Bg|=0.003/1.0 jump=23.93/20
+[component_container_mt-1] [WARN] [1782470453.638668798] [estimator]: Failure detected [velocity blow-up]: |V|=65.29/50 |Ba|=0.690/2.5 |Bg|=0.004/1.0 jump=5.75/20
+[component_container_mt-1] [WARN] [1782470454.680464442] [estimator]: Failure detected [velocity blow-up]: |V|=65.96/50 |Ba|=0.688/2.5 |Bg|=0.004/1.0 jump=5.40/20
+[component_container_mt-1] [WARN] [1782470455.748123363] [estimator]: Failure detected [velocity blow-up]: |V|=66.57/50 |Ba|=0.689/2.5 |Bg|=0.004/1.0 jump=5.86/20
+[component_container_mt-1] [WARN] [1782470456.823102557] [estimator]: Failure detected [velocity blow-up]: |V|=66.75/50 |Ba|=0.688/2.5 |Bg|=0.004/1.0 jump=5.50/20
+[component_container_mt-1] [WARN] [1782470457.869182766] [estimator]: Failure detected [velocity blow-up]: |V|=67.63/50 |Ba|=0.689/2.5 |Bg|=0.004/1.0 jump=5.51/20
+[component_container_mt-1] [WARN] [1782470458.924960951] [estimator]: Failure detected [velocity blow-up]: |V|=68.50/50 |Ba|=0.689/2.5 |Bg|=0.004/1.0 jump=5.58/20
+[component_container_mt-1] [WARN] [1782470459.980031388] [estimator]: Failure detected [velocity blow-up]: |V|=68.84/50 |Ba|=0.689/2.5 |Bg|=0.004/1.0 jump=5.61/20
+[component_container_mt-1] [WARN] [1782470461.046024378] [estimator]: Failure detected [velocity blow-up]: |V|=69.22/50 |Ba|=0.689/2.5 |Bg|=0.004/1.0 jump=5.64/20
+[component_container_mt-1] [WARN] [1782470462.104497317] [estimator]: Failure detected [velocity blow-up]: |V|=69.94/50 |Ba|=0.688/2.5 |Bg|=0.004/1.0 jump=5.70/20
+[component_container_mt-1] [WARN] [1782470463.174564647] [estimator]: Failure detected [velocity blow-up]: |V|=70.51/50 |Ba|=0.687/2.5 |Bg|=0.004/1.0 jump=5.74/20
+[component_container_mt-1] [WARN] [1782470464.211126488] [estimator]: Failure detected [velocity blow-up]: |V|=70.83/50 |Ba|=0.689/2.5 |Bg|=0.004/1.0 jump=5.77/20
+[component_container_mt-1] [WARN] [1782470465.284369032] [estimator]: Failure detected [velocity blow-up]: |V|=71.68/50 |Ba|=0.689/2.5 |Bg|=0.004/1.0 jump=6.05/20
+[component_container_mt-1] [WARN] [1782470466.340928519] [estimator]: Failure detected [velocity blow-up]: |V|=72.11/50 |Ba|=0.688/2.5 |Bg|=0.004/1.0 jump=5.88/20
+[component_container_mt-1] [WARN] [1782470467.399076240] [estimator]: Failure detected [velocity blow-up]: |V|=72.58/50 |Ba|=0.686/2.5 |Bg|=0.004/1.0 jump=5.91/20
+[component_container_mt-1] [WARN] [1782470468.458334316] [estimator]: Failure detected [velocity blow-up]: |V|=73.31/50 |Ba|=0.685/2.5 |Bg|=0.004/1.0 jump=5.99/20
+[component_container_mt-1] [WARN] [1782470469.515525170] [estimator]: Failure detected [velocity blow-up]: |V|=74.18/50 |Ba|=0.685/2.5 |Bg|=0.004/1.0 jump=6.04/20
+[component_container_mt-1] [WARN] [1782470470.571368734] [estimator]: Failure detected [velocity blow-up]: |V|=74.83/50 |Ba|=0.685/2.5 |Bg|=0.004/1.0 jump=6.09/20
+[component_container_mt-1] [WARN] [1782470471.578523481] [estimator]: Failure detected [velocity blow-up]: |V|=75.39/50 |Ba|=0.689/2.5 |Bg|=0.004/1.0 jump=6.38/20
+[component_container_mt-1] [WARN] [1782470472.614183703] [estimator]: Failure detected [velocity blow-up]: |V|=75.34/50 |Ba|=0.687/2.5 |Bg|=0.004/1.0 jump=6.13/20
+[component_container_mt-1] [WARN] [1782470473.683878977] [estimator]: Failure detected [velocity blow-up]: |V|=76.03/50 |Ba|=0.687/2.5 |Bg|=0.004/1.0 jump=6.20/20
+[component_container_mt-1] [WARN] [1782470474.726446032] [estimator]: Failure detected [velocity blow-up]: |V|=76.49/50 |Ba|=0.687/2.5 |Bg|=0.004/1.0 jump=6.35/20
+[component_container_mt-1] [WARN] [1782470475.794671400] [estimator]: Failure detected [velocity blow-up]: |V|=77.23/50 |Ba|=0.688/2.5 |Bg|=0.004/1.0 jump=6.29/20
+[component_container_mt-1] [WARN] [1782470476.854651205] [estimator]: Failure detected [velocity blow-up]: |V|=76.65/50 |Ba|=0.683/2.5 |Bg|=0.004/1.0 jump=6.24/20
+[component_container_mt-1] [WARN] [1782470477.908317619] [estimator]: Failure detected [velocity blow-up]: |V|=77.47/50 |Ba|=0.687/2.5 |Bg|=0.004/1.0 jump=6.31/20
+[component_container_mt-1] [WARN] [1782470478.977778845] [estimator]: Failure detected [velocity blow-up]: |V|=77.98/50 |Ba|=0.687/2.5 |Bg|=0.004/1.0 jump=6.35/20
+[component_container_mt-1] [WARN] [1782470480.039081240] [estimator]: Failure detected [velocity blow-up]: |V|=78.78/50 |Ba|=0.688/2.5 |Bg|=0.004/1.0 jump=6.42/20
+[component_container_mt-1] [WARN] [1782470481.043492479] [estimator]: Failure detected [velocity blow-up]: |V|=78.63/50 |Ba|=0.687/2.5 |Bg|=0.004/1.0 jump=6.40/20
+[component_container_mt-1] [WARN] [1782470482.077432786] [estimator]: Failure detected [velocity blow-up]: |V|=79.63/50 |Ba|=0.688/2.5 |Bg|=0.004/1.0 jump=6.46/20
+[component_container_mt-1] [WARN] [1782470483.136076477] [estimator]: Failure detected [velocity blow-up]: |V|=79.30/50 |Ba|=0.690/2.5 |Bg|=0.004/1.0 jump=6.46/20
+[component_container_mt-1] [WARN] [1782470484.182312711] [estimator]: Failure detected [velocity blow-up]: |V|=79.58/50 |Ba|=0.688/2.5 |Bg|=0.004/1.0 jump=6.88/20
+[component_container_mt-1] [WARN] [1782470485.239008016] [estimator]: Failure detected [velocity blow-up]: |V|=80.72/50 |Ba|=0.690/2.5 |Bg|=0.004/1.0 jump=6.57/20
+[component_container_mt-1] [WARN] [1782470486.309994476] [estimator]: Failure detected [velocity blow-up]: |V|=81.24/50 |Ba|=0.690/2.5 |Bg|=0.004/1.0 jump=6.62/20
+[component_container_mt-1] [WARN] [1782470487.361916282] [estimator]: Failure detected [velocity blow-up]: |V|=82.21/50 |Ba|=0.689/2.5 |Bg|=0.004/1.0 jump=6.93/20
+[component_container_mt-1] [WARN] [1782470488.412576050] [estimator]: Failure detected [velocity blow-up]: |V|=82.36/50 |Ba|=0.686/2.5 |Bg|=0.004/1.0 jump=6.71/20
+[component_container_mt-1] [WARN] [1782470489.477820140] [estimator]: Failure detected [velocity blow-up]: |V|=83.44/50 |Ba|=0.686/2.5 |Bg|=0.004/1.0 jump=6.77/20
+[component_container_mt-1] [WARN] [1782470490.539835981] [estimator]: Failure detected [velocity blow-up]: |V|=84.61/50 |Ba|=0.686/2.5 |Bg|=0.004/1.0 jump=6.89/20
+[component_container_mt-1] [WARN] [1782470491.590031564] [estimator]: Failure detected [velocity blow-up]: |V|=85.83/50 |Ba|=0.686/2.5 |Bg|=0.004/1.0 jump=6.99/20
+[component_container_mt-1] [WARN] [1782470492.649810397] [estimator]: Failure detected [velocity blow-up]: |V|=87.12/50 |Ba|=0.686/2.5 |Bg|=0.004/1.0 jump=7.10/20
+[component_container_mt-1] [WARN] [1782470493.721074411] [estimator]: Failure detected [velocity blow-up]: |V|=87.73/50 |Ba|=0.686/2.5 |Bg|=0.004/1.0 jump=7.15/20
+[component_container_mt-1] [WARN] [1782470494.776188914] [estimator]: Failure detected [velocity blow-up]: |V|=88.20/50 |Ba|=0.689/2.5 |Bg|=0.004/1.0 jump=7.20/20
+[component_container_mt-1] [WARN] [1782470495.847518653] [estimator]: Failure detected [velocity blow-up]: |V|=88.02/50 |Ba|=0.687/2.5 |Bg|=0.004/1.0 jump=7.18/20
+[component_container_mt-1] [WARN] [1782470496.896274517] [estimator]: Failure detected [velocity blow-up]: |V|=88.77/50 |Ba|=0.687/2.5 |Bg|=0.004/1.0 jump=7.18/20
+[component_container_mt-1] [WARN] [1782470497.959454753] [estimator]: Failure detected [velocity blow-up]: |V|=89.66/50 |Ba|=0.688/2.5 |Bg|=0.004/1.0 jump=7.30/20
+[component_container_mt-1] [WARN] [1782470499.019810116] [estimator]: Failure detected [velocity blow-up]: |V|=90.71/50 |Ba|=0.688/2.5 |Bg|=0.004/1.0 jump=6.94/20
+[component_container_mt-1] [WARN] [1782470500.059386717] [estimator]: Failure detected [velocity blow-up]: |V|=91.04/50 |Ba|=0.688/2.5 |Bg|=0.004/1.0 jump=7.41/20
+[component_container_mt-1] [WARN] [1782470501.140623733] [estimator]: Failure detected [velocity blow-up]: |V|=92.38/50 |Ba|=0.690/2.5 |Bg|=0.004/1.0 jump=7.53/20
+[component_container_mt-1] [WARN] [1782470502.204094959] [estimator]: Failure detected [velocity blow-up]: |V|=92.39/50 |Ba|=0.687/2.5 |Bg|=0.004/1.0 jump=7.53/20
+[component_container_mt-1] [WARN] [1782470503.243400310] [estimator]: Failure detected [velocity blow-up]: |V|=92.62/50 |Ba|=0.689/2.5 |Bg|=0.004/1.0 jump=7.55/20
+[component_container_mt-1] [WARN] [1782470504.310059008] [estimator]: Failure detected [velocity blow-up]: |V|=94.59/50 |Ba|=0.688/2.5 |Bg|=0.004/1.0 jump=7.70/20
+[component_container_mt-1] [WARN] [1782470505.366599348] [estimator]: Failure detected [velocity blow-up]: |V|=95.59/50 |Ba|=0.687/2.5 |Bg|=0.004/1.0 jump=7.78/20
+[component_container_mt-1] [WARN] [1782470506.422889011] [estimator]: Failure detected [velocity blow-up]: |V|=96.93/50 |Ba|=0.689/2.5 |Bg|=0.004/1.0 jump=7.89/20
+[component_container_mt-1] [WARN] [1782470507.489015370] [estimator]: Failure detected [velocity blow-up]: |V|=97.84/50 |Ba|=0.690/2.5 |Bg|=0.004/1.0 jump=7.96/20
+[component_container_mt-1] [WARN] [1782470508.540606348] [estimator]: Failure detected [velocity blow-up]: |V|=99.34/50 |Ba|=0.691/2.5 |Bg|=0.004/1.0 jump=8.10/20
+[component_container_mt-1] [WARN] [1782470509.617416224] [estimator]: Failure detected [velocity blow-up]: |V|=100.82/50 |Ba|=0.691/2.5 |Bg|=0.004/1.0 jump=8.07/20
+[WARNING] [launch]: user interrupted with ctrl-c (SIGINT)
+[component_container_mt-1] [INFO] [1782470516.860724939] [rclcpp]: signal_handler(SIGINT/SIGTERM)
+[component_container_mt-1] [WARN] [1782470516.903723498] [dl_vins_component]: DlVinsComponent shutting down.
+[component_container_mt-1] [INFO] [1782470516.904051883] [estimator]: Processing thread stopped
+[component_container_mt-1] [MetricsLogger] Feature tracker log closed
+[component_container_mt-1] [MetricsLogger] Estimator log closed
+[component_container_mt-1] [INFO] [1782470516.910101327] [feature_extractor]: FeatureExtractor TensorRT & CUDA resources cleaned up.
+[component_container_mt-1] [LoopMetricsLogger] loop_fusion log closed
+[component_container_mt-1] [LoopMetricsLogger] loop_optimizations log closed
+[INFO] [component_container_mt-1]: process has finished cleanly [pid 1701293]

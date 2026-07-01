@@ -1,0 +1,474 @@
+[INFO] [launch]: All log files can be found below /home/nvidia/.ros/log/2026-06-22-13-47-33-504394-ubuntu-4003378
+[INFO] [launch]: Default logging verbosity is set to INFO
+[INFO] [component_container_mt-1]: process started with pid [4003496]
+[component_container_mt-1] [INFO] [1782107253.916172484] [dl_vins.dl_vins_container]: Load Library: /home/nvidia/dl-vins-factory/DL-VINS/install/dl_vins/lib/libdl_vins_component.so
+[component_container_mt-1] [INFO] [1782107254.073678895] [dl_vins.dl_vins_container]: Found class: rclcpp_components::NodeFactoryTemplate<uosm::perception::DlVinsComponent>
+[component_container_mt-1] [INFO] [1782107254.074667038] [dl_vins.dl_vins_container]: Instantiate class: rclcpp_components::NodeFactoryTemplate<uosm::perception::DlVinsComponent>
+[component_container_mt-1] [INFO] [1782107254.082260890] [dl_vins_component]: **********************************
+[component_container_mt-1] [INFO] [1782107254.082837296] [dl_vins_component]:  DLVINS Component                 
+[component_container_mt-1] [INFO] [1782107254.083262665] [dl_vins_component]: **********************************
+[component_container_mt-1] [INFO] [1782107254.083622466] [dl_vins_component]:  * namespace: /
+[component_container_mt-1] [INFO] [1782107254.083973948] [dl_vins_component]:  * node name: dl_vins_component
+[component_container_mt-1] [INFO] [1782107254.084301718] [dl_vins_component]: **********************************
+[component_container_mt-1] [INFO] [1782107254.085335428] [dl_vins_component]: Estimator Parameters:
+[component_container_mt-1] [INFO] [1782107254.085673727] [dl_vins_component]:  * window_size: 10 (compile-time)
+[component_container_mt-1] [INFO] [1782107254.085988857] [dl_vins_component]:  * gravity: 9.81007
+[component_container_mt-1] [INFO] [1782107254.086305076] [dl_vins_component]:  * device: CPU
+[component_container_mt-1] [INFO] [1782107254.086614414] [dl_vins_component]:  * mode: mono
+[component_container_mt-1] [INFO] [1782107254.086917929] [dl_vins_component]:  * initial_td: 0.0000 s (estimate_td=false)
+[component_container_mt-1] [INFO] [1782107254.087230116] [dl_vins_component]:  * init gates: max_g_error=0.500, max_abias=0.250, scale=[0.100, 10.000]
+[component_container_mt-1] [INFO] [1782107254.087545374] [dl_vins_component]:  * init_min_parallax_ratio: 0.0652 (30.0 px @ ref focal 460)
+[component_container_mt-1] [INFO] [1782107254.087873400] [dl_vins_component]:  * estimate_extrinsic: true (online, gated)
+[component_container_mt-1] [INFO] [1782107254.088181235] [dl_vins_component]: Tracker Parameters:
+[component_container_mt-1] [INFO] [1782107254.088481806] [dl_vins_component]:  * feature_extraction: SIFT_CPU
+[component_container_mt-1] [INFO] [1782107254.088794472] [dl_vins_component]:  * max_keypoints: 256
+[component_container_mt-1] [INFO] [1782107254.089096451] [dl_vins_component]:  * use_descriptor_matcher: true
+[INFO] [launch_ros.actions.load_composable_nodes]: Loaded node '/dl_vins_component' in container '/dl_vins/dl_vins_container'
+[component_container_mt-1] [INFO] [1782107254.092657413] [dl_vins.dl_vins_container]: Load Library: /home/nvidia/dl-vins-factory/DL-VINS/install/loop_fusion/lib/libloop_fusion_component.so
+[component_container_mt-1] [INFO] [1782107254.099089781] [dl_vins.dl_vins_container]: Found class: rclcpp_components::NodeFactoryTemplate<uosm::perception::LoopFusionComponent>
+[component_container_mt-1] [INFO] [1782107254.099723466] [dl_vins_component]: Resolved paths:
+[component_container_mt-1] [INFO] [1782107254.099910055] [dl_vins_component]:   cam0_calib: /home/nvidia/dl-vins-factory/DL-VINS/install/dl_vins/share/dl_vins/config/ntu_viral/camRight.yaml
+[component_container_mt-1] [INFO] [1782107254.099923751] [dl_vins_component]:   weights_folder: /home/nvidia/dl-vins-factory/DL-VINS/install/dl_vins/share/dl_vins/weights/ntu_viral
+[component_container_mt-1] [INFO] [1782107254.099941542] [dl_vins_component]:   use_descriptor_matcher: true (type='lightglue')
+[component_container_mt-1] [MetricsLogger] Logging enabled, folder: /home/nvidia/dl-vins-factory/tmp/ntu_viral_eval_mono_loop/dlvins_sift_cpu_lightglue_mono_loop/nya_02/./logs, session: 20260622_134734
+[component_container_mt-1] [INFO] [1782107254.103075728] [feature_tracker]: Auto-computed focal_length from PinholeCamera: 432.0px
+[component_container_mt-1] [INFO] [1782107254.105761921] [dl_vins.dl_vins_container]: Instantiate class: rclcpp_components::NodeFactoryTemplate<uosm::perception::LoopFusionComponent>
+[component_container_mt-1] [INFO] [1782107254.111312064] [loop_fusion]: loop_fusion config_file: /home/nvidia/dl-vins-factory/DL-VINS/install/loop_fusion/share/loop_fusion/config/loop_fusion_ntu_viral.yaml
+[component_container_mt-1] [INFO] [1782107254.111592732] [loop_fusion]: cam calib path: /home/nvidia/dl-vins-factory/DL-VINS/install/dl_vins/share/dl_vins/config/ntu_viral/camRight.yaml
+[component_container_mt-1] [INFO] [1782107254.111878167] [loop_fusion]: Derived FOCAL_LENGTH_PX = 431.32 px from m_camera
+[component_container_mt-1] [INFO] [1782107254.111924182] [loop_fusion]: loop tunables: MIN_SCORE=0.030 PNP_INFLATION=10.00 RECALL_IGNORE_RECENT_COUNT=50 MAX_THETA_DIFF=30.00 MAX_POS_DIFF=20.00 MIN_LOOP_NUM=25
+[component_container_mt-1] [vlad] codebook loaded: 32 clusters x 384 dim  (VLAD dim 12288)
+[component_container_mt-1] [INFO] [1782107254.154928137] [feature_tracker]: SIFT_CPU: GPU buffers allocated (262144 + 8192 bytes)
+[component_container_mt-1] [WARN] [1782107254.155197637] [feature_tracker]: use_descriptor_matcher=true but no 'lightglue' engine found for model='sift', kp=256 under '/home/nvidia/dl-vins-factory/DL-VINS/install/dl_vins/share/dl_vins/weights/matcher/mono_extractor'. Descriptor matcher will be disabled.
+[component_container_mt-1] [MetricsLogger] Feature tracker CSV: /home/nvidia/dl-vins-factory/tmp/ntu_viral_eval_mono_loop/dlvins_sift_cpu_lightglue_mono_loop/nya_02/./logs/feature_tracker_sift_cpu_20260622_134734.csv
+[component_container_mt-1] [INFO] [1782107254.155338946] [dl_vins_component]: Feature tracker initialized
+[component_container_mt-1] [INFO] [1782107254.155435137] [dl_vins_component]: Extrinsics loaded:
+[component_container_mt-1] [INFO] [1782107254.155454944] [dl_vins_component]:   tic0: [0.0052, 0.1348, 0.0147]
+[component_container_mt-1] [INFO] [1782107254.155474848] [dl_vins_component]: Auto-detected norm_focal_length: 432.04 px
+[component_container_mt-1] [MetricsLogger] Estimator CSV: /home/nvidia/dl-vins-factory/tmp/ntu_viral_eval_mono_loop/dlvins_sift_cpu_lightglue_mono_loop/nya_02/./logs/estimator_metrics_20260622_134734.csv
+[component_container_mt-1] [INFO] [1782107254.155948824] [estimator]: Processing thread started
+[component_container_mt-1] [INFO] [1782107254.156037526] [dl_vins_component]: Tracking thread started
+[component_container_mt-1] [INFO] [1782107254.156162068] [dl_vins_component]: IMU subscription QoS reliability: reliable
+[component_container_mt-1] [INFO] [1782107254.160831651] [dl_vins_component]: DlVinsComponent fully initialized
+[component_container_mt-1] [dino_vpr] ready: 280x448 -> 640 tokens x 384  (VLAD dim 12288)
+[component_container_mt-1] [INFO] [1782107254.286109407] [loop_fusion]: loop closure GLOBAL_VPR: AnyLoc DINOv2+VLAD ready (engine=dino_vits14_h280_w448.fp16.engine 280x448, VLAD dim=12288, sim_thresh=0.60 ratio=0.85)
+[component_container_mt-1] [LoopMetricsLogger] Logging enabled, folder: /home/nvidia/dl-vins-factory/tmp/ntu_viral_eval_mono_loop/dlvins_sift_cpu_lightglue_mono_loop/nya_02/./logs, session: 20260622_134734
+[component_container_mt-1] [loop_fusion] 4-DoF (x, y, z, yaw) pose-graph optimization thread starting
+[component_container_mt-1] [LoopMetricsLogger] loop_fusion CSV: /home/nvidia/dl-vins-factory/tmp/ntu_viral_eval_mono_loop/dlvins_sift_cpu_lightglue_mono_loop/nya_02/./logs/loop_fusion_metrics_20260622_134734.csv
+[component_container_mt-1] [LoopMetricsLogger] loop_optimizations CSV: /home/nvidia/dl-vins-factory/tmp/ntu_viral_eval_mono_loop/dlvins_sift_cpu_lightglue_mono_loop/nya_02/./logs/loop_optimizations_20260622_134734.csv
+[component_container_mt-1] [INFO] [1782107254.294465549] [loop_fusion]: loop_fusion: composable component up; spinning on container
+[INFO] [launch_ros.actions.load_composable_nodes]: Loaded node '/loop_fusion' in container '/dl_vins/dl_vins_container'
+[component_container_mt-1] [WARN] [1782107258.959713390] [tracking_thread]: No features tracked
+[component_container_mt-1] [WARN] [1782107259.984764640] [tracking_thread]: No features tracked
+[component_container_mt-1] [WARN] [1782107261.085896423] [tracking_thread]: No features tracked
+[component_container_mt-1] [WARN] [1782107262.185145742] [tracking_thread]: No features tracked
+[component_container_mt-1] [WARN] [1782107263.284707888] [tracking_thread]: No features tracked
+[component_container_mt-1] [WARN] [1782107264.287862271] [tracking_thread]: No features tracked
+[component_container_mt-1] [WARN] [1782107265.385111721] [tracking_thread]: No features tracked
+[component_container_mt-1] [WARN] [1782107266.486205616] [tracking_thread]: No features tracked
+[component_container_mt-1] [WARN] [1782107267.490287695] [tracking_thread]: No features tracked
+[component_container_mt-1] [WARN] [1782107268.589060511] [tracking_thread]: No features tracked
+[component_container_mt-1] [WARN] [1782107269.686442598] [tracking_thread]: No features tracked
+[component_container_mt-1] [WARN] [1782107270.690099021] [tracking_thread]: No features tracked
+[component_container_mt-1] [WARN] [1782107271.787571443] [tracking_thread]: No features tracked
+[component_container_mt-1] [WARN] [1782107272.789124222] [tracking_thread]: No features tracked
+[component_container_mt-1] [WARN] [1782107273.890395842] [tracking_thread]: No features tracked
+[component_container_mt-1] [WARN] [1782107274.889671515] [tracking_thread]: No features tracked
+[component_container_mt-1] [WARN] [1782107275.989167189] [tracking_thread]: No features tracked
+[component_container_mt-1] [WARN] [1782107276.991628293] [tracking_thread]: No features tracked
+[component_container_mt-1] [WARN] [1782107278.089723884] [tracking_thread]: No features tracked
+[component_container_mt-1] [WARN] [1782107279.192189888] [tracking_thread]: No features tracked
+[component_container_mt-1] [WARN] [1782107280.191455504] [tracking_thread]: No features tracked
+[component_container_mt-1] [WARN] [1782107281.192859160] [tracking_thread]: No features tracked
+[component_container_mt-1] [WARN] [1782107282.192486904] [tracking_thread]: No features tracked
+[component_container_mt-1] [WARN] [1782107283.191347978] [tracking_thread]: No features tracked
+[component_container_mt-1] [WARN] [1782107284.291119001] [tracking_thread]: No features tracked
+[component_container_mt-1] [WARN] [1782107285.291070270] [tracking_thread]: No features tracked
+[component_container_mt-1] [WARN] [1782107286.291222273] [tracking_thread]: No features tracked
+[component_container_mt-1] [WARN] [1782107287.292599329] [tracking_thread]: No features tracked
+[component_container_mt-1] [WARN] [1782107288.393480361] [tracking_thread]: No features tracked
+[component_container_mt-1] [WARN] [1782107289.492128699] [tracking_thread]: No features tracked
+[component_container_mt-1] [WARN] [1782107290.492586781] [tracking_thread]: No features tracked
+[component_container_mt-1] [WARN] [1782107291.494642128] [tracking_thread]: No features tracked
+[component_container_mt-1] [WARN] [1782107292.593605956] [tracking_thread]: No features tracked
+[component_container_mt-1] [WARN] [1782107293.594064614] [tracking_thread]: No features tracked
+[component_container_mt-1] [WARN] [1782107294.594207079] [tracking_thread]: No features tracked
+[component_container_mt-1] [WARN] [1782107295.594685519] [tracking_thread]: No features tracked
+[component_container_mt-1] [WARN] [1782107296.594697831] [tracking_thread]: No features tracked
+[component_container_mt-1] [WARN] [1782107297.595666568] [tracking_thread]: No features tracked
+[component_container_mt-1] [WARN] [1782107298.595164640] [tracking_thread]: No features tracked
+[component_container_mt-1] [WARN] [1782107299.594598596] [tracking_thread]: No features tracked
+[component_container_mt-1] [WARN] [1782107300.595607314] [tracking_thread]: No features tracked
+[component_container_mt-1] [WARN] [1782107301.596511711] [tracking_thread]: No features tracked
+[component_container_mt-1] [WARN] [1782107302.597165342] [tracking_thread]: No features tracked
+[component_container_mt-1] [WARN] [1782107303.597750888] [tracking_thread]: No features tracked
+[component_container_mt-1] [WARN] [1782107304.697046339] [tracking_thread]: No features tracked
+[component_container_mt-1] [WARN] [1782107305.697280095] [tracking_thread]: No features tracked
+[component_container_mt-1] [WARN] [1782107306.698358988] [tracking_thread]: No features tracked
+[component_container_mt-1] [WARN] [1782107307.798194973] [tracking_thread]: No features tracked
+[component_container_mt-1] [WARN] [1782107308.798478949] [tracking_thread]: No features tracked
+[component_container_mt-1] [WARN] [1782107309.899241031] [tracking_thread]: No features tracked
+[component_container_mt-1] [WARN] [1782107310.999994120] [tracking_thread]: No features tracked
+[component_container_mt-1] [WARN] [1782107312.100334737] [tracking_thread]: No features tracked
+[component_container_mt-1] [WARN] [1782107313.199069172] [tracking_thread]: No features tracked
+[component_container_mt-1] [WARN] [1782107314.201270076] [tracking_thread]: No features tracked
+[component_container_mt-1] [WARN] [1782107315.299736164] [tracking_thread]: No features tracked
+[component_container_mt-1] [WARN] [1782107316.300582787] [tracking_thread]: No features tracked
+[component_container_mt-1] [WARN] [1782107317.301000265] [tracking_thread]: No features tracked
+[component_container_mt-1] [WARN] [1782107318.401358417] [tracking_thread]: No features tracked
+[component_container_mt-1] [WARN] [1782107319.501378175] [tracking_thread]: No features tracked
+[component_container_mt-1] [WARN] [1782107320.601662696] [tracking_thread]: No features tracked
+[component_container_mt-1] [WARN] [1782107321.702616295] [tracking_thread]: No features tracked
+[component_container_mt-1] [WARN] [1782107322.802370521] [tracking_thread]: No features tracked
+[component_container_mt-1] [WARN] [1782107323.803271063] [tracking_thread]: No features tracked
+[component_container_mt-1] [WARN] [1782107324.903877019] [tracking_thread]: No features tracked
+[component_container_mt-1] [WARN] [1782107326.010711256] [tracking_thread]: No features tracked
+[component_container_mt-1] [WARN] [1782107327.104120019] [tracking_thread]: No features tracked
+[component_container_mt-1] [WARN] [1782107328.104072705] [tracking_thread]: No features tracked
+[component_container_mt-1] [WARN] [1782107329.204575783] [tracking_thread]: No features tracked
+[component_container_mt-1] [WARN] [1782107330.304961935] [tracking_thread]: No features tracked
+[component_container_mt-1] [WARN] [1782107331.406027595] [tracking_thread]: No features tracked
+[component_container_mt-1] [WARN] [1782107332.405334820] [tracking_thread]: No features tracked
+[component_container_mt-1] [WARN] [1782107333.505831562] [tracking_thread]: No features tracked
+[component_container_mt-1] [WARN] [1782107334.605401599] [tracking_thread]: No features tracked
+[component_container_mt-1] [WARN] [1782107335.622896937] [tracking_thread]: No features tracked
+[component_container_mt-1] [WARN] [1782107336.706419337] [tracking_thread]: No features tracked
+[component_container_mt-1] [WARN] [1782107337.806643444] [tracking_thread]: No features tracked
+[component_container_mt-1] [WARN] [1782107338.908508020] [tracking_thread]: No features tracked
+[component_container_mt-1] [WARN] [1782107340.007571731] [tracking_thread]: No features tracked
+[component_container_mt-1] [WARN] [1782107341.007186614] [tracking_thread]: No features tracked
+[component_container_mt-1] [WARN] [1782107342.008121318] [tracking_thread]: No features tracked
+[component_container_mt-1] [WARN] [1782107343.008971348] [tracking_thread]: No features tracked
+[component_container_mt-1] [WARN] [1782107344.108971986] [tracking_thread]: No features tracked
+[component_container_mt-1] [WARN] [1782107345.110234318] [tracking_thread]: No features tracked
+[component_container_mt-1] [WARN] [1782107346.109106584] [tracking_thread]: No features tracked
+[component_container_mt-1] [WARN] [1782107347.109228716] [tracking_thread]: No features tracked
+[component_container_mt-1] [WARN] [1782107348.109876114] [tracking_thread]: No features tracked
+[component_container_mt-1] [WARN] [1782107349.110684286] [tracking_thread]: No features tracked
+[component_container_mt-1] [WARN] [1782107350.111105629] [tracking_thread]: No features tracked
+[component_container_mt-1] [WARN] [1782107351.110660158] [tracking_thread]: No features tracked
+[component_container_mt-1] [WARN] [1782107352.110916631] [tracking_thread]: No features tracked
+[component_container_mt-1] [WARN] [1782107353.111349174] [tracking_thread]: No features tracked
+[component_container_mt-1] [WARN] [1782107354.110892023] [tracking_thread]: No features tracked
+[component_container_mt-1] [WARN] [1782107355.211623790] [tracking_thread]: No features tracked
+[component_container_mt-1] [WARN] [1782107356.212361432] [tracking_thread]: No features tracked
+[component_container_mt-1] [WARN] [1782107357.212009116] [tracking_thread]: No features tracked
+[component_container_mt-1] [WARN] [1782107358.212957549] [tracking_thread]: No features tracked
+[component_container_mt-1] [WARN] [1782107359.313248533] [tracking_thread]: No features tracked
+[component_container_mt-1] [WARN] [1782107360.313974878] [tracking_thread]: No features tracked
+[component_container_mt-1] [WARN] [1782107361.313722534] [tracking_thread]: No features tracked
+[component_container_mt-1] [WARN] [1782107362.314286186] [tracking_thread]: No features tracked
+[component_container_mt-1] [WARN] [1782107363.314444639] [tracking_thread]: No features tracked
+[component_container_mt-1] [WARN] [1782107364.314458448] [tracking_thread]: No features tracked
+[component_container_mt-1] [WARN] [1782107365.314826381] [tracking_thread]: No features tracked
+[component_container_mt-1] [WARN] [1782107366.316192428] [tracking_thread]: No features tracked
+[component_container_mt-1] [WARN] [1782107367.316526215] [tracking_thread]: No features tracked
+[component_container_mt-1] [WARN] [1782107368.316470198] [tracking_thread]: No features tracked
+[component_container_mt-1] [WARN] [1782107369.416764959] [tracking_thread]: No features tracked
+[component_container_mt-1] [WARN] [1782107370.416684044] [tracking_thread]: No features tracked
+[component_container_mt-1] [WARN] [1782107371.416880131] [tracking_thread]: No features tracked
+[component_container_mt-1] [WARN] [1782107372.517270159] [tracking_thread]: No features tracked
+[component_container_mt-1] [WARN] [1782107373.516912819] [tracking_thread]: No features tracked
+[component_container_mt-1] [WARN] [1782107374.517656637] [tracking_thread]: No features tracked
+[component_container_mt-1] [WARN] [1782107375.518190623] [tracking_thread]: No features tracked
+[component_container_mt-1] [WARN] [1782107376.644773992] [tracking_thread]: No features tracked
+[component_container_mt-1] [WARN] [1782107377.719272322] [tracking_thread]: No features tracked
+[component_container_mt-1] [WARN] [1782107378.719808100] [tracking_thread]: No features tracked
+[component_container_mt-1] [WARN] [1782107379.720141440] [tracking_thread]: No features tracked
+[component_container_mt-1] [WARN] [1782107380.720218227] [tracking_thread]: No features tracked
+[component_container_mt-1] [WARN] [1782107381.720809591] [tracking_thread]: No features tracked
+[component_container_mt-1] [WARN] [1782107382.721677541] [tracking_thread]: No features tracked
+[component_container_mt-1] [WARN] [1782107383.820702339] [tracking_thread]: No features tracked
+[component_container_mt-1] [WARN] [1782107384.821575185] [tracking_thread]: No features tracked
+[component_container_mt-1] [WARN] [1782107385.822149621] [tracking_thread]: No features tracked
+[component_container_mt-1] [WARN] [1782107386.922154291] [tracking_thread]: No features tracked
+[component_container_mt-1] [WARN] [1782107387.922484463] [tracking_thread]: No features tracked
+[component_container_mt-1] [WARN] [1782107388.922760777] [tracking_thread]: No features tracked
+[component_container_mt-1] [WARN] [1782107389.923395567] [tracking_thread]: No features tracked
+[component_container_mt-1] [WARN] [1782107390.924129784] [tracking_thread]: No features tracked
+[component_container_mt-1] [WARN] [1782107391.922950272] [tracking_thread]: No features tracked
+[component_container_mt-1] [WARN] [1782107392.923342238] [tracking_thread]: No features tracked
+[component_container_mt-1] [WARN] [1782107393.923824670] [tracking_thread]: No features tracked
+[component_container_mt-1] [WARN] [1782107394.940586154] [tracking_thread]: No features tracked
+[component_container_mt-1] [WARN] [1782107396.024310014] [tracking_thread]: No features tracked
+[component_container_mt-1] [WARN] [1782107397.024667738] [tracking_thread]: No features tracked
+[component_container_mt-1] [WARN] [1782107398.025980599] [tracking_thread]: No features tracked
+[component_container_mt-1] [WARN] [1782107399.026100428] [tracking_thread]: No features tracked
+[component_container_mt-1] [WARN] [1782107400.026170623] [tracking_thread]: No features tracked
+[component_container_mt-1] [WARN] [1782107401.025817059] [tracking_thread]: No features tracked
+[component_container_mt-1] [WARN] [1782107402.026958714] [tracking_thread]: No features tracked
+[component_container_mt-1] [WARN] [1782107403.027476764] [tracking_thread]: No features tracked
+[component_container_mt-1] [WARN] [1782107404.028985489] [tracking_thread]: No features tracked
+[component_container_mt-1] [WARN] [1782107405.127132528] [tracking_thread]: No features tracked
+[component_container_mt-1] [WARN] [1782107406.231352290] [tracking_thread]: No features tracked
+[component_container_mt-1] [WARN] [1782107407.327860451] [tracking_thread]: No features tracked
+[component_container_mt-1] [WARN] [1782107408.427698844] [tracking_thread]: No features tracked
+[component_container_mt-1] [WARN] [1782107409.433115306] [tracking_thread]: No features tracked
+[component_container_mt-1] [WARN] [1782107410.528636007] [tracking_thread]: No features tracked
+[component_container_mt-1] [WARN] [1782107411.529984490] [tracking_thread]: No features tracked
+[component_container_mt-1] [WARN] [1782107412.629679244] [tracking_thread]: No features tracked
+[component_container_mt-1] [WARN] [1782107413.730145311] [tracking_thread]: No features tracked
+[component_container_mt-1] [WARN] [1782107414.830709101] [tracking_thread]: No features tracked
+[component_container_mt-1] [WARN] [1782107415.930669790] [tracking_thread]: No features tracked
+[component_container_mt-1] [WARN] [1782107417.031410305] [tracking_thread]: No features tracked
+[component_container_mt-1] [WARN] [1782107418.131946672] [tracking_thread]: No features tracked
+[component_container_mt-1] [WARN] [1782107419.141541507] [tracking_thread]: No features tracked
+[component_container_mt-1] [WARN] [1782107420.231420371] [tracking_thread]: No features tracked
+[component_container_mt-1] [WARN] [1782107421.331972897] [tracking_thread]: No features tracked
+[component_container_mt-1] [WARN] [1782107422.431617094] [tracking_thread]: No features tracked
+[component_container_mt-1] [WARN] [1782107423.532969732] [tracking_thread]: No features tracked
+[component_container_mt-1] [WARN] [1782107424.633600494] [tracking_thread]: No features tracked
+[component_container_mt-1] [WARN] [1782107425.733147001] [tracking_thread]: No features tracked
+[component_container_mt-1] [WARN] [1782107426.734701711] [tracking_thread]: No features tracked
+[component_container_mt-1] [WARN] [1782107427.834409456] [tracking_thread]: No features tracked
+[component_container_mt-1] [WARN] [1782107428.935142963] [tracking_thread]: No features tracked
+[component_container_mt-1] [WARN] [1782107430.034934511] [tracking_thread]: No features tracked
+[component_container_mt-1] [WARN] [1782107431.135571224] [tracking_thread]: No features tracked
+[component_container_mt-1] [WARN] [1782107432.236347801] [tracking_thread]: No features tracked
+[component_container_mt-1] [WARN] [1782107433.335960064] [tracking_thread]: No features tracked
+[component_container_mt-1] [WARN] [1782107434.435974062] [tracking_thread]: No features tracked
+[component_container_mt-1] [WARN] [1782107435.537021727] [tracking_thread]: No features tracked
+[component_container_mt-1] [WARN] [1782107436.538279783] [tracking_thread]: No features tracked
+[component_container_mt-1] [WARN] [1782107437.637071295] [tracking_thread]: No features tracked
+[component_container_mt-1] [WARN] [1782107438.737251139] [tracking_thread]: No features tracked
+[component_container_mt-1] [WARN] [1782107439.738571336] [tracking_thread]: No features tracked
+[component_container_mt-1] [WARN] [1782107440.837993722] [tracking_thread]: No features tracked
+[component_container_mt-1] [WARN] [1782107441.938361843] [tracking_thread]: No features tracked
+[component_container_mt-1] [WARN] [1782107443.038520889] [tracking_thread]: No features tracked
+[component_container_mt-1] [WARN] [1782107444.139607431] [tracking_thread]: No features tracked
+[component_container_mt-1] [WARN] [1782107445.239480030] [tracking_thread]: No features tracked
+[component_container_mt-1] [WARN] [1782107446.340468594] [tracking_thread]: No features tracked
+[component_container_mt-1] [WARN] [1782107447.440235696] [tracking_thread]: No features tracked
+[component_container_mt-1] [WARN] [1782107448.457540882] [tracking_thread]: No features tracked
+[component_container_mt-1] [WARN] [1782107449.540876844] [tracking_thread]: No features tracked
+[component_container_mt-1] [WARN] [1782107450.640886875] [tracking_thread]: No features tracked
+[component_container_mt-1] [WARN] [1782107451.652861310] [tracking_thread]: No features tracked
+[component_container_mt-1] [WARN] [1782107452.741769993] [tracking_thread]: No features tracked
+[component_container_mt-1] [WARN] [1782107453.841484938] [tracking_thread]: No features tracked
+[component_container_mt-1] [WARN] [1782107454.842763857] [tracking_thread]: No features tracked
+[component_container_mt-1] [WARN] [1782107455.942267678] [tracking_thread]: No features tracked
+[component_container_mt-1] [WARN] [1782107457.042417028] [tracking_thread]: No features tracked
+[component_container_mt-1] [WARN] [1782107458.143167719] [tracking_thread]: No features tracked
+[component_container_mt-1] [WARN] [1782107459.245083331] [tracking_thread]: No features tracked
+[component_container_mt-1] [WARN] [1782107460.344996855] [tracking_thread]: No features tracked
+[component_container_mt-1] [WARN] [1782107461.445479306] [tracking_thread]: No features tracked
+[component_container_mt-1] [WARN] [1782107462.544357437] [tracking_thread]: No features tracked
+[component_container_mt-1] [WARN] [1782107463.649903838] [tracking_thread]: No features tracked
+[component_container_mt-1] [WARN] [1782107464.744628715] [tracking_thread]: No features tracked
+[component_container_mt-1] [WARN] [1782107465.845008164] [tracking_thread]: No features tracked
+[component_container_mt-1] [WARN] [1782107466.945564626] [tracking_thread]: No features tracked
+[component_container_mt-1] [WARN] [1782107468.045697945] [tracking_thread]: No features tracked
+[component_container_mt-1] [WARN] [1782107469.146028121] [tracking_thread]: No features tracked
+[component_container_mt-1] [WARN] [1782107470.146729277] [tracking_thread]: No features tracked
+[component_container_mt-1] [WARN] [1782107471.246594331] [tracking_thread]: No features tracked
+[component_container_mt-1] [WARN] [1782107472.348678575] [tracking_thread]: No features tracked
+[component_container_mt-1] [WARN] [1782107473.353655882] [tracking_thread]: No features tracked
+[component_container_mt-1] [WARN] [1782107474.448362069] [tracking_thread]: No features tracked
+[component_container_mt-1] [WARN] [1782107475.548726029] [tracking_thread]: No features tracked
+[component_container_mt-1] [WARN] [1782107476.648823961] [tracking_thread]: No features tracked
+[component_container_mt-1] [WARN] [1782107477.748206716] [tracking_thread]: No features tracked
+[component_container_mt-1] [WARN] [1782107478.848948662] [tracking_thread]: No features tracked
+[component_container_mt-1] [WARN] [1782107479.948729722] [tracking_thread]: No features tracked
+[component_container_mt-1] [WARN] [1782107480.950182821] [tracking_thread]: No features tracked
+[component_container_mt-1] [WARN] [1782107481.964902548] [tracking_thread]: No features tracked
+[component_container_mt-1] [WARN] [1782107483.051631908] [tracking_thread]: No features tracked
+[component_container_mt-1] [WARN] [1782107484.150647939] [tracking_thread]: No features tracked
+[component_container_mt-1] [WARN] [1782107485.250254709] [tracking_thread]: No features tracked
+[component_container_mt-1] [WARN] [1782107486.253173743] [tracking_thread]: No features tracked
+[component_container_mt-1] [WARN] [1782107487.351093666] [tracking_thread]: No features tracked
+[component_container_mt-1] [WARN] [1782107488.452803859] [tracking_thread]: No features tracked
+[component_container_mt-1] [WARN] [1782107489.552171351] [tracking_thread]: No features tracked
+[component_container_mt-1] [WARN] [1782107490.652104047] [tracking_thread]: No features tracked
+[component_container_mt-1] [WARN] [1782107491.752701973] [tracking_thread]: No features tracked
+[component_container_mt-1] [WARN] [1782107492.852510775] [tracking_thread]: No features tracked
+[component_container_mt-1] [WARN] [1782107493.954117519] [tracking_thread]: No features tracked
+[component_container_mt-1] [WARN] [1782107495.054299093] [tracking_thread]: No features tracked
+[component_container_mt-1] [WARN] [1782107496.154553109] [tracking_thread]: No features tracked
+[component_container_mt-1] [WARN] [1782107497.253565556] [tracking_thread]: No features tracked
+[component_container_mt-1] [WARN] [1782107498.255085434] [tracking_thread]: No features tracked
+[component_container_mt-1] [WARN] [1782107499.355307805] [tracking_thread]: No features tracked
+[component_container_mt-1] [WARN] [1782107500.455411944] [tracking_thread]: No features tracked
+[component_container_mt-1] [WARN] [1782107501.555787743] [tracking_thread]: No features tracked
+[component_container_mt-1] [WARN] [1782107502.656043071] [tracking_thread]: No features tracked
+[component_container_mt-1] [WARN] [1782107503.755956377] [tracking_thread]: No features tracked
+[component_container_mt-1] [WARN] [1782107504.760457305] [tracking_thread]: No features tracked
+[component_container_mt-1] [WARN] [1782107505.857386777] [tracking_thread]: No features tracked
+[component_container_mt-1] [WARN] [1782107506.957187228] [tracking_thread]: No features tracked
+[component_container_mt-1] [WARN] [1782107508.057330117] [tracking_thread]: No features tracked
+[component_container_mt-1] [WARN] [1782107509.058726100] [tracking_thread]: No features tracked
+[component_container_mt-1] [WARN] [1782107510.158089848] [tracking_thread]: No features tracked
+[component_container_mt-1] [WARN] [1782107511.260951184] [tracking_thread]: No features tracked
+[component_container_mt-1] [WARN] [1782107512.359201290] [tracking_thread]: No features tracked
+[component_container_mt-1] [WARN] [1782107513.459293462] [tracking_thread]: No features tracked
+[component_container_mt-1] [WARN] [1782107514.560442514] [tracking_thread]: No features tracked
+[component_container_mt-1] [WARN] [1782107515.660589818] [tracking_thread]: No features tracked
+[component_container_mt-1] [WARN] [1782107516.760989743] [tracking_thread]: No features tracked
+[component_container_mt-1] [WARN] [1782107517.860145283] [tracking_thread]: No features tracked
+[component_container_mt-1] [WARN] [1782107518.961943628] [tracking_thread]: No features tracked
+[component_container_mt-1] [WARN] [1782107520.062243337] [tracking_thread]: No features tracked
+[component_container_mt-1] [WARN] [1782107521.161690407] [tracking_thread]: No features tracked
+[component_container_mt-1] [WARN] [1782107522.162179260] [tracking_thread]: No features tracked
+[component_container_mt-1] [WARN] [1782107523.261814923] [tracking_thread]: No features tracked
+[component_container_mt-1] [WARN] [1782107524.263104835] [tracking_thread]: No features tracked
+[component_container_mt-1] [WARN] [1782107525.363777283] [tracking_thread]: No features tracked
+[component_container_mt-1] [WARN] [1782107526.463013809] [tracking_thread]: No features tracked
+[component_container_mt-1] [WARN] [1782107527.563558587] [tracking_thread]: No features tracked
+[component_container_mt-1] [WARN] [1782107528.664612349] [tracking_thread]: No features tracked
+[component_container_mt-1] [WARN] [1782107529.764607569] [tracking_thread]: No features tracked
+[component_container_mt-1] [WARN] [1782107530.864878704] [tracking_thread]: No features tracked
+[component_container_mt-1] [WARN] [1782107531.964683602] [tracking_thread]: No features tracked
+[component_container_mt-1] [WARN] [1782107533.064734355] [tracking_thread]: No features tracked
+[component_container_mt-1] [WARN] [1782107534.165233814] [tracking_thread]: No features tracked
+[component_container_mt-1] [WARN] [1782107535.265284796] [tracking_thread]: No features tracked
+[component_container_mt-1] [WARN] [1782107536.265942330] [tracking_thread]: No features tracked
+[component_container_mt-1] [WARN] [1782107537.366367283] [tracking_thread]: No features tracked
+[component_container_mt-1] [WARN] [1782107538.465618657] [tracking_thread]: No features tracked
+[component_container_mt-1] [WARN] [1782107539.567068015] [tracking_thread]: No features tracked
+[component_container_mt-1] [WARN] [1782107540.668384485] [tracking_thread]: No features tracked
+[component_container_mt-1] [WARN] [1782107541.678173861] [tracking_thread]: No features tracked
+[component_container_mt-1] [WARN] [1782107542.768017441] [tracking_thread]: No features tracked
+[component_container_mt-1] [WARN] [1782107543.768691419] [tracking_thread]: No features tracked
+[component_container_mt-1] [WARN] [1782107544.868556727] [tracking_thread]: No features tracked
+[component_container_mt-1] [WARN] [1782107545.968557419] [tracking_thread]: No features tracked
+[component_container_mt-1] [WARN] [1782107547.069177642] [tracking_thread]: No features tracked
+[component_container_mt-1] [WARN] [1782107548.074101297] [tracking_thread]: No features tracked
+[component_container_mt-1] [WARN] [1782107549.170743317] [tracking_thread]: No features tracked
+[component_container_mt-1] [WARN] [1782107550.270074188] [tracking_thread]: No features tracked
+[component_container_mt-1] [WARN] [1782107551.370457489] [tracking_thread]: No features tracked
+[component_container_mt-1] [WARN] [1782107552.371117774] [tracking_thread]: No features tracked
+[component_container_mt-1] [WARN] [1782107553.471211911] [tracking_thread]: No features tracked
+[component_container_mt-1] [WARN] [1782107554.571089887] [tracking_thread]: No features tracked
+[component_container_mt-1] [WARN] [1782107555.671311027] [tracking_thread]: No features tracked
+[component_container_mt-1] [WARN] [1782107556.772778812] [tracking_thread]: No features tracked
+[component_container_mt-1] [WARN] [1782107557.872495778] [tracking_thread]: No features tracked
+[component_container_mt-1] [WARN] [1782107558.972923886] [tracking_thread]: No features tracked
+[component_container_mt-1] [WARN] [1782107559.974514537] [tracking_thread]: No features tracked
+[component_container_mt-1] [WARN] [1782107561.073794066] [tracking_thread]: No features tracked
+[component_container_mt-1] [WARN] [1782107562.173926819] [tracking_thread]: No features tracked
+[component_container_mt-1] [WARN] [1782107563.273915672] [tracking_thread]: No features tracked
+[component_container_mt-1] [WARN] [1782107564.374780403] [tracking_thread]: No features tracked
+[component_container_mt-1] [WARN] [1782107565.475014113] [tracking_thread]: No features tracked
+[component_container_mt-1] [WARN] [1782107566.574916664] [tracking_thread]: No features tracked
+[component_container_mt-1] [WARN] [1782107567.674929612] [tracking_thread]: No features tracked
+[component_container_mt-1] [WARN] [1782107568.776307800] [tracking_thread]: No features tracked
+[component_container_mt-1] [WARN] [1782107569.876122066] [tracking_thread]: No features tracked
+[component_container_mt-1] [WARN] [1782107570.978089581] [tracking_thread]: No features tracked
+[component_container_mt-1] [WARN] [1782107572.077120734] [tracking_thread]: No features tracked
+[component_container_mt-1] [WARN] [1782107573.176945911] [tracking_thread]: No features tracked
+[component_container_mt-1] [WARN] [1782107574.277629528] [tracking_thread]: No features tracked
+[component_container_mt-1] [WARN] [1782107575.378021761] [tracking_thread]: No features tracked
+[component_container_mt-1] [WARN] [1782107576.378583738] [tracking_thread]: No features tracked
+[component_container_mt-1] [WARN] [1782107577.477735400] [tracking_thread]: No features tracked
+[component_container_mt-1] [WARN] [1782107578.479271652] [tracking_thread]: No features tracked
+[component_container_mt-1] [WARN] [1782107579.579477107] [tracking_thread]: No features tracked
+[component_container_mt-1] [WARN] [1782107580.679736096] [tracking_thread]: No features tracked
+[component_container_mt-1] [WARN] [1782107581.780268773] [tracking_thread]: No features tracked
+[component_container_mt-1] [WARN] [1782107582.880306296] [tracking_thread]: No features tracked
+[component_container_mt-1] [WARN] [1782107583.879963276] [tracking_thread]: No features tracked
+[component_container_mt-1] [WARN] [1782107584.981206972] [tracking_thread]: No features tracked
+[component_container_mt-1] [WARN] [1782107585.981132136] [tracking_thread]: No features tracked
+[component_container_mt-1] [WARN] [1782107587.081042591] [tracking_thread]: No features tracked
+[component_container_mt-1] [WARN] [1782107588.181707744] [tracking_thread]: No features tracked
+[component_container_mt-1] [WARN] [1782107589.281834097] [tracking_thread]: No features tracked
+[component_container_mt-1] [WARN] [1782107590.394026784] [tracking_thread]: No features tracked
+[component_container_mt-1] [WARN] [1782107591.485247798] [tracking_thread]: No features tracked
+[component_container_mt-1] [WARN] [1782107592.582648983] [tracking_thread]: No features tracked
+[component_container_mt-1] [WARN] [1782107593.683557872] [tracking_thread]: No features tracked
+[component_container_mt-1] [WARN] [1782107594.782892824] [tracking_thread]: No features tracked
+[component_container_mt-1] [WARN] [1782107595.883664790] [tracking_thread]: No features tracked
+[component_container_mt-1] [WARN] [1782107596.983364212] [tracking_thread]: No features tracked
+[component_container_mt-1] [WARN] [1782107598.084130468] [tracking_thread]: No features tracked
+[component_container_mt-1] [WARN] [1782107599.184686448] [tracking_thread]: No features tracked
+[component_container_mt-1] [WARN] [1782107600.284300775] [tracking_thread]: No features tracked
+[component_container_mt-1] [WARN] [1782107601.385622890] [tracking_thread]: No features tracked
+[component_container_mt-1] [WARN] [1782107602.485480510] [tracking_thread]: No features tracked
+[component_container_mt-1] [WARN] [1782107603.485621910] [tracking_thread]: No features tracked
+[component_container_mt-1] [WARN] [1782107604.486456614] [tracking_thread]: No features tracked
+[component_container_mt-1] [WARN] [1782107605.586312505] [tracking_thread]: No features tracked
+[component_container_mt-1] [WARN] [1782107606.586694670] [tracking_thread]: No features tracked
+[component_container_mt-1] [WARN] [1782107607.686873311] [tracking_thread]: No features tracked
+[component_container_mt-1] [WARN] [1782107608.788426944] [tracking_thread]: No features tracked
+[component_container_mt-1] [WARN] [1782107609.887827256] [tracking_thread]: No features tracked
+[component_container_mt-1] [WARN] [1782107610.889647710] [tracking_thread]: No features tracked
+[component_container_mt-1] [WARN] [1782107611.989906125] [tracking_thread]: No features tracked
+[component_container_mt-1] [WARN] [1782107612.990032325] [tracking_thread]: No features tracked
+[component_container_mt-1] [WARN] [1782107614.089235648] [tracking_thread]: No features tracked
+[component_container_mt-1] [WARN] [1782107615.189911498] [tracking_thread]: No features tracked
+[component_container_mt-1] [WARN] [1782107616.289853917] [tracking_thread]: No features tracked
+[component_container_mt-1] [WARN] [1782107617.390237195] [tracking_thread]: No features tracked
+[component_container_mt-1] [WARN] [1782107618.390506657] [tracking_thread]: No features tracked
+[component_container_mt-1] [WARN] [1782107619.399014717] [tracking_thread]: No features tracked
+[component_container_mt-1] [WARN] [1782107620.491576417] [tracking_thread]: No features tracked
+[component_container_mt-1] [WARN] [1782107621.591481012] [tracking_thread]: No features tracked
+[component_container_mt-1] [WARN] [1782107622.690778190] [tracking_thread]: No features tracked
+[component_container_mt-1] [WARN] [1782107623.791412185] [tracking_thread]: No features tracked
+[component_container_mt-1] [WARN] [1782107624.791929612] [tracking_thread]: No features tracked
+[component_container_mt-1] [WARN] [1782107625.792955034] [tracking_thread]: No features tracked
+[component_container_mt-1] [WARN] [1782107626.892335091] [tracking_thread]: No features tracked
+[component_container_mt-1] [WARN] [1782107627.893503136] [tracking_thread]: No features tracked
+[component_container_mt-1] [WARN] [1782107628.993652144] [tracking_thread]: No features tracked
+[component_container_mt-1] [WARN] [1782107630.092886443] [tracking_thread]: No features tracked
+[component_container_mt-1] [WARN] [1782107631.193869170] [tracking_thread]: No features tracked
+[component_container_mt-1] [WARN] [1782107632.194464165] [tracking_thread]: No features tracked
+[component_container_mt-1] [WARN] [1782107633.294576374] [tracking_thread]: No features tracked
+[component_container_mt-1] [WARN] [1782107634.394723302] [tracking_thread]: No features tracked
+[component_container_mt-1] [WARN] [1782107635.394836030] [tracking_thread]: No features tracked
+[component_container_mt-1] [WARN] [1782107636.495095629] [tracking_thread]: No features tracked
+[component_container_mt-1] [WARN] [1782107637.498827774] [tracking_thread]: No features tracked
+[component_container_mt-1] [WARN] [1782107638.594997530] [tracking_thread]: No features tracked
+[component_container_mt-1] [WARN] [1782107639.695486918] [tracking_thread]: No features tracked
+[component_container_mt-1] [WARN] [1782107640.696464373] [tracking_thread]: No features tracked
+[component_container_mt-1] [WARN] [1782107641.796192106] [tracking_thread]: No features tracked
+[component_container_mt-1] [WARN] [1782107642.796512000] [tracking_thread]: No features tracked
+[component_container_mt-1] [WARN] [1782107643.896995021] [tracking_thread]: No features tracked
+[component_container_mt-1] [WARN] [1782107644.996754401] [tracking_thread]: No features tracked
+[component_container_mt-1] [WARN] [1782107646.097853575] [tracking_thread]: No features tracked
+[component_container_mt-1] [WARN] [1782107647.197817018] [tracking_thread]: No features tracked
+[component_container_mt-1] [WARN] [1782107648.297861356] [tracking_thread]: No features tracked
+[component_container_mt-1] [WARN] [1782107649.299608754] [tracking_thread]: No features tracked
+[component_container_mt-1] [WARN] [1782107650.301630037] [tracking_thread]: No features tracked
+[component_container_mt-1] [WARN] [1782107651.398413706] [tracking_thread]: No features tracked
+[component_container_mt-1] [WARN] [1782107652.499525072] [tracking_thread]: No features tracked
+[component_container_mt-1] [WARN] [1782107653.599466115] [tracking_thread]: No features tracked
+[component_container_mt-1] [WARN] [1782107654.599850040] [tracking_thread]: No features tracked
+[component_container_mt-1] [WARN] [1782107655.700795455] [tracking_thread]: No features tracked
+[component_container_mt-1] [WARN] [1782107656.800728562] [tracking_thread]: No features tracked
+[component_container_mt-1] [WARN] [1782107657.900677989] [tracking_thread]: No features tracked
+[component_container_mt-1] [WARN] [1782107659.000536697] [tracking_thread]: No features tracked
+[component_container_mt-1] [WARN] [1782107660.000822191] [tracking_thread]: No features tracked
+[component_container_mt-1] [WARN] [1782107661.001863740] [tracking_thread]: No features tracked
+[component_container_mt-1] [WARN] [1782107662.002562574] [tracking_thread]: No features tracked
+[component_container_mt-1] [WARN] [1782107663.001984010] [tracking_thread]: No features tracked
+[component_container_mt-1] [WARN] [1782107664.101925731] [tracking_thread]: No features tracked
+[component_container_mt-1] [WARN] [1782107665.103210800] [tracking_thread]: No features tracked
+[component_container_mt-1] [WARN] [1782107666.102813901] [tracking_thread]: No features tracked
+[component_container_mt-1] [WARN] [1782107667.102864306] [tracking_thread]: No features tracked
+[component_container_mt-1] [WARN] [1782107668.203494843] [tracking_thread]: No features tracked
+[component_container_mt-1] [WARN] [1782107669.204064596] [tracking_thread]: No features tracked
+[component_container_mt-1] [WARN] [1782107670.203616200] [tracking_thread]: No features tracked
+[component_container_mt-1] [WARN] [1782107671.204006852] [tracking_thread]: No features tracked
+[component_container_mt-1] [WARN] [1782107672.204216643] [tracking_thread]: No features tracked
+[component_container_mt-1] [WARN] [1782107673.205046822] [tracking_thread]: No features tracked
+[component_container_mt-1] [WARN] [1782107674.204788473] [tracking_thread]: No features tracked
+[component_container_mt-1] [WARN] [1782107675.206329743] [tracking_thread]: No features tracked
+[component_container_mt-1] [WARN] [1782107676.206334317] [tracking_thread]: No features tracked
+[component_container_mt-1] [WARN] [1782107677.205481920] [tracking_thread]: No features tracked
+[component_container_mt-1] [WARN] [1782107678.206140551] [tracking_thread]: No features tracked
+[component_container_mt-1] [WARN] [1782107679.206942726] [tracking_thread]: No features tracked
+[component_container_mt-1] [WARN] [1782107680.223795661] [tracking_thread]: No features tracked
+[component_container_mt-1] [WARN] [1782107681.307507649] [tracking_thread]: No features tracked
+[component_container_mt-1] [WARN] [1782107682.307910943] [tracking_thread]: No features tracked
+[component_container_mt-1] [WARN] [1782107683.308379016] [tracking_thread]: No features tracked
+[component_container_mt-1] [WARN] [1782107684.307915386] [tracking_thread]: No features tracked
+[component_container_mt-1] [WARN] [1782107685.308726330] [tracking_thread]: No features tracked
+[component_container_mt-1] [WARN] [1782107686.308609604] [tracking_thread]: No features tracked
+[component_container_mt-1] [WARN] [1782107687.310005547] [tracking_thread]: No features tracked
+[WARNING] [launch]: user interrupted with ctrl-c (SIGINT)
+[component_container_mt-1] [INFO] [1782107694.387343882] [rclcpp]: signal_handler(SIGINT/SIGTERM)
+[component_container_mt-1] [WARN] [1782107694.439117225] [dl_vins_component]: DlVinsComponent shutting down.
+[component_container_mt-1] [INFO] [1782107694.439304613] [estimator]: Processing thread stopped
+[component_container_mt-1] [MetricsLogger] Feature tracker log closed
+[component_container_mt-1] [MetricsLogger] Estimator log closed
+[component_container_mt-1] [LoopMetricsLogger] loop_fusion log closed
+[component_container_mt-1] [LoopMetricsLogger] loop_optimizations log closed
+[INFO] [component_container_mt-1]: process has finished cleanly [pid 4003496]

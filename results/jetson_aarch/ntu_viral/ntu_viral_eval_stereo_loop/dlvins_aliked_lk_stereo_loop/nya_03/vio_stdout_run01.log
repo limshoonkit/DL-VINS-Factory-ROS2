@@ -1,0 +1,137 @@
+[INFO] [launch]: All log files can be found below /home/nvidia/.ros/log/2026-06-21-18-47-22-392668-ubuntu-2507675
+[INFO] [launch]: Default logging verbosity is set to INFO
+[INFO] [component_container_mt-1]: process started with pid [2507794]
+[component_container_mt-1] [INFO] [1782038842.797099878] [dl_vins.dl_vins_container]: Load Library: /home/nvidia/dl-vins-factory/DL-VINS/install/dl_vins/lib/libdl_vins_component.so
+[component_container_mt-1] [INFO] [1782038842.924566526] [dl_vins.dl_vins_container]: Found class: rclcpp_components::NodeFactoryTemplate<uosm::perception::DlVinsComponent>
+[component_container_mt-1] [INFO] [1782038842.925532524] [dl_vins.dl_vins_container]: Instantiate class: rclcpp_components::NodeFactoryTemplate<uosm::perception::DlVinsComponent>
+[component_container_mt-1] [INFO] [1782038842.930342994] [dl_vins_component]: **********************************
+[component_container_mt-1] [INFO] [1782038842.931080395] [dl_vins_component]:  DLVINS Component                 
+[component_container_mt-1] [INFO] [1782038842.931440536] [dl_vins_component]: **********************************
+[component_container_mt-1] [INFO] [1782038842.931769927] [dl_vins_component]:  * namespace: /
+[component_container_mt-1] [INFO] [1782038842.932091127] [dl_vins_component]:  * node name: dl_vins_component
+[component_container_mt-1] [INFO] [1782038842.932392295] [dl_vins_component]: **********************************
+[component_container_mt-1] [INFO] [1782038842.933394323] [dl_vins_component]: Estimator Parameters:
+[component_container_mt-1] [INFO] [1782038842.933718818] [dl_vins_component]:  * window_size: 10 (compile-time)
+[component_container_mt-1] [INFO] [1782038842.934026770] [dl_vins_component]:  * gravity: 9.81007
+[component_container_mt-1] [INFO] [1782038842.934339362] [dl_vins_component]:  * device: CPU
+[component_container_mt-1] [INFO] [1782038842.934633650] [dl_vins_component]:  * mode: stereo
+[component_container_mt-1] [INFO] [1782038842.934947682] [dl_vins_component]:  * initial_td: 0.0000 s (estimate_td=false)
+[component_container_mt-1] [INFO] [1782038842.935255794] [dl_vins_component]:  * init: gyro-bias-only (stereo), max_g_error=0.500
+[component_container_mt-1] [INFO] [1782038842.935561794] [dl_vins_component]:  * estimate_extrinsic: true (online, gated)
+[component_container_mt-1] [INFO] [1782038842.935872786] [dl_vins_component]: Tracker Parameters:
+[component_container_mt-1] [INFO] [1782038842.936175842] [dl_vins_component]:  * feature_extraction: ALIKED
+[component_container_mt-1] [INFO] [1782038842.936478226] [dl_vins_component]:  * optflow_device: CPU
+[component_container_mt-1] [INFO] [1782038842.936778851] [dl_vins_component]:  * max_keypoints: 256
+[component_container_mt-1] [INFO] [1782038842.937068628] [dl_vins_component]:  * use_descriptor_matcher: false
+[INFO] [launch_ros.actions.load_composable_nodes]: Loaded node '/dl_vins_component' in container '/dl_vins/dl_vins_container'
+[component_container_mt-1] [INFO] [1782038842.947669452] [dl_vins_component]: Resolved paths:
+[component_container_mt-1] [INFO] [1782038842.947728841] [dl_vins_component]:   cam0_calib: /home/nvidia/dl-vins-factory/DL-VINS/install/dl_vins/share/dl_vins/config/ntu_viral/camRight.yaml
+[component_container_mt-1] [INFO] [1782038842.947742696] [dl_vins_component]:   cam1_calib: /home/nvidia/dl-vins-factory/DL-VINS/install/dl_vins/share/dl_vins/config/ntu_viral/camLeft.yaml
+[component_container_mt-1] [INFO] [1782038842.947757928] [dl_vins_component]:   weights_folder: /home/nvidia/dl-vins-factory/DL-VINS/install/dl_vins/share/dl_vins/weights/ntu_viral
+[component_container_mt-1] [INFO] [1782038842.947768839] [dl_vins_component]:   use_descriptor_matcher: false (type='lightglue')
+[component_container_mt-1] [MetricsLogger] Logging enabled, folder: /home/nvidia/dl-vins-factory/tmp/ntu_viral_eval_stereo_loop/dlvins_aliked_lk_stereo_loop/nya_03/./logs, session: 20260621_184722
+[component_container_mt-1] [INFO] [1782038842.949238682] [feature_tracker]: Auto-computed focal_length from PinholeCamera: 432.0px
+[component_container_mt-1] [INFO] [1782038842.953893320] [dl_vins.dl_vins_container]: Load Library: /home/nvidia/dl-vins-factory/DL-VINS/install/loop_fusion/lib/libloop_fusion_component.so
+[component_container_mt-1] [INFO] [1782038842.958743148] [dl_vins.dl_vins_container]: Found class: rclcpp_components::NodeFactoryTemplate<uosm::perception::LoopFusionComponent>
+[component_container_mt-1] [INFO] [1782038842.958793929] [dl_vins.dl_vins_container]: Instantiate class: rclcpp_components::NodeFactoryTemplate<uosm::perception::LoopFusionComponent>
+[component_container_mt-1] [INFO] [1782038842.964720885] [loop_fusion]: loop_fusion config_file: /home/nvidia/dl-vins-factory/DL-VINS/install/loop_fusion/share/loop_fusion/config/loop_fusion_ntu_viral.yaml
+[component_container_mt-1] [INFO] [1782038842.965057155] [loop_fusion]: cam calib path: /home/nvidia/dl-vins-factory/DL-VINS/install/dl_vins/share/dl_vins/config/ntu_viral/camRight.yaml
+[component_container_mt-1] [INFO] [1782038842.965324502] [loop_fusion]: Derived FOCAL_LENGTH_PX = 431.32 px from m_camera
+[component_container_mt-1] [INFO] [1782038842.965374227] [loop_fusion]: loop tunables: MIN_SCORE=0.030 PNP_INFLATION=10.00 RECALL_IGNORE_RECENT_COUNT=50 MAX_THETA_DIFF=30.00 MAX_POS_DIFF=20.00 MIN_LOOP_NUM=25
+[component_container_mt-1] [INFO] [1782038842.965457327] [loop_fusion]: vocabulary: /home/nvidia/dl-vins-factory/DL-VINS/install/loop_fusion/share/loop_fusion/support_files/brief_k10L6.bin
+[component_container_mt-1] Loaded engine size: 1 MiB
+[component_container_mt-1] Using an engine plan file across different models of devices is not recommended and is likely to affect performance or even cause errors.
+[component_container_mt-1] [MemUsageChange] TensorRT-managed allocation in IExecutionContext creation: CPU +0, GPU +453, now: CPU 0, GPU 453 (MiB)
+[component_container_mt-1] [INFO] [1782038843.085011394] [dense_extractor]: Input tensor: image
+[component_container_mt-1] [INFO] [1782038843.085057760] [dense_extractor]: Output tensor: score_map
+[component_container_mt-1] [INFO] [1782038843.085187609] [dense_extractor]: Output tensor: feature_map
+[component_container_mt-1] [INFO] [1782038843.085196473] [dense_extractor]: DenseExtractor ready: B=2 480x768 C=3 Cf=128
+[component_container_mt-1] loop start load vocabulary
+[component_container_mt-1] [INFO] [1782038843.301936748] [dense_extractor]: Warmup complete (3 iters, B=2 480x768)
+[component_container_mt-1] [INFO] [1782038843.306066165] [feature_tracker]: Loaded ALIKED dense pipeline (batch=2, dhead=no (LK))
+[component_container_mt-1] [MetricsLogger] Feature tracker CSV: /home/nvidia/dl-vins-factory/tmp/ntu_viral_eval_stereo_loop/dlvins_aliked_lk_stereo_loop/nya_03/./logs/feature_tracker_aliked_20260621_184722.csv
+[component_container_mt-1] [INFO] [1782038843.306303625] [dl_vins_component]: Feature tracker initialized
+[component_container_mt-1] [INFO] [1782038843.306375429] [dl_vins_component]: Extrinsics loaded:
+[component_container_mt-1] [INFO] [1782038843.306390052] [dl_vins_component]:   tic0: [0.0052, 0.1348, 0.0147]
+[component_container_mt-1] [INFO] [1782038843.306408580] [dl_vins_component]:   tic1: [0.0055, -0.1243, 0.0161]
+[component_container_mt-1] [INFO] [1782038843.306419555] [dl_vins_component]:   stereo_baseline: 0.2591 m
+[component_container_mt-1] [INFO] [1782038843.306436546] [feature_tracker]: Stereo config: baseline=0.259m, focal=432.0px
+[component_container_mt-1] [INFO] [1782038843.306451169] [feature_tracker]: Stereo extrinsics set: t_cam0_cam1=[-0.2591, -0.0016, -0.0047] m (|t|=0.2591)
+[component_container_mt-1] [INFO] [1782038843.306457409] [dl_vins_component]: Auto-detected norm_focal_length: 432.04 px
+[component_container_mt-1] [MetricsLogger] Estimator CSV: /home/nvidia/dl-vins-factory/tmp/ntu_viral_eval_stereo_loop/dlvins_aliked_lk_stereo_loop/nya_03/./logs/estimator_metrics_20260621_184722.csv
+[component_container_mt-1] [INFO] [1782038843.306737298] [estimator]: Processing thread started
+[component_container_mt-1] [INFO] [1782038843.306807791] [dl_vins_component]: Tracking thread started
+[component_container_mt-1] [INFO] [1782038843.306948487] [dl_vins_component]: IMU subscription QoS reliability: reliable
+[component_container_mt-1] [INFO] [1782038843.312405676] [dl_vins_component]: DlVinsComponent fully initialized
+[component_container_mt-1] [INFO] [1782038843.348886305] [loop_fusion]: BRIEF_PATTERN_FILE: /home/nvidia/dl-vins-factory/DL-VINS/install/loop_fusion/share/loop_fusion/support_files/brief_pattern.yml
+[component_container_mt-1] [INFO] [1782038843.348988412] [loop_fusion]: loop closure: CLASSIC mode (DBoW2 + BRIEF)
+[component_container_mt-1] [LoopMetricsLogger] Logging enabled, folder: /home/nvidia/dl-vins-factory/tmp/ntu_viral_eval_stereo_loop/dlvins_aliked_lk_stereo_loop/nya_03/./logs, session: 20260621_184723
+[component_container_mt-1] [loop_fusion] 4-DoF (x, y, z, yaw) pose-graph optimization thread starting
+[component_container_mt-1] [LoopMetricsLogger] loop_fusion CSV: /home/nvidia/dl-vins-factory/tmp/ntu_viral_eval_stereo_loop/dlvins_aliked_lk_stereo_loop/nya_03/./logs/loop_fusion_metrics_20260621_184723.csv
+[component_container_mt-1] [LoopMetricsLogger] loop_optimizations CSV: /home/nvidia/dl-vins-factory/tmp/ntu_viral_eval_stereo_loop/dlvins_aliked_lk_stereo_loop/nya_03/./logs/loop_optimizations_20260621_184723.csv
+[component_container_mt-1] [INFO] [1782038843.356168135] [loop_fusion]: loop_fusion: composable component up; spinning on container
+[INFO] [launch_ros.actions.load_composable_nodes]: Loaded node '/loop_fusion' in container '/dl_vins/dl_vins_container'
+[component_container_mt-1] [INFO] [1782038849.768245597] [estimator]: Initializing first IMU pose
+[component_container_mt-1] [INFO] [1782038851.806647191] [estimator]: Stereo initialization complete!
+[component_container_mt-1] optimize pose graph 
+[component_container_mt-1] optimize pose graph 
+[component_container_mt-1] optimize pose graph 
+[component_container_mt-1] optimize pose graph 
+[component_container_mt-1] optimize pose graph 
+[component_container_mt-1] optimize pose graph 
+[component_container_mt-1] optimize pose graph 
+[component_container_mt-1] optimize pose graph 
+[component_container_mt-1] optimize pose graph 
+[component_container_mt-1] optimize pose graph 
+[component_container_mt-1] optimize pose graph 
+[component_container_mt-1] optimize pose graph 
+[component_container_mt-1] optimize pose graph 
+[component_container_mt-1] optimize pose graph 
+[component_container_mt-1] optimize pose graph 
+[component_container_mt-1] optimize pose graph 
+[component_container_mt-1] optimize pose graph 
+[component_container_mt-1] optimize pose graph 
+[component_container_mt-1] optimize pose graph 
+[component_container_mt-1] optimize pose graph 
+[component_container_mt-1] optimize pose graph 
+[component_container_mt-1] optimize pose graph 
+[component_container_mt-1] optimize pose graph 
+[component_container_mt-1] optimize pose graph 
+[component_container_mt-1] optimize pose graph 
+[component_container_mt-1] optimize pose graph 
+[component_container_mt-1] optimize pose graph 
+[component_container_mt-1] optimize pose graph 
+[component_container_mt-1] optimize pose graph 
+[component_container_mt-1] optimize pose graph 
+[component_container_mt-1] optimize pose graph 
+[component_container_mt-1] optimize pose graph 
+[component_container_mt-1] optimize pose graph 
+[component_container_mt-1] optimize pose graph 
+[component_container_mt-1] optimize pose graph 
+[component_container_mt-1] optimize pose graph 
+[component_container_mt-1] optimize pose graph 
+[component_container_mt-1] optimize pose graph 
+[component_container_mt-1] optimize pose graph 
+[component_container_mt-1] optimize pose graph 
+[component_container_mt-1] optimize pose graph 
+[component_container_mt-1] optimize pose graph 
+[component_container_mt-1] optimize pose graph 
+[component_container_mt-1] optimize pose graph 
+[component_container_mt-1] optimize pose graph 
+[component_container_mt-1] optimize pose graph 
+[component_container_mt-1] optimize pose graph 
+[component_container_mt-1] optimize pose graph 
+[component_container_mt-1] optimize pose graph 
+[component_container_mt-1] optimize pose graph 
+[component_container_mt-1] optimize pose graph 
+[component_container_mt-1] optimize pose graph 
+[component_container_mt-1] optimize pose graph 
+[WARNING] [launch]: user interrupted with ctrl-c (SIGINT)
+[component_container_mt-1] [INFO] [1782039265.847921657] [rclcpp]: signal_handler(SIGINT/SIGTERM)
+[component_container_mt-1] [WARN] [1782039265.880901484] [dl_vins_component]: DlVinsComponent shutting down.
+[component_container_mt-1] [INFO] [1782039265.882848777] [estimator]: Processing thread stopped
+[component_container_mt-1] [MetricsLogger] Feature tracker log closed
+[component_container_mt-1] [MetricsLogger] Estimator log closed
+[component_container_mt-1] [LoopMetricsLogger] loop_fusion log closed
+[component_container_mt-1] [LoopMetricsLogger] loop_optimizations log closed
+[INFO] [component_container_mt-1]: process has finished cleanly [pid 2507794]

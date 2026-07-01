@@ -1,0 +1,80 @@
+%YAML:1.0
+# OKVIS2 config — Botanic Garden monocular-inertial.
+# cam0 = dalsa gray left (/dalsa_gray/left/image_raw), IMU = /imu/data.
+# Intrinsics from dalsa_cam0_pinhole_down.yaml; T_SC from official calib_chain.yaml
+# (Kalibr) T_xsens_gray0 — consistent across DL-VINS / VINS-Fusion / OKVIS2.
+cameras:
+     - {T_SC:
+        [-0.00375313, 0.01609339, 0.99986345, 0.17517298,
+              -0.99997267, -0.00642959, -0.00365005, 0.13259005,
+              0.00636997, -0.99984982, 0.01611708, 0.0670137,
+              0.0, 0.0, 0.0, 1.0],
+        image_dimension: [960, 600],
+        distortion_coefficients: [-0.061606731291039, 0.100129900708930, 0.0, 0.0],
+        distortion_type: radialtangential,
+        focal_length: [643.5951111267952, 642.6656126857330],
+        principal_point: [475.2215406900663, 307.4120184196884],
+        camera_type: gray,
+        slam_use: okvis}
+
+camera_parameters:
+    timestamp_tolerance: 0.005
+    sync_cameras: [0]
+    image_delay: 0.0
+    online_calibration:
+        do_extrinsics: false
+        do_extrinsics_final_ba: true
+        sigma_r: 0.01
+        sigma_alpha: 0.1
+        sigma_r_final_ba: 0.03
+        sigma_alpha_final_ba: 0.3
+
+imu_parameters:
+    use: true
+    a_max: 176.0
+    g_max: 7.8
+    sigma_g_c: 2.0e-3
+    sigma_a_c: 1.0e-2
+    sigma_bg: 0.01
+    sigma_ba: 0.1
+    sigma_gw_c: 8.0e-5
+    sigma_aw_c: 3.0e-5
+    g: 9.81007
+    g0: [ 0.0, 0.0, 0.0 ]
+    a0: [ 0.0, 0.0, 0.0 ]
+    T_BS:
+        [1.0000, 0.0000, 0.0000, 0.0000,
+         0.0000, 1.0000, 0.0000, 0.0000,
+         0.0000, 0.0000, 1.0000, 0.0000,
+         0.0000, 0.0000, 0.0000, 1.0000]
+
+frontend_parameters:
+    detection_threshold: 38.0
+    absolute_threshold: 150.0
+    matching_threshold: 60.0
+    octaves: 0
+    max_num_keypoints: 700
+    keyframe_overlap: 0.60
+    use_cnn: true
+    parallelise_detection: true
+    num_matching_threads: 4
+
+estimator_parameters:
+    num_keyframes: 5
+    num_loop_closure_frames: 3
+    num_imu_frames: 3
+    do_loop_closures: false
+    do_final_ba: false
+    enforce_realtime: false
+    realtime_min_iterations: 3
+    realtime_max_iterations: 10
+    realtime_time_limit: 0.07
+    realtime_num_threads: 3
+    full_graph_iterations: 15
+    full_graph_num_threads: 3
+    p_dbow: 0.4
+    drift_percentage_heuristic: 1.35
+
+output_parameters:
+    display_matches: false
+    display_overhead: false
