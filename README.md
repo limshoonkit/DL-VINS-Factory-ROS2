@@ -138,6 +138,19 @@ ros2 bag play ../dataset/6_SubT-MRS/low_light1 --clock
 
 - Baseline method for comparison (LET-NET, vins-fusion, okvis2) is available at [baseline_reference](./baseline_reference)
 
+- 📄 **Paper:** [DL-VINS-Factory](https://arxiv.org/abs/2607.01757)
+```
+@misc{lim2026dlvinsfactorymodularframeworklearned,
+      title={DL-VINS-Factory: A Modular Framework for Learned Visual Front-Ends in Visual-Inertial SLAM}, 
+      author={Shoon Kit Lim and Melissa Jia Ying Chong and Ting Yang Ling},
+      year={2026},
+      eprint={2607.01757},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV},
+      url={https://arxiv.org/abs/2607.01757}, 
+}
+```
+
 ## E. Known Issue
 
 *Feel free to open any Github issues.*
