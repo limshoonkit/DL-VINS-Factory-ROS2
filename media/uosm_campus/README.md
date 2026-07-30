@@ -41,6 +41,9 @@ axis-aligned bounding box, i.e. how far the sequence spreads spatially. A sequen
 | UF-02-D | 1217 | 175.9 | 204.1 | 65.2 |
 | UF-02-N | 1228 | 180.2 | 198.4 | 69.0 |
 
+Lowlight example 
+![lowlight](./uosm_lower_low_light.jpg)
+![lowlight](./uosm_upper_low_light.jpg)
 
 ### Topics
 
@@ -56,6 +59,8 @@ axis-aligned bounding box, i.e. how far the sequence spreads spatially. A sequen
 ---
 
 ## Ground truth (TUM format)
+
+![BF-00 example](./uosm_map.png)
 
 Both sets are plain-text **TUM trajectory format**: one pose per line, space
 separated, no header —
@@ -123,18 +128,19 @@ stereo-inertial. Scored stream is `/dl_vins/odometry` (no loop-closure), so thes
 are pure odometry numbers. ZED GEN_3 is the ZED SDK's own onboard VIO at `GEN_3`
 positional-tracking mode, for reference.
 
-| Method | BF-00 | LF-01-D | LF-01-N | LF-02-D | LF-02-N | UF-01-D | UF-01-N | UF-02-D | UF-02-N | median |
-|---|---|---|---|---|---|---|---|---|---|---|
-| **ZED GEN_3** | 1.43 | **0.38** | 0.51 | 0.69 | 0.84 | 2.38 | 0.72 | 2.28 | **0.47** | **0.72** |
-| ALIKED + LightGlue    | 1.37 | 0.49 | 0.35 | 0.73 | 0.57 | 1.01 | 0.94 | 0.99 | 0.58 | 0.73 |
-| ALIKED + LK           | 1.12 | 0.62 | 0.69 | 0.39 | 0.98 | 1.01 | 3.28 | 1.76 | 1.57 | 1.01 |
-| SuperPoint + LightGlue| 1.82 | 0.59 | **0.30** | 0.99 | **0.42** | 1.09 | 1.48 | 1.12 | 0.69 | 0.99 |
-| SuperPoint + LK       | 1.15 | 0.40 | 0.93 | 0.83 | 0.64 | 1.26 | 2.55 | 2.24 | 2.09 | 1.15 |
-| XFeat + LightGlue     | 1.33 | 0.51 | 0.88 | 0.95 | 0.98 | 2.08 | 3.29 | 1.66 | 1.16 | 1.16 |
-| XFeat + LK            | 1.71 | 0.54 | 0.92 | 0.59 | 1.05 | 1.03 | 2.68 | 2.03 | 2.53 | 1.05 |
-| **RaCo + LightGlue**  | 2.22 | 0.46 | 0.40 | **0.39** | 0.66 | 1.12 | **0.63** | **0.94** | 0.64 | **0.64** |
-| RaCo + LK             | 1.30 | 0.57 | 0.79 | 0.37 | 1.14 | 1.38 | 2.79 | 2.14 | 1.09 | 1.14 |
-| GFTT (classical)      | 1.61 | 0.53 | 0.43 | 0.53 | 0.78 | 0.83 | 2.34 | 1.83 | 0.78 | 0.78 |
+| Method | BF-00 | LF-01-D | LF-01-N | LF-02-D | LF-02-N | UF-01-D | UF-01-N | UF-02-D | UF-02-N |
+|---|---|---|---|---|---|---|---|---|---|
+| **ZED GEN_3** | 1.43 | **0.38** | 0.51 | 0.69 | 0.84 | 2.38 | 0.72 | 2.28 | **0.47** |
+| ALIKED + LightGlue    | 1.37 | 0.49 | 0.35 | 0.73 | 0.57 | 1.01 | 0.94 | 0.99 | 0.58 |
+| ALIKED + LK           | 1.12 | 0.62 | 0.69 | 0.39 | 0.98 | 1.01 | 3.28 | 1.76 | 1.57 |
+| SuperPoint + LightGlue| 1.82 | 0.59 | **0.30** | 0.99 | **0.42** | 1.09 | 1.48 | 1.12 | 0.69 |
+| SuperPoint + LK       | 1.15 | 0.40 | 0.93 | 0.83 | 0.64 | 1.26 | 2.55 | 2.24 | 2.09 |
+| XFeat + LightGlue     | 1.33 | 0.51 | 0.88 | 0.95 | 0.98 | 2.08 | 3.29 | 1.66 | 1.16 |
+| XFeat + LK            | 1.71 | 0.54 | 0.92 | 0.59 | 1.05 | 1.03 | 2.68 | 2.03 | 2.53 |
+| **RaCo + LightGlue**  | 2.22 | 0.46 | 0.40 | **0.39** | 0.66 | 1.12 | **0.63** | **0.94** | 0.64 |
+| RaCo + LK             | 1.30 | 0.57 | 0.79 | 0.37 | 1.14 | 1.38 | 2.79 | 2.14 | 1.09 |
+| GFTT (classical)      | 1.61 | 0.53 | 0.43 | 0.53 | 0.78 | 0.83 | 2.34 | 1.83 | 0.78 |
+
 
 Summary over all 9 sequences:
 
@@ -150,6 +156,8 @@ Summary over all 9 sequences:
 | RaCo + LK | 1.14 | 1.29 | 2.79 | 0.95 | 0.74 | 0.25 |
 | SuperPoint + LK | 1.15 | 1.34 | 2.55 | 1.02 | 0.76 | 0.26 |
 | XFeat + LightGlue | 1.16 | 1.43 | 3.29 | 1.09 | 0.82 | 0.16 |
+
+![Plots](./uosm_campus_stereo_3d_traj_plot.png)
 
 ---
 
