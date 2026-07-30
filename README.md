@@ -4,6 +4,12 @@ Basically, VINS-Fusion <s>on steriods</s> with a learning front-end upgrade.
 
 A tightly coupled visual-inertial odometry (VIO) system with deep learning front-ends for feature extraction and matching. It replaces classical hand-crafted features with learned alternatives — **ALIKED**, **RaCo**, **SuperPoint**, **XFeat** with either Lucas-Kanade optical flow tracking or frame-to-frame **LightGlue** matching — accelerated via TensorRT for deployment on NVIDIA Jetson. Optional loop closure is provided through [AnyLoc](https://github.com/AnyLoc/AnyLoc) using DINOv2 + VLAD place recognition. The system is evaluated against public benchmarks (EuRoC, NTU-VIRAL, SubT-MRS) and compared to baselines (LET-Net, VINS-Fusion, OKVIS2).
 
+## Updates
+
+- **2026-07-30** — New dataset: **[UoSM-Campus](https://huggingface.co/datasets/lsk950329/UoSM-Campus)**, an indoor campus sequence set with well-lit and low-light traversals, captured with the [handheld_mapper](https://github.com/limshoonkit/handheld_mapper) rig. Results in [media/uosm_campus](./media/uosm_campus).
+- **2026-07-02** — Evaluation results, run scripts and paper added.
+- **2026-06-29** — Initial release.
+
 ## Demo
 
 1. ![NTU-VIRAL combined](media/ntu_combined.mp4)
