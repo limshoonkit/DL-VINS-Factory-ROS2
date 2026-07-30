@@ -42,6 +42,7 @@ axis-aligned bounding box, i.e. how far the sequence spreads spatially. A sequen
 | UF-02-N | 1228 | 180.2 | 198.4 | 69.0 |
 
 Lowlight example 
+
 ![lowlight](./uosm_lower_low_light.jpg)
 ![lowlight](./uosm_upper_low_light.jpg)
 
@@ -124,7 +125,7 @@ ATE (APE RMSE, m) against `ground_truth/fastlivo2_lvba_blended/`, SE(3)-Umeyama
 aligned, per-sequence clock offset fitted by speed-profile cross-correlation.
 
 DL-VINS front-ends from <https://github.com/limshoonkit/DL-VINS-Factory-ROS2>, run
-stereo-inertial. Scored stream is `/dl_vins/odometry` (no loop-closure), so these
+stereo-inertial on the **ZED_CAMERA_STREAM**. Scored stream is `/dl_vins/odometry` (no loop-closure), so these
 are pure odometry numbers. ZED GEN_3 is the ZED SDK's own onboard VIO at `GEN_3`
 positional-tracking mode, for reference.
 

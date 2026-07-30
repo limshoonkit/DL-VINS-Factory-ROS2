@@ -1,0 +1,45 @@
+dl_vins_component:
+  ros__parameters:
+    # ===== Estimator / IMU / Extrinsic (UoSM Campus, ZED 2i) =====
+    gravity: 9.8116
+    acc_noise: 0.1
+    gyr_noise: 0.01
+    acc_bias_noise: 0.001
+    gyr_bias_noise: 0.0001
+    initial_td: 0.0
+    estimate_td: false
+    max_iterations: 10
+    max_solver_time: 0.04
+    estimate_extrinsic: true
+    num_threads: 6
+    ceres_device: 0
+    odom_frame_id: "odom"
+    norm_focal_length: 0.0
+
+    # IMU-Camera Extrinsic (UoSM Campus, row-major 4x4)
+    # body = zed2i_imu_link (ROS conv, X fwd/Y left/Z up). Rotation/translation from
+    # ZED 2i factory camera_imu_transform (SVO2) composed with the optical->ROS remap;
+    # stereo T_c1_c0 from Kalibr calib-camchain.yaml. estimate_extrinsic refines online.
+    body_T_cam0: [0.01076749, -0.00308561, 0.99993724, 0.00175090,
+                  -0.99993145, -0.00463882, 0.01075311, 0.02307992,
+                  0.00460535, -0.99998446, -0.00313535, -0.00032947,
+                  0.0, 0.0, 0.0, 1.0]
+    body_T_cam1: [0.00689734, -0.00401209, 0.99996813, 0.00229431,
+                  -0.99996793, -0.00410442, 0.00688088, -0.09085329,
+                  0.00407669, -0.99998351, -0.00404027, 0.00020621,
+                  0.0, 0.0, 0.0, 1.0]
+
+    # ===== Method-specific: XFeat + LK (stereo, UoSM Campus) =====
+    cam0_calib: "config/uosm_campus/cam0_pinhole.yaml"
+    cam1_calib: "config/uosm_campus/cam1_pinhole.yaml"
+    image_width: 640
+    image_height: 360
+    image_encoding: "mono8"
+    max_tracked_keypoints: 256
+    enable_visualization: false
+    enable_csv_logging: true
+    log_folder: "./logs"
+    feature_extraction_method: 5
+    optflow_device: 0
+    use_descriptor_matcher: false
+    weights_folder: "weights/uosm_campus"
